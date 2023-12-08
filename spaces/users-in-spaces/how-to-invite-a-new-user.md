@@ -22,7 +22,7 @@ To invite another user to your space, simply click the "Invite User" button and 
 
 Every new invitation will appear at the bottom of the page, where you can manage them and track their status. Once a user accepts your invitation, the status of the invitation is no longer "pending" and the user is moved to "users" where you can edit their role.
 
-To delete a pending invitation or user from the space, click on the ![](../../.gitbook/assets/deleterolebtn.png) button next to the user’s name.
+To delete a pending invitation or user from the space, click on the <mark style="background-color:red;">Delete</mark> button next to the user’s name.
 
 <figure><img src="../../.gitbook/assets/users_delete.png" alt=""><figcaption><p><mark style="color:purple;">Delete a user from your space</mark></p></figcaption></figure>
 
