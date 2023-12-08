@@ -93,7 +93,7 @@ _This practically means that users who are already invited to one of your Spaces
 
 ## New Space
 
-If you need to create a new space for another project, or for testing your rules for example, simply click on the Space name next to your email in the top right corner. A list of the Spaces you are a user in will appear. At the bottom, click the <mark style="background-color:purple;">+ Space</mark> button and enter a name for the new Space. Click on the Confirm button and the new Space will be created.
+If you need to create a new space for another project, or for testing your rules for example, simply click on the Space name next to your email in the top right corner. A list of the Spaces you are a user in will appear. At the bottom, click the  <mark style="background-color:purple;">**+ Space**</mark>  button and enter a name for the new Space. Click on the Confirm button and the new Space will be created.
 
 ## Switching between Spaces
 

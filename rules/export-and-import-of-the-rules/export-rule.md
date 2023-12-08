@@ -8,7 +8,7 @@ As you know, your rules can be accessed from the “Business Rules” in the lef
 
 ### 1.2 Exporting from Rule Settings
 
-In the Rule Settings tab you can do various actions such as exporting your rule to a file. At the top click on the <mark style="background-color:purple;">Export</mark> button.
+In the Rule Settings tab you can do various actions such as exporting your rule to a file. At the top click on the  <mark style="background-color:purple;">**Export**</mark>  button.
 
 <figure><img src="../../.gitbook/assets/exportfromrulesettings.png" alt=""><figcaption><p><mark style="color:purple;">Export Rule from Rule Settings</mark></p></figcaption></figure>
 
