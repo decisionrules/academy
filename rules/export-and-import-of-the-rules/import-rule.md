@@ -22,7 +22,7 @@ When you click on “Import”, you will be prompted to drop or choose a file fr
 
 <figure><img src="../../.gitbook/assets/import.png" alt=""><figcaption></figcaption></figure>
 
-Once your rule file has been selected, click the [![](../../.gitbook/assets/importbtn.png)](https://drive.google.com/file/d/1j7HC2Ra0yj9E624cfqLGTG4Es34yNkjL/view?usp=drive\_link) button.
+Once your rule file has been selected, click the <mark style="background-color:purple;">Import</mark> button.
 
 {% hint style="info" %}
 _You can import one file at a time._
