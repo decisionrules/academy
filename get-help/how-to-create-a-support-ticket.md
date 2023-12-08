@@ -16,7 +16,7 @@ The link can be found in the left side bar menu. In the Help section, click on S
 
 ## Submit a ticket
 
-To submit a ticket, click on the ![](../.gitbook/assets/submitbtn.png) button in the top bar or in the middle of the page.
+To submit a ticket, click on the <mark style="background-color:purple;">Submit a ticket</mark> button in the top bar or in the middle of the page.
 
 <figure><img src="../.gitbook/assets/supportlanding.png" alt=""><figcaption></figcaption></figure>
 
