@@ -23,7 +23,7 @@ To create business rules, save your work and invite other colleagues to your wor
 
 ## Sign up with credentials
 
-Go to the [<mark style="color:purple;">DecisionRules</mark>](https://www.decisionrules.io/) page. Click on the <mark style="background-color:purple;">**Sing Up**</mark> button at the top of the page. A form page will appear where you fill in all the required fields.&#x20;
+Go to the [<mark style="color:purple;">DecisionRules</mark>](https://www.decisionrules.io/) page. Click on the <mark style="background-color:purple;">**Sign Up**</mark> button at the top of the page. A form page will appear where you fill in all the required fields.&#x20;
 
 <figure><img src="../.gitbook/assets/signupform.png" alt=""><figcaption><p><mark style="color:purple;">Sign up form</mark></p></figcaption></figure>
 
