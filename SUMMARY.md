@@ -2,7 +2,7 @@
 
 ## 🏁 GETTING STARTED
 
-* [Introduction](README.md)
+* [DecisionRules Academy Introduction](README.md)
 * [Create an Account](getting-started/create-an-account.md)
 
 ## 👥 ACCOUNT
