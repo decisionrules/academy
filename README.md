@@ -1,11 +1,6 @@
 ---
 description: Discover the capabilities of DecisionRules
-cover: .gitbook/assets/DecisionRules.svg
-coverY: 0
 layout:
-  cover:
-    visible: true
-    size: full
   title:
     visible: true
   description:
@@ -18,7 +13,7 @@ layout:
     visible: true
 ---
 
-# Introduction
+# DecisionRules Academy Introduction
 
 ## Benefits of a codeless solution
 
