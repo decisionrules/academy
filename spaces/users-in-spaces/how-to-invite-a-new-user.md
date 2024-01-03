@@ -32,6 +32,11 @@ To delete a pending invitation or user from the space, click on the <mark style=
 
 After another user invites you to the space, an invitation arrives in your inbox.
 
-<figure><img src="../../.gitbook/assets/inboxinvite (1).png" alt=""><figcaption><p><mark style="color:purple;">Invitation in your inbox</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Snímek obrazovky 2024-01-03 v 16.33.25.png" alt=""><figcaption></figcaption></figure>
+
+&#x20;
+
+<figure><img src="../../.gitbook/assets/Snímek obrazovky 2024-01-03 v 16.35.27.png" alt=""><figcaption></figcaption></figure>
 
 Inside is a link that will take you to the decisionrules.io login page. After logging in, you gain access to the space you were invited to.
+
