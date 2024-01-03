@@ -51,7 +51,7 @@ We will now create the input and output model which is used to set conditions an
 
 #### Using the simple editor
 
-Let's start with the input model. First we delete all default attributes by clicking the trash can icon. Then we add our own attributes: <mark style="background-color:purple;">period</mark>, <mark style="background-color:purple;">ProductType</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark>. We create a root for each of them by clicking the **+Add root** button.
+Let's start with the input model. First we delete all default attributes by clicking the trash can icon. Then we add our own attributes:  <mark style="color:purple;background-color:purple;">**period**</mark> ,  <mark style="color:purple;background-color:purple;">**ProductType**</mark>  and  <mark style="color:purple;background-color:purple;">**promoCode**</mark> . We create a root for each of them by clicking the **+Add root** button.
 
 {% hint style="info" %}
 More information on the simple editor is provided [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/input-and-output/simple-editor).
@@ -61,7 +61,7 @@ More information on the simple editor is provided [<mark style="color:purple;">h
 After creating an input or output model, we must always confirm the changes with the <mark style="background-color:orange;">save</mark> button.
 {% endhint %}
 
-Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:green;background-color:green;">**prices**</mark>and <mark style="color:green;background-color:green;">**message**</mark>. Here, we would like to add a child attributes to the [<mark style="color:green;background-color:green;">**prices**</mark>](#user-content-fn-1)[^1]. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
+Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:green;background-color:green;">**prices**</mark>and <mark style="color:green;background-color:green;">**message**</mark>. Here, we would like to add a child attributes to the <mark style="color:green;background-color:green;">**prices**</mark>. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
 
 <figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_Kk9OOAFg1xRpFGgPDY7D_image.webp" alt=""><figcaption></figcaption></figure>
 
@@ -219,5 +219,3 @@ More information about Test Bench can be found [<mark style="color:purple;">here
 {% endhint %}
 
 If you have arrived here, you have successfully completed the tutorial. Congratulations!
-
-[^1]: 

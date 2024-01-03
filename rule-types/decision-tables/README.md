@@ -5,7 +5,7 @@ coverY: 0
 
 # Decision Tables
 
-Introduction
+### Introduction
 
 Decision Tables are our most popular decision rule type as they are the market standard of decisioning. Thanks to their similarity to Excel and Google Sheets, Decision Tables are easy to learn, yet they can make more complex decisions. Decision Tables are by far our most scalable rule type. They can contain and perform efficiently with around 10,000 rows and 10 to 20 columns full of conditions. In case you need more, you can create an additional Decision Table and connect them using the Rule Flow.
 
@@ -79,7 +79,7 @@ Use Debug Mode to see how rows are evaluated. Enable Debug Mode in Test Bench by
 
 <figure><img src="../../.gitbook/assets/testbench.gif" alt=""><figcaption></figcaption></figure>
 
-Solving strategies
+**Solving strategies**
 
 You can use execution strategies to define the output of the Decision Table. In the Test Bench Tool, click the Standard button to open a list of possible strategies. These are as follows:&#x20;
 

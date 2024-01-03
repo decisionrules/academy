@@ -13,7 +13,7 @@ Log into your account, click on the space name at the top of the page. A window 
 {% hint style="info" %}
 _Note that plans have limit for number of users you can invite to your space._
 
-_More information about Tariff Limits can be found_ [_<mark style="color:purple;">here</mark>_](broken-reference) _and <mark style="color:purple;">here</mark>._
+_More information about Tariff Limits can be found_ [_<mark style="color:purple;">here</mark>_](https://www.decisionrules.io/pricing/public-cloud) _and_ [_<mark style="color:purple;">here</mark>_](https://app.decisionrules.io/profile)_._
 {% endhint %}
 
 To invite another user to your space, simply click the "Invite User" button and enter the email address of the person you want to collaborate with in the space. Select the role you want to assign to the new user and confirm with the “Invite” button. Invitation will be sent to the email address provided.
