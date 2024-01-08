@@ -91,7 +91,7 @@ We set the output model similarly, where we set as root **loan**, **tax**, **tot
 
 <figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_5azOulQMPFJ6U4sAMAi4_image.webp" alt=""><figcaption></figcaption></figure>
 
-#### Create using JSON editor
+### Create using JSON editor
 
 #### **Input model**
 

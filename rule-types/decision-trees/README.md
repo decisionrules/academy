@@ -5,7 +5,7 @@ coverY: 0
 
 # Decision Trees
 
-Introduction
+## Introduction
 
 Decision Tree is an easy to learn type of decision rule based on if this then that structure. In a simple and user-friendly visual designer, you can easily create simple yet powerful rules. Such rules can then form the entire decision process or you can link it as a sub-rule to a Rule Flow, for example. We can think of creating a Decision Tree as writing a sentence:  If this, then that. If it rains, I'll take an umbrella. This is why Decision Tree is suitable for creating very simple rules. Or rules that have multiple levels of conditional branching. Such condition nesting would require the creation of all combinations of all input values in the Decision Table.
 
@@ -43,7 +43,7 @@ The If Block is divided into two parts. In the left part you always add conditio
 
 <figure><img src="../../.gitbook/assets/addconditions (1).gif" alt=""><figcaption></figcaption></figure>
 
-1. Click "Logic OR" to add the entire OR block, which by default creates OR logic between the two conditions. add conditions on both sides of the operator using the "Add" button.
+2. Click "Logic OR" to add the entire OR block, which by default creates OR logic between the two conditions. add conditions on both sides of the operator using the "Add" button.
 
 <figure><img src="../../.gitbook/assets/orconditionstree.gif" alt=""><figcaption><p><mark style="color:purple;">How to add OR condition</mark></p></figcaption></figure>
 

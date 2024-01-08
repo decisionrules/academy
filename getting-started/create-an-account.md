@@ -33,7 +33,7 @@ Then click on the <mark style="background-color:purple;">**Create account**</mar
 
 ## Creating new account using your Google or Microsoft SSO
 
-Are you tired of inventing new logins? With one click, you can create an account on <mark style="color:purple;">DecisionRules</mark> with Google and Microsoft SSO. Go to the [<mark style="color:purple;">DecisionRules</mark>](https://www.decisionrules.io/) page. Click on the <mark style="background-color:purple;">**Sing Up**</mark> button at the top of the page. A form page will appear where Simply click the button <img src="../.gitbook/assets/Screenshot 2023-10-31 154742 (1).png" alt="" data-size="original"> or <img src="../.gitbook/assets/Screenshot 2023-10-31 154804.png" alt="" data-size="original">.&#x20;
+Are you tired of inventing new logins? With one click, you can create an account on <mark style="color:purple;">DecisionRules</mark> with Google and Microsoft SSO. Go to the [<mark style="color:purple;">DecisionRules</mark>](https://www.decisionrules.io/) page. Click on the <mark style="background-color:purple;">**Sing Up**</mark> button at the top of the page. A form page will appear where Simply click the button <mark style="background-color:red;">Continue with Google</mark> or <mark style="background-color:green;">Login via Microsoft</mark> .
 
 You will be redirected to Google or Microsoft login. After successfully logging in to your Google or Microsoft account, you'll be asked to grant permissions for application to access certain information. Review the permissions, and if you agree, click "Allow" or "Grant."
 

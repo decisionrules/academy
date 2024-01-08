@@ -79,7 +79,7 @@ Use Debug Mode to see how rows are evaluated. Enable Debug Mode in Test Bench by
 
 <figure><img src="../../.gitbook/assets/testbench.gif" alt=""><figcaption></figcaption></figure>
 
-**Solving strategies**
+## Solving Strategies
 
 You can use execution strategies to define the output of the Decision Table. In the Test Bench Tool, click the Standard button to open a list of possible strategies. These are as follows:&#x20;
 
