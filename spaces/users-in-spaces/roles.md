@@ -1,8 +1,5 @@
 ---
 description: Manage access and permissions for users within the space
-cover: >-
-  https://images.unsplash.com/photo-1503095396549-807759245b35?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwyfHxhY3RvcnN8ZW58MHx8fHwxNzAxODc1NDk1fDA&ixlib=rb-4.0.3&q=85
-coverY: 54
 ---
 
 # Roles

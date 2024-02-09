@@ -1,8 +1,3 @@
----
-cover: ../../.gitbook/assets/6242e56b55504a08ddafb8f3_dr-scripting-rule.svg
-coverY: 0
----
-
 # Scripting Rules
 
 ### Introduction

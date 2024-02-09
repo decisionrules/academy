@@ -1,8 +1,3 @@
----
-cover: ../../.gitbook/assets/6242e46b893c55e572b6c46e_dr-decision-table.svg
-coverY: 0
----
-
 # Decision Tables
 
 ### Introduction

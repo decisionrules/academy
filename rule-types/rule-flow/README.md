@@ -1,8 +1,3 @@
----
-cover: ../../.gitbook/assets/6242e573b8d3ad0dc0e0d72b_dr-ruleflow.svg
-coverY: 0
----
-
 # Rule Flow
 
 Introduction

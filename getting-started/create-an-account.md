@@ -1,10 +1,6 @@
 ---
 description: Find out how you can immediately start using DecisionRules
-coverY: 0
 layout:
-  cover:
-    visible: true
-    size: full
   title:
     visible: true
   description:

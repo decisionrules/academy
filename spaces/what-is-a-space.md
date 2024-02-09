@@ -2,9 +2,6 @@
 description: >-
   Find out how you can differentiate rules for individual teams, departments or
   projects
-cover: >-
-  https://images.unsplash.com/photo-1505506874110-6a7a69069a08?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxOTcwMjR8MHwxfHNlYXJjaHwzfHxzcGFjZXxlbnwwfHx8fDE2OTg4NDU4NDF8MA&ixlib=rb-4.0.3&q=85
-coverY: -533.6023489932884
 ---
 
 # What Is a Space

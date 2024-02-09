@@ -1,8 +1,3 @@
----
-cover: ../../.gitbook/assets/627bca0611981939ec09a910_dr-decision-tree.svg
-coverY: 0
----
-
 # Decision Trees
 
 ## Introduction

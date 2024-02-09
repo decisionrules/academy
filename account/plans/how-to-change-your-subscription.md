@@ -2,7 +2,6 @@
 description: >-
   Do you want to switch to a higher plan or turn on a new addon, find out how to
   do that
-coverY: 0
 ---
 
 # How to change your subscription
