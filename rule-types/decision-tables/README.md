@@ -46,7 +46,7 @@ Now that we have the conditions set, it's time to create the results that will r
 Continue in this way with all the scenarios that may occur in your decision process.
 
 {% hint style="info" %}
-Once you have set up the Input-Output model, you can export your Decision Table in XLSX format. In Excel or Google Sheets, you can then add more data at once and re-import your rule into your space. For more information on creating tables using Excel or Google Sheets, click [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/manage-tables-excel-gsheets).
+Once you have set up the Input-Output model, you can export your Decision Table in XLSX format. In Excel or Google Sheets, you can then add more data at once and re-import your rule into your space. For more information on creating tables using Excel or Google Sheets, click [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/import-and-export-rule/manage-tables-excel-gsheets).
 {% endhint %}
 
 #### Else Row

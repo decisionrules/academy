@@ -41,7 +41,7 @@ Since we do not want this decision table to be available yet, we will change its
 We will now create an input and output model, which we will then use to set conditions and results. We create this model with a **JSON editor**.
 
 {% hint style="info" %}
-After creating an input or output model, we must always confirm the changes with the  <mark style="background-color:purple;">**Save**</mark>  button.
+After creating an input or output model, we must always confirm the changes with the <mark style="background-color:purple;">**Save**</mark>  button.
 {% endhint %}
 
 #### **Input model**
@@ -199,7 +199,7 @@ The debug mode can be turned on by clicking on [ <mark style="background-color:p
 ```
 
 {% hint style="info" %}
-More information about Test Bench is [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/tutorials/code-editor).
+More information about Test Bench is [<mark style="color:purple;">here</mark>](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/other/test-bench).
 {% endhint %}
 
 [^1]: 

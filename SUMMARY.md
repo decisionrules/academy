@@ -20,7 +20,7 @@
   * [How to invite a new User](spaces/users-in-spaces/how-to-invite-a-new-user.md)
   * [Roles](spaces/users-in-spaces/roles.md)
 
-## ⚖ RULES
+## ⚖️ RULES
 
 * [What is a Rule?](rules/what-is-a-rule.md)
 * [Export & Import of the Rules](rules/export-and-import-of-the-rules/README.md)

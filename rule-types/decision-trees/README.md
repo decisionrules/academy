@@ -95,5 +95,5 @@ After assigning variables from your output, assign a value to the variable. Clic
 <figure><img src="../../.gitbook/assets/makeresults.gif" alt=""><figcaption><p><mark style="color:purple;">Building results</mark></p></figcaption></figure>
 
 {% hint style="info" %}
-_A list of all operators and functions with their examples can be found in the_ [_Operators_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/operators) _and_ [_Functions_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/functions) _section of our documentation._
+_A list of all operators and functions with their examples can be found in the_ [_Operators_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/operators) _and_ [_Functions_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/operators/functions) _section of our documentation._
 {% endhint %}

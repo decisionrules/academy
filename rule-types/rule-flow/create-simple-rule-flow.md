@@ -9,7 +9,7 @@ description: This tutorial will walk you through the creation of a Rule Flow.
 Let's advance one step at a time.
 
 {% hint style="info" %}
-In this tutorial, you need to have knowledge of [<mark style="color:purple;">Decision Tables</mark>](broken-reference) or [<mark style="color:purple;">Scripting Rules</mark>](broken-reference).
+In this tutorial, you need to have knowledge of [<mark style="color:purple;">Decision Tables</mark>](../decision-tables/) or [<mark style="color:purple;">Scripting Rules</mark>](../scripting-rules/).
 {% endhint %}
 
 ### 1. Create Decision Tables
