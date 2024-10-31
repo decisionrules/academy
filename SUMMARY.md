@@ -35,6 +35,8 @@
   * [Create Simple Decision Tree](rule-types/decision-trees/create-simple-decision-tree.md)
 * [Scripting Rules](rule-types/scripting-rules/README.md)
   * [Create Simple Scripting Rule](rule-types/scripting-rules/create-simple-scripting-rule.md)
+* [Workflow](rule-types/workflow/README.md)
+  * [Create a Workflow](rule-types/workflow/create-a-workflow.md)
 * [Rule Flow](rule-types/rule-flow/README.md)
   * [Create Simple Rule Flow](rule-types/rule-flow/create-simple-rule-flow.md)
 

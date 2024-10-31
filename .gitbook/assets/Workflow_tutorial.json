@@ -1,0 +1,2490 @@
+{
+    "export": {
+        "exportType": "FOLDER",
+        "version": 1,
+        "createdAt": "2024-10-31T14:33:44.656Z",
+        "data": {
+            "structure": {
+                "id": "e9636e2b-dad5-386c-4b1c-18dc86139d5e",
+                "name": "Workflow tutorial",
+                "type": "FOLDER",
+                "children": [
+                    {
+                        "baseId": "86729714-613e-6f60-1760-1180eaf897e4",
+                        "version": 1,
+                        "name": "Loyalty Discount",
+                        "ruleAlias": "loyalty-discount",
+                        "type": "RULE"
+                    },
+                    {
+                        "baseId": "7d4e0a4f-e8cf-2aa2-0d7c-00e380ca1ea3",
+                        "version": 1,
+                        "name": "Product Catalogue Sample",
+                        "ruleAlias": "product-catalogue",
+                        "type": "RULE"
+                    },
+                    {
+                        "baseId": "6a04ef91-84d8-e9fa-1de2-70592620b36a",
+                        "version": 1,
+                        "name": "Order evaluation - Workflow tutorial",
+                        "ruleAlias": "order-workflow-tutorial",
+                        "type": "RULE"
+                    }
+                ]
+            },
+            "rules": [
+                {
+                    "name": "Loyalty Discount",
+                    "description": "",
+                    "inputSchema": {
+                        "basicPrice": {},
+                        "customer": {
+                            "loyaltyClass": {},
+                            "credit": {}
+                        }
+                    },
+                    "outputSchema": {
+                        "finalPrice": {},
+                        "message": {}
+                    },
+                    "decisionTable": {
+                        "columns": [
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "name": "Basic Price",
+                                    "definition": {
+                                        "content": "basicPrice",
+                                        "type": "INPUT_VARIABLE",
+                                        "valid": false
+                                    }
+                                },
+                                "columnId": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                "type": "input",
+                                "alias": "col-cyan-tiger"
+                            },
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "name": "Loyalty Class",
+                                    "definition": {
+                                        "content": "customer.loyaltyClass",
+                                        "type": "INPUT_VARIABLE",
+                                        "valid": false
+                                    }
+                                },
+                                "columnId": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                "type": "input",
+                                "alias": "col-orange-rabbit"
+                            },
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "name": "Credit",
+                                    "definition": {
+                                        "content": "customer.credit",
+                                        "type": "INPUT_VARIABLE",
+                                        "valid": false
+                                    }
+                                },
+                                "columnId": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                "type": "input",
+                                "alias": "col-black-shark"
+                            },
+                            {
+                                "columnId": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                "type": "calc",
+                                "alias": "col-blue-rabbit",
+                                "calculation": {
+                                    "name": "Discount",
+                                    "variable": "discount"
+                                }
+                            },
+                            {
+                                "columnOutput": {
+                                    "type": "simple",
+                                    "name": "Final Price",
+                                    "outputVariable": "finalPrice"
+                                },
+                                "columnId": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                "type": "output",
+                                "alias": "col-maroon-rabbit"
+                            },
+                            {
+                                "columnOutput": {
+                                    "type": "simple",
+                                    "outputVariable": "message",
+                                    "name": "Message"
+                                },
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "type": "output",
+                                "alias": "col-maroon-elephant"
+                            }
+                        ],
+                        "rows": [
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "120",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "FIRST_VISIT",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "anything",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": 0,
+                                            "type": "function",
+                                            "stringValue": "0"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "type": "function",
+                                            "value": "Thanks for your first order!",
+                                            "stringValue": "Thanks for your first order!"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "120",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "REGULAR",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "0",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": "{regularDiscount}",
+                                            "type": "function",
+                                            "stringValue": "{regularDiscount}"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Thank you for your order!",
+                                            "type": "function",
+                                            "stringValue": "Thank you for your order!"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "120",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "REGULAR",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "betweenLeftOpen",
+                                            "value": [
+                                                "0",
+                                                "15"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "PLUS_CHAR",
+                                                "parameters": [
+                                                    "{regularDiscount}",
+                                                    5
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{regularDiscount}+5"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "120",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "REGULAR",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "betweenLeftOpen",
+                                            "value": [
+                                                "15",
+                                                "25"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "PLUS_CHAR",
+                                                "parameters": [
+                                                    "{regularDiscount}",
+                                                    8
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{regularDiscount}+8"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "120",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "REGULAR",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": ">",
+                                            "value": "25",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "PLUS_CHAR",
+                                                "parameters": [
+                                                    "{regularDiscount}",
+                                                    12
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{regularDiscount}+12"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "240",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "LOYALTY1",
+                                                "LOYALTY2"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "0",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": "{loyaltyDiscount}",
+                                            "type": "function",
+                                            "stringValue": "{loyaltyDiscount}"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "240",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "LOYALTY1",
+                                                "LOYALTY2"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "betweenLeftOpen",
+                                            "value": [
+                                                "0",
+                                                "40"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "PLUS_CHAR",
+                                                "parameters": [
+                                                    "{loyaltyDiscount}",
+                                                    5
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{loyaltyDiscount}+5"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "240",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "LOYALTY1",
+                                                "LOYALTY2"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": ">",
+                                            "value": "40",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "PLUS_CHAR",
+                                                "parameters": [
+                                                    "{loyaltyDiscount}",
+                                                    10
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{loyaltyDiscount}+10"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "<=",
+                                            "value": "360",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "LOYALTY3",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": ">",
+                                            "value": "60",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": "{specialDiscount}",
+                                            "type": "function",
+                                            "stringValue": "{specialDiscount}"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'You get {discount}% discount!'",
+                                            "type": "function",
+                                            "stringValue": "'You get {discount}% discount!'"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                        "scalarCondition": {
+                                            "operator": "ELSE",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                        "scalarCondition": {
+                                            "operator": "ELSE",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                        "scalarCondition": {
+                                            "operator": "ELSE",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                        "outputScalarValue": {
+                                            "value": 0,
+                                            "type": "function",
+                                            "stringValue": "0"
+                                        },
+                                        "type": "calc"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": {
+                                                "functionName": "TIMES_CHAR",
+                                                "parameters": [
+                                                    "{basicPrice}",
+                                                    {
+                                                        "functionName": "MINUS_CHAR",
+                                                        "parameters": [
+                                                            1,
+                                                            {
+                                                                "functionName": "DIVIDED_CHAR",
+                                                                "parameters": [
+                                                                    "{discount}",
+                                                                    100
+                                                                ]
+                                                            }
+                                                        ],
+                                                        "isInBrackets": true
+                                                    }
+                                                ]
+                                            },
+                                            "type": "function",
+                                            "stringValue": "{basicPrice}*(1-{discount}/100)"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Thank you for your order!",
+                                            "type": "function",
+                                            "stringValue": "Thank you for your order!"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            }
+                        ]
+                    },
+                    "type": "decision-table",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "visualData": {
+                        "columns": [
+                            {
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "width": 425
+                            },
+                            {
+                                "columnId": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                "width": 300
+                            },
+                            {
+                                "columnId": "a7b1b521-47c3-f75c-e028-7ada2211ab68",
+                                "width": 292
+                            },
+                            {
+                                "columnId": "a662247c-cb2b-39a6-6185-8f89ef9e238f",
+                                "width": 242
+                            },
+                            {
+                                "columnId": "64fc82c6-6209-9180-16ce-b071f8389339",
+                                "width": 188
+                            },
+                            {
+                                "columnId": "8986951f-9194-1866-2b66-a2e254d49cbd",
+                                "width": 154
+                            }
+                        ]
+                    },
+                    "tags": [],
+                    "userVariables": [
+                        {
+                            "name": "regularDiscount",
+                            "value": 10,
+                            "saved": true
+                        },
+                        {
+                            "name": "loyaltyDiscount",
+                            "value": 20,
+                            "saved": true
+                        },
+                        {
+                            "name": "specialDiscount",
+                            "value": 40,
+                            "saved": true
+                        },
+                        {}
+                    ],
+                    "ruleId": "86729714-613e-6f60-1760-1180eaf897e4",
+                    "baseId": "86729714-613e-6f60-1760-1180eaf897e4",
+                    "version": 1,
+                    "ruleAlias": "loyalty-discount",
+                    "createdIn": "2024-10-23T14:55:14.796Z",
+                    "lastUpdate": "2024-10-23T14:55:14.796Z"
+                },
+                {
+                    "name": "Product Catalogue Sample",
+                    "description": "",
+                    "inputSchema": {
+                        "productId": {},
+                        "branch": {}
+                    },
+                    "outputSchema": {
+                        "product": {
+                            "name": {},
+                            "available": {},
+                            "basicPrice": {}
+                        }
+                    },
+                    "decisionTable": {
+                        "columns": [
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "name": "Product ID",
+                                    "definition": {
+                                        "content": "productId",
+                                        "type": "INPUT_VARIABLE",
+                                        "valid": false
+                                    }
+                                },
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "type": "input",
+                                "alias": "col-violet-elephant"
+                            },
+                            {
+                                "condition": {
+                                    "type": "simple",
+                                    "name": "Branch",
+                                    "definition": {
+                                        "content": "branch",
+                                        "type": "INPUT_VARIABLE",
+                                        "valid": false
+                                    }
+                                },
+                                "columnId": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                "type": "input",
+                                "alias": "col-violet-eagle",
+                                "validValues": [
+                                    {
+                                        "type": "GENERAL",
+                                        "value": "SHOP_A"
+                                    },
+                                    {
+                                        "type": "GENERAL",
+                                        "value": "SHOP_B"
+                                    }
+                                ]
+                            },
+                            {
+                                "columnOutput": {
+                                    "type": "simple",
+                                    "outputVariable": "product.name",
+                                    "name": "Product Name"
+                                },
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "type": "output",
+                                "alias": "col-maroon-elephant"
+                            },
+                            {
+                                "columnOutput": {
+                                    "type": "simple",
+                                    "name": "Available",
+                                    "outputVariable": "product.available"
+                                },
+                                "columnId": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                "type": "output",
+                                "alias": "col-maroon-rabbit"
+                            },
+                            {
+                                "columnId": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                "type": "output",
+                                "alias": "col-red-hawk",
+                                "columnOutput": {
+                                    "name": "Original Price",
+                                    "type": "simple",
+                                    "outputVariable": "product.basicPrice"
+                                }
+                            }
+                        ],
+                        "rows": [
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0011",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A",
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "type": "function",
+                                            "value": "Notebook Blue A4",
+                                            "stringValue": "Notebook Blue A4"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 4.2,
+                                            "type": "function",
+                                            "stringValue": "4.20"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0012",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A",
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Notebook Black A4",
+                                            "type": "function",
+                                            "stringValue": "Notebook Black A4"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 4.2,
+                                            "type": "function",
+                                            "stringValue": "4.20"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0021",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A",
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Notebook Blue A5",
+                                            "type": "function",
+                                            "stringValue": "Notebook Blue A5"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 3.9,
+                                            "type": "function",
+                                            "stringValue": "3.90"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0022",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A",
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Notebook Black A5",
+                                            "type": "function",
+                                            "stringValue": "Notebook Black A5"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 3.9,
+                                            "type": "function",
+                                            "stringValue": "3.90"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0009",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Notebook Special Edition",
+                                            "type": "function",
+                                            "stringValue": "Notebook Special Edition"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 6,
+                                            "type": "function",
+                                            "stringValue": "6.00"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0009",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Notebook Special Edition",
+                                            "type": "function",
+                                            "stringValue": "Notebook Special Edition"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": false,
+                                            "type": "function",
+                                            "stringValue": "false"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 6,
+                                            "type": "function",
+                                            "stringValue": "6.00"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0031",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A",
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Calendar A4",
+                                            "type": "function",
+                                            "stringValue": "Calendar A4"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 5.1,
+                                            "type": "function",
+                                            "stringValue": "5.10"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "=",
+                                            "value": "P_0032",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "IN",
+                                            "value": [
+                                                "SHOP_A",
+                                                "SHOP_B"
+                                            ],
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "Calendar A5",
+                                            "type": "function",
+                                            "stringValue": "Calendar A5"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": true,
+                                            "type": "function",
+                                            "stringValue": "true"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": 4.4,
+                                            "type": "function",
+                                            "stringValue": "4.40"
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            },
+                            {
+                                "cells": [
+                                    {
+                                        "column": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                        "scalarCondition": {
+                                            "operator": "ELSE",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                        "scalarCondition": {
+                                            "operator": "ELSE",
+                                            "value": "",
+                                            "type": "general"
+                                        },
+                                        "type": "input"
+                                    },
+                                    {
+                                        "column": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                        "outputScalarValue": {
+                                            "value": "'N/A'",
+                                            "type": "function",
+                                            "stringValue": "'N/A'"
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                        "outputScalarValue": {
+                                            "value": "",
+                                            "type": "function",
+                                            "stringValue": ""
+                                        },
+                                        "type": "output"
+                                    },
+                                    {
+                                        "column": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                        "outputScalarValue": {
+                                            "value": "",
+                                            "type": "function",
+                                            "stringValue": ""
+                                        },
+                                        "type": "output"
+                                    }
+                                ],
+                                "active": true
+                            }
+                        ]
+                    },
+                    "type": "decision-table",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "visualData": {
+                        "columns": [
+                            {
+                                "columnId": "2e46eb73-de05-51bc-5913-4b261bbe2069",
+                                "width": 223
+                            },
+                            {
+                                "columnId": "ec57bb7c-8e90-4aee-da49-17b607a6b09a",
+                                "width": 171
+                            },
+                            {
+                                "columnId": "b2d008d8-7fc8-e769-dd43-986256c9bdac",
+                                "width": 237
+                            },
+                            {
+                                "columnId": "3f582624-e179-754e-87cc-fe13d4de227d",
+                                "width": 220
+                            },
+                            {
+                                "columnId": "383f75ed-db81-6a65-3bd5-ce5479538acd",
+                                "width": 132
+                            }
+                        ]
+                    },
+                    "tags": [],
+                    "ruleId": "7d4e0a4f-e8cf-2aa2-0d7c-00e380ca1ea3",
+                    "baseId": "7d4e0a4f-e8cf-2aa2-0d7c-00e380ca1ea3",
+                    "version": 1,
+                    "ruleAlias": "product-catalogue",
+                    "createdIn": "2024-10-23T14:55:14.805Z",
+                    "lastUpdate": "2024-10-30T09:44:55.496Z"
+                },
+                {
+                    "name": "Order evaluation - Workflow tutorial",
+                    "description": "This is the tutorial workflow. Evaluates final order based on items and user loyalty class and credit.",
+                    "inputSchema": {
+                        "order": {
+                            "items": {},
+                            "branch": {},
+                            "customer": {
+                                "id": {},
+                                "loyaltyClass": {},
+                                "credit": {}
+                            }
+                        }
+                    },
+                    "outputSchema": {
+                        "finished_order": {
+                            "id": {},
+                            "missingItems": {},
+                            "initialTotal": {},
+                            "totalPayable": {},
+                            "message": {},
+                            "customer": {
+                                "id": {}
+                            }
+                        }
+                    },
+                    "workflowData": {
+                        "nodes": [
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "fbd5a179-588e-4e75-b1e3-73ef458a84a2",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "c2c8e47c",
+                                "version": 1,
+                                "type": "START",
+                                "position": {
+                                    "x": 338.78625682805364,
+                                    "y": 299.90762540713814
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "type": "VARIABLES",
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "870b95b4-927b-4c6f-9846-7af74ff69186",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "23a6846d-3c66-4b97-9c03-82293eea8e4b",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "f4e6bdca",
+                                "version": 1,
+                                "position": {
+                                    "x": 506.81095965936214,
+                                    "y": 264.90762540713814
+                                },
+                                "name": "declare",
+                                "data": {
+                                    "variables": [
+                                        {
+                                            "name": "initialTotal",
+                                            "expression": {
+                                                "type": 1,
+                                                "outputScalarValue": {
+                                                    "type": "function",
+                                                    "value": 0,
+                                                    "stringValue": "0"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "guiSettings": {
+                                        "showAll": false
+                                    }
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "fec59d61-3319-4937-9b29-6fd870d499d2",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "outgoing-loop",
+                                        "id": "d00e19f3-fd8d-44c0-ac92-9a2670e8f2fe",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-end",
+                                        "id": "c6959f43-0f77-4254-8f4f-3ba9a82bed26",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "ef647ebd",
+                                "version": 1,
+                                "type": "FOREACH",
+                                "position": {
+                                    "x": 739,
+                                    "y": 265
+                                },
+                                "name": "foreach",
+                                "data": {
+                                    "listPath": "input.order.items"
+                                }
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-end",
+                                        "id": "ce2f5570-ac92-411d-afcc-a0b63dea9bc7",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "2979e1a2-7c2b-43e9-a7f0-3ad72b139b5f",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "outgoing-loop",
+                                        "id": "1b889c57-7064-4223-8da4-651df12cfaf2",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "2b24774e",
+                                "version": 1,
+                                "type": "BUSINESS_RULE",
+                                "position": {
+                                    "x": 947.4211765216872,
+                                    "y": 510.9792853065566
+                                },
+                                "name": "rule",
+                                "data": {
+                                    "rule": {
+                                        "ruleAlias": "product-catalogue",
+                                        "version": 1,
+                                        "type": "decision-table",
+                                        "baseId": "7d4e0a4f-e8cf-2aa2-0d7c-00e380ca1ea3"
+                                    },
+                                    "strategy": "STANDARD",
+                                    "mapping": [
+                                        {
+                                            "target": {
+                                                "path": "productId"
+                                            },
+                                            "source": {
+                                                "path": "foreach.currentItem",
+                                                "disabled": false
+                                            }
+                                        },
+                                        {
+                                            "target": {
+                                                "path": "branch"
+                                            },
+                                            "source": {
+                                                "path": "input.order.branch",
+                                                "disabled": false
+                                            }
+                                        }
+                                    ],
+                                    "evaluationType": "STATIC"
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "be2d86bf-a178-4e95-92e7-75c2e6b71ec3",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "808421ef-4f87-4a48-9b95-3c5c0511608e",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "5aafce01",
+                                "version": 1,
+                                "type": "DATA_MANIPULATION",
+                                "position": {
+                                    "x": 1276.1814824106514,
+                                    "y": 646.7196789070033
+                                },
+                                "name": "assign",
+                                "data": {
+                                    "mapping": [
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": {
+                                                            "functionName": "PLUS_CHAR",
+                                                            "parameters": [
+                                                                "{declare.initialTotal}",
+                                                                "{rule.currentItem.product.basicPrice}"
+                                                            ]
+                                                        },
+                                                        "stringValue": "{declare.initialTotal}+{rule.currentItem.product.basicPrice}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "declare.initialTotal"
+                                            }
+                                        }
+                                    ],
+                                    "guiSettings": {
+                                        "showAll": false
+                                    }
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "f86bc18a-9353-4b39-8fc3-f06a514fa68f",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-inner",
+                                        "id": "3f1ad8f9-a66b-4ec7-ab5b-c7ba01dd40dc"
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-inner",
+                                        "id": "bf29b719-70d3-4d5c-a296-f24aa313513e"
+                                    }
+                                ],
+                                "id": "9078d6c2",
+                                "version": 1,
+                                "type": "IF_STATEMENT",
+                                "position": {
+                                    "x": 1272.3533700119158,
+                                    "y": 401.0917369101059
+                                },
+                                "data": {
+                                    "cases": [
+                                        {
+                                            "name": "Item is not available",
+                                            "conditions": [
+                                                {
+                                                    "decisionNode": {
+                                                        "scalarCondition": {
+                                                            "type": "general",
+                                                            "operator": "=",
+                                                            "value": "false"
+                                                        },
+                                                        "type": 0
+                                                    },
+                                                    "variable": "rule.currentItem.product.available"
+                                                }
+                                            ],
+                                            "type": "CASE",
+                                            "connectorId": "3f1ad8f9-a66b-4ec7-ab5b-c7ba01dd40dc"
+                                        },
+                                        {
+                                            "name": "Default",
+                                            "type": "DEFAULT",
+                                            "connectorId": "bf29b719-70d3-4d5c-a296-f24aa313513e"
+                                        }
+                                    ],
+                                    "evaluationStrategy": "ALL_WINNING"
+                                },
+                                "name": "switch",
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "772e5d19-ca73-4dc7-9d93-58e18c5ff5f4",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "a6b923bb-9818-49d7-8515-628ddc15d093",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "86bef6c",
+                                "version": 1,
+                                "type": "ARRAY_APPEND",
+                                "position": {
+                                    "x": 1710.0902568034971,
+                                    "y": 480.6910263766703
+                                },
+                                "name": "arrayAppend",
+                                "zIndex": 20,
+                                "data": {
+                                    "values": [
+                                        {
+                                            "path": "foreach.currentItem"
+                                        }
+                                    ],
+                                    "target": {
+                                        "path": "items_unavailable"
+                                    }
+                                }
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-end",
+                                        "id": "57c73730-cdf5-49c1-ad6c-79b36252d775",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "e7a9f4a9-0231-42f2-b65a-859029e06f43",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "outgoing-loop",
+                                        "id": "8a7caabd-9496-4031-bd80-2efd21aead10",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "919f2897",
+                                "version": 1,
+                                "type": "BUSINESS_RULE",
+                                "position": {
+                                    "x": 1072.916003113451,
+                                    "y": 96.70155342152187
+                                },
+                                "name": "rule_1",
+                                "data": {
+                                    "rule": {
+                                        "ruleAlias": "loyalty-discount",
+                                        "version": 1,
+                                        "type": "decision-table",
+                                        "baseId": "86729714-613e-6f60-1760-1180eaf897e4"
+                                    },
+                                    "strategy": "STANDARD",
+                                    "mapping": [
+                                        {
+                                            "target": {
+                                                "path": "basicPrice"
+                                            },
+                                            "source": {
+                                                "path": "declare.initialTotal",
+                                                "disabled": false
+                                            }
+                                        },
+                                        {
+                                            "target": {
+                                                "path": "customer.loyaltyClass"
+                                            },
+                                            "source": {
+                                                "path": "input.order.customer.loyaltyClass",
+                                                "disabled": false
+                                            }
+                                        },
+                                        {
+                                            "target": {
+                                                "path": "customer.credit"
+                                            },
+                                            "source": {
+                                                "path": "input.order.customer.credit",
+                                                "disabled": false
+                                            }
+                                        },
+                                        {
+                                            "target": {
+                                                "path": "customer"
+                                            },
+                                            "source": {}
+                                        }
+                                    ],
+                                    "evaluationType": "STATIC"
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "2c4d1807-90da-499c-8058-b4e55679fae3",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "833680b4-df59-4dc8-808b-26da4ad649b5",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "4c253999",
+                                "version": 1,
+                                "type": "DATA_MANIPULATION",
+                                "position": {
+                                    "x": 1392.9097657757256,
+                                    "y": 73.20522519421083
+                                },
+                                "name": "assign_1",
+                                "data": {
+                                    "mapping": [
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "{declare.initialTotal}",
+                                                        "stringValue": "{declare.initialTotal}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.initialTotal"
+                                            }
+                                        },
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "{rule_1.currentItem.finalPrice}",
+                                                        "stringValue": "{rule_1.currentItem.finalPrice}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.totalPayable"
+                                            }
+                                        },
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "{items_unavailable}",
+                                                        "stringValue": "{items_unavailable}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.missingItems"
+                                            }
+                                        },
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "{input.order.customer}",
+                                                        "stringValue": "{input.order.customer}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.customer"
+                                            }
+                                        }
+                                    ],
+                                    "guiSettings": {
+                                        "showAll": false
+                                    }
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "7cecd7ca-b838-4e49-a4dc-9e695743fef4",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-inner",
+                                        "id": "89475803-59c9-4486-900e-e26dcfc7f743"
+                                    },
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "out-inner",
+                                        "id": "cbcab8d4-b5f9-427d-b19f-367c5549f71b"
+                                    }
+                                ],
+                                "id": "5702d763",
+                                "version": 1,
+                                "type": "IF_STATEMENT",
+                                "position": {
+                                    "x": 2024.0689726485075,
+                                    "y": 83.32881556628642
+                                },
+                                "data": {
+                                    "cases": [
+                                        {
+                                            "name": "All items are available",
+                                            "conditions": [
+                                                {
+                                                    "decisionNode": {
+                                                        "scalarCondition": {
+                                                            "operator": "isNull",
+                                                            "value": "",
+                                                            "type": "general"
+                                                        },
+                                                        "type": 0
+                                                    },
+                                                    "variable": "arrayAppend"
+                                                }
+                                            ],
+                                            "type": "CASE",
+                                            "connectorId": "89475803-59c9-4486-900e-e26dcfc7f743"
+                                        },
+                                        {
+                                            "name": "Default",
+                                            "type": "DEFAULT",
+                                            "connectorId": "cbcab8d4-b5f9-427d-b19f-367c5549f71b"
+                                        }
+                                    ],
+                                    "evaluationStrategy": "ALL_WINNING"
+                                },
+                                "name": "switch_1",
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "97c51503-cc09-4d44-8aa2-5e934ea2148b",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "206a9a35-fb77-45c3-a8a8-7073c10a53e5",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "8c1e2723",
+                                "version": 1,
+                                "type": "DATA_MANIPULATION",
+                                "position": {
+                                    "x": 2488.3708541113497,
+                                    "y": 8.551548568430967
+                                },
+                                "name": "assign_2",
+                                "data": {
+                                    "mapping": [
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "Thank you for your order! Your order will be shipped next business day.",
+                                                        "stringValue": "\"Thank you for your order! Your order will be shipped next business day.\""
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.message"
+                                            }
+                                        }
+                                    ],
+                                    "guiSettings": {
+                                        "showAll": false
+                                    }
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "out",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "5528b6e3-9355-478b-971a-ea06d17d142b",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    },
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "ac3dbde3-0eec-433c-b1fc-6d2f03dfc8cc",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "819135c5",
+                                "version": 1,
+                                "type": "DATA_MANIPULATION",
+                                "position": {
+                                    "x": 2487.726174560433,
+                                    "y": 169.2204896303674
+                                },
+                                "name": "assign_3",
+                                "data": {
+                                    "mapping": [
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": {
+                                                            "functionName": "CONCAT",
+                                                            "parameters": [
+                                                                "\"Thank you for your order! Unfortunately, the following item(s) are currently out of stock: \"",
+                                                                "{items_unavailable}",
+                                                                ". We appreciate your understanding and the order will be shipped as soon as the items become available."
+                                                            ]
+                                                        },
+                                                        "stringValue": "CONCAT(\"Thank you for your order! Unfortunately, the following item(s) are currently out of stock: \",{items_unavailable},\". We appreciate your understanding and the order will be shipped as soon as the items become available.\")"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.message"
+                                            }
+                                        },
+                                        {
+                                            "source": {
+                                                "expression": {
+                                                    "type": 1,
+                                                    "outputScalarValue": {
+                                                        "type": "function",
+                                                        "value": "{arrayAppend}",
+                                                        "stringValue": "{arrayAppend}"
+                                                    }
+                                                }
+                                            },
+                                            "target": {
+                                                "path": "output.finished_order.missingItems"
+                                            }
+                                        }
+                                    ],
+                                    "guiSettings": {
+                                        "showAll": false
+                                    }
+                                },
+                                "zIndex": 20
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "ef456a11-cfba-4709-9fb3-3474853b08f0",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "11d0216d",
+                                "version": 1,
+                                "type": "END",
+                                "position": {
+                                    "x": 3142.281414933498,
+                                    "y": 9.162191931872382
+                                },
+                                "name": "end"
+                            },
+                            {
+                                "connectors": [
+                                    {
+                                        "type": "in",
+                                        "maxConnections": -1,
+                                        "subType": "none",
+                                        "id": "b9b94b75-df4c-495c-b725-9f65de25b804",
+                                        "maxCount": 1,
+                                        "minCount": 1
+                                    }
+                                ],
+                                "id": "384167d4",
+                                "version": 1,
+                                "type": "END",
+                                "position": {
+                                    "x": 3152.863578718471,
+                                    "y": 185.98614430804025
+                                },
+                                "name": "end_1"
+                            }
+                        ],
+                        "connections": [
+                            {
+                                "source": "fbd5a179-588e-4e75-b1e3-73ef458a84a2",
+                                "target": "23a6846d-3c66-4b97-9c03-82293eea8e4b",
+                                "type": 0,
+                                "id": "4052815f-0a57-400d-9dcc-dd56d1066a13"
+                            },
+                            {
+                                "source": "870b95b4-927b-4c6f-9846-7af74ff69186",
+                                "target": "fec59d61-3319-4937-9b29-6fd870d499d2",
+                                "type": 0,
+                                "id": "73b4c68a-bc91-485f-a746-a867248c5bc2"
+                            },
+                            {
+                                "source": "d00e19f3-fd8d-44c0-ac92-9a2670e8f2fe",
+                                "target": "2979e1a2-7c2b-43e9-a7f0-3ad72b139b5f",
+                                "type": 0,
+                                "id": "5ad2a6c4-a496-46dd-90e6-9d25aaa0ab8b"
+                            },
+                            {
+                                "source": "ce2f5570-ac92-411d-afcc-a0b63dea9bc7",
+                                "target": "808421ef-4f87-4a48-9b95-3c5c0511608e",
+                                "type": 0,
+                                "id": "09c2779f-473b-4317-a61f-baad076bd48e"
+                            },
+                            {
+                                "source": "ce2f5570-ac92-411d-afcc-a0b63dea9bc7",
+                                "target": "f86bc18a-9353-4b39-8fc3-f06a514fa68f",
+                                "type": 0,
+                                "id": "077809ba-a303-4802-ae6e-151ff90eeff2"
+                            },
+                            {
+                                "source": "3f1ad8f9-a66b-4ec7-ab5b-c7ba01dd40dc",
+                                "target": "a6b923bb-9818-49d7-8515-628ddc15d093",
+                                "type": 0,
+                                "id": "4430512c-4ebf-4b21-92c5-1c367056ce95"
+                            },
+                            {
+                                "source": "c6959f43-0f77-4254-8f4f-3ba9a82bed26",
+                                "target": "e7a9f4a9-0231-42f2-b65a-859029e06f43",
+                                "type": 0,
+                                "id": "3d937370-d53d-424c-8b81-2bbaccd724dd"
+                            },
+                            {
+                                "source": "57c73730-cdf5-49c1-ad6c-79b36252d775",
+                                "target": "833680b4-df59-4dc8-808b-26da4ad649b5",
+                                "type": 0,
+                                "id": "4141ddf6-0ffb-4e67-9ebb-b7ce8c0ecc5f"
+                            },
+                            {
+                                "source": "2c4d1807-90da-499c-8058-b4e55679fae3",
+                                "target": "7cecd7ca-b838-4e49-a4dc-9e695743fef4",
+                                "type": 0,
+                                "id": "d2a48dcc-01e3-4516-a31b-a2234a342be6"
+                            },
+                            {
+                                "source": "89475803-59c9-4486-900e-e26dcfc7f743",
+                                "target": "206a9a35-fb77-45c3-a8a8-7073c10a53e5",
+                                "type": 0,
+                                "id": "d760553b-addf-490a-a3cb-0229d7c565a0"
+                            },
+                            {
+                                "source": "cbcab8d4-b5f9-427d-b19f-367c5549f71b",
+                                "target": "ac3dbde3-0eec-433c-b1fc-6d2f03dfc8cc",
+                                "type": 0,
+                                "id": "dfcce4fb-af6a-4e85-bc95-998990ff710e"
+                            },
+                            {
+                                "source": "5528b6e3-9355-478b-971a-ea06d17d142b",
+                                "target": "b9b94b75-df4c-495c-b725-9f65de25b804",
+                                "type": 0,
+                                "id": "e114a396-5f65-4f79-bda6-f2a3981f7c7c"
+                            },
+                            {
+                                "source": "97c51503-cc09-4d44-8aa2-5e934ea2148b",
+                                "target": "ef456a11-cfba-4709-9fb3-3474853b08f0",
+                                "type": 0,
+                                "id": "2607bacf-d982-4e6a-9184-ffef0be11978"
+                            }
+                        ]
+                    },
+                    "type": "workflow",
+                    "status": "published",
+                    "auditLog": {
+                        "active": false,
+                        "debug": {
+                            "active": false
+                        },
+                        "ttl": 14
+                    },
+                    "ruleId": "6a04ef91-84d8-e9fa-1de2-70592620b36a",
+                    "baseId": "6a04ef91-84d8-e9fa-1de2-70592620b36a",
+                    "version": 1,
+                    "ruleAlias": "order-workflow-tutorial",
+                    "createdIn": "2024-10-30T12:31:34.546Z",
+                    "lastUpdate": "2024-10-31T14:10:38.536Z",
+                    "tags": [],
+                    "visualData": {
+                        "scale": 0.5772408297187938,
+                        "rotate": 0,
+                        "translate": {
+                            "x": -183.5306069077057,
+                            "y": 127.90070555824664
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

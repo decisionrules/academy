@@ -122,7 +122,7 @@ Do not forget to click the <mark style="background-color:orange;">save</mark> bu
 Currently, we have a single row in the Decision Table.
 
 {% hint style="info" %}
-Each row of the table corresponds to one set of conditions and results. When the [Rule Solver](broken-reference) is called, it goes through the individual rows and evaluates their condition values against the corresponding request input data. If some values of the conditions in a row match, [Rule Solver](broken-reference) takes the values of the individual results on that row and places them in the output.
+Each row of the table corresponds to one set of conditions and results. When the Rule Solver is called, it goes through the individual rows and evaluates their condition values against the corresponding request input data. If some values of the conditions in a row match, Rule Solver takes the values of the individual results on that row and places them in the output.
 {% endhint %}
 
 Let's set the conditions in the first row.
