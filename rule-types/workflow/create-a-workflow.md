@@ -91,6 +91,12 @@ Note that Data Dictionary tab and input whisperer store all already declared var
 
 Once the node is saved connect the node to **Declare** node. Now comes the part when we create a set of actions that will be performed for each item in the order. As mentioned we need to evaluate the Product Catalogue decision table to know and add the item price to total. In addition if the item is not available add it to the list of unavailable items.
 
+{% hint style="info" %}
+Those mentioned actions, represented by individual nodes, must be connected to the "Loop" connector of the **Foreach node**. So all nodes that you connect in this way will be evaluated in each iteration of the **Foreach** node.
+
+At the end of this part you will find picture to better understand the structure.
+{% endhint %}
+
 First place the **Business Rule** node on the canvas and open it. In the Business rule field select _Product Catalogue Sample_ table, its input model shows. Now to the mapping to the business rule: for the _productId_ we will use the item that will be provided be **Foreach** node as only price for one item will be evaluated at a time, _branch_ - we want the property be passed right from the main workflow input.
 
 <figure><img src="../../.gitbook/assets/wf-tut-br-price.png" alt=""><figcaption><p>Business Rule node - item price evaluation</p></figcaption></figure>
@@ -109,7 +115,7 @@ See that `items_unavailable` array can be created in the **Append** node
 
 <figure><img src="../../.gitbook/assets/wf-tut-item-append.png" alt=""><figcaption><p>Append out of stock productId</p></figcaption></figure>
 
-We’ve now completed the first phase by calculating the initial order price (see the reference image below). With this foundation set, we’ll move forward to evaluate whether the customer qualifies for a discount. This next step will involve applying the Loyalty Discount rule, factoring in customer-specific details such as loyalty class and credit, to determine the final payable amount.
+We’ve now completed the first phase by calculating the initial order price (see the reference image below). With this foundation set, we’ll move forward to evaluate whether the customer qualifies for a discount. This next step will involve applying the Loyalty Discount rule, factoring in customer-specific details such as loyalty class and credit, to determine the final payable amount. The next node will be added after the **Foreach** node, it will be connected to its "After Loop" connector, so we will continue in our process.
 
 <figure><img src="../../.gitbook/assets/wf-tut-initprice-calculation.png" alt=""><figcaption><p>Process of initial price calculation</p></figcaption></figure>
 
@@ -135,13 +141,17 @@ Both options work interchangeably, but note that they are mutually exclusive, as
 
 Now that we have gathered all the necessary values, we can create the final order, which will include the total payable price, any missing items, and a personalized message. To map these values for display in the workflow output, we'll utilize an **Assign** node. In the modal we will map all the information to output properties.
 
-To generate a simple order ID, we can utilize the **CONCAT** function, which combines today's date with the user's ID. This method ensures that each order ID is unique and easily traceable back to the specific user and the date of the order.
+To generate a simple order ID, we can utilize the [**CONCAT** function](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/operators/functions/text#concatenation-concat), which combines today's date with the user's ID. This method ensures that each order ID is unique and easily traceable back to the specific user and the date of the order.
 
 <figure><img src="../../.gitbook/assets/wf-tut-final-order-assign.png" alt=""><figcaption><p>Assigning values to Workflow Output</p></figcaption></figure>
 
-To personalize the message shown to the customer, we will use a **Switch** node that checks for any items in the array created by the **Append** node. If any items are out of stock, their identifiers will be stored in this array. We will then use the contents of the array to craft a message for the customer, informing them about the unavailable items using **Assign** node. This ensures that the communication is tailored to each customer's order.
+To personalize the message shown to the customer, we will use a **Switch** node that checks for any items in the array created by the **Append** node.
 
-If all the items are available we will use message:&#x20;
+<figure><img src="../../.gitbook/assets/wf-tut-switch-items.png" alt="" width="533"><figcaption><p>Checking for any missing items</p></figcaption></figure>
+
+If any items are out of stock, their identifiers will be stored in this array. The **Switch** node will direct the flow of the process based on the content of the array.  We will then use the contents of the array to craft a message for the customer, informing them about the unavailable items using **Assign** node to create tailored messages.
+
+If all the items are available we can use message:&#x20;
 
 ```
 "Thank you for your order! Your order will be shipped next business day." 
@@ -159,7 +169,9 @@ CONCAT("Thank you for your order! Unfortunately, the following item(s) are curre
 More about functions, their types and syntax can be found in [dedicated section of our documentation](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/decision-tables/operators/functions).
 {% endhint %}
 
-To get a complete view of how data appears at the end of the workflow, add **End** nodes right after the **Assign** nodes. When you run the workflow, you’ll see the final data in each branch’s **Inspect** tab, showing the actual results once the rule has fully executed. This provides a clear, final snapshot of all processed data.
+<figure><img src="../../.gitbook/assets/wf-tut-switch-directions.png" alt=""><figcaption><p>Detail of Switch node directing the process</p></figcaption></figure>
+
+To get a complete view of how data appears at the end of the workflow, add **End** nodes right after the **Assign** nodes. When you run the workflow, you’ll see the final data in each End’s **Inspect** tab, showing the actual results once the rule has fully executed. This provides a clear, final snapshot of all processed data.
 
 <figure><img src="../../.gitbook/assets/wf-tut-end-nodes.png" alt=""><figcaption><p>Adding End nod for branches</p></figcaption></figure>
 
@@ -251,4 +263,10 @@ To wrap up, let’s go over a few best practices to enhance your workflow’s ef
 
 See the workflow below that you can easily import into your environment. This completed workflow demonstrates all the processes we’ve covered, providing a clear example of how to configure and connect everything for effective order processing.
 
+{% hint style="info" %}
+Clicking the file below opens the file content in current tab. Once opened, right click and choose  "Save as" option to save the content as json file. Then you can use such file for folder import.
+{% endhint %}
+
 {% file src="../../.gitbook/assets/Workflow_tutorial.json" %}
+Workflow tutorial folder json file
+{% endfile %}
