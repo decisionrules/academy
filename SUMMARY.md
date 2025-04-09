@@ -1,5 +1,7 @@
 # Table of contents
 
+* [DecisionRules Documentation](https://docs.decisionrules.io/)
+
 ## 🏁 GETTING STARTED
 
 * [DecisionRules Academy Introduction](README.md)
