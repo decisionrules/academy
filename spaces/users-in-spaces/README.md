@@ -2,17 +2,6 @@
 description: >-
   Get to know more about how you can limit control access and permissions for
   all users of DecisionRules
-layout:
-  title:
-    visible: true
-  description:
-    visible: true
-  tableOfContents:
-    visible: true
-  outline:
-    visible: true
-  pagination:
-    visible: true
 ---
 
 # Users in Spaces

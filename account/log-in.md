@@ -26,7 +26,7 @@ If your organization has the single sign-on (SSO) option enabled, you can use yo
 
 <figure><img src="../.gitbook/assets/loginsso.png" alt=""><figcaption><p><mark style="color:purple;">SSO login page</mark></p></figcaption></figure>
 
-Type in your organization name and click “Login via SSO”. You will be directed to the provider's login page to log in. After successful login you will be redirected to the Dashboard in <mark style="color:purple;">DecisionRules</mark>. For detailed information about organization SSO please see our documentation [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/other/single-sign-on-sso).
+Type in your organization name and click “Login via SSO”. You will be directed to the provider's login page to log in. After successful login you will be redirected to the Dashboard in <mark style="color:purple;">DecisionRules</mark>. For detailed information about organization SSO please see our documentation [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/access/single-sign-on-sso).
 
 <figure><img src="../.gitbook/assets/loginSSO.gif" alt=""><figcaption><p><mark style="color:purple;">Log in with SSO</mark></p></figcaption></figure>
 

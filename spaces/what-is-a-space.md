@@ -37,7 +37,7 @@ The rules you create belong in your Space. You can find your rules list in the l
 In addition to the Business Rules section, you can also find your rules in the Folder Structure, which is very similar to the file structure on your computer.
 
 {% hint style="info" %}
-_More about Sharing rules between Spaces can be found_ [_<mark style="color:purple;">here</mark>_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/teamwork/share-between-spaces)_._
+_More about Sharing rules between Spaces can be found_ [_<mark style="color:purple;">here</mark>_](broken-reference)_._
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/businessrules.png" alt=""><figcaption><p><mark style="color:purple;">Business Rules</mark></p></figcaption></figure>

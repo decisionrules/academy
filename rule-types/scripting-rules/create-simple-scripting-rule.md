@@ -199,7 +199,7 @@ The debug mode can be turned on by clicking on [ <mark style="background-color:p
 ```
 
 {% hint style="info" %}
-More information about Test Bench is [<mark style="color:purple;">here</mark>](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/other/test-bench).
+More information about Test Bench is [<mark style="color:purple;">here</mark>](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/test-bench).
 {% endhint %}
 
 [^1]: 

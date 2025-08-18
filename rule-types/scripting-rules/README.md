@@ -6,7 +6,7 @@ Scripting Rule is another type of rule that you can use in <mark style="color:pu
 
 Just like the other rules, it has a unified Rule Settings form that is the same across all rule types.
 
-So when you are creating a rule, the procedure is exactly the same, first, you create an input and output structure in Rule Settings. You can also create your own [Rule Variables](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/other/rule-variables).
+So when you are creating a rule, the procedure is exactly the same, first, you create an input and output structure in Rule Settings. You can also create your own [Rule Variables](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/rule-variables).
 
 Next, you move to the Scripting Rule Designer and create the rule and all the logic using JavaScript.&#x20;
 
@@ -28,7 +28,7 @@ One of the most popular use cases is when a developer creates a generic script t
 
 #### Rule Orchestration
 
-Although Rule Flow was primarily intended for rule orchestration, with using Scripting Rule for rule orchestration, it is possible to enrich such orchestration with custom and more advanced features. An example of orchestration using Scripting Rule is the use of the [DR.solve function](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/scripting-rules/call-embedded-rules-in-sr), which calls the required rules from code and can further manipulate the data that such rules return as output.
+Although Rule Flow was primarily intended for rule orchestration, with using Scripting Rule for rule orchestration, it is possible to enrich such orchestration with custom and more advanced features. An example of orchestration using Scripting Rule is the use of the [DR.solve function](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/scripting-rule/call-embedded-rules-in-sr), which calls the required rules from code and can further manipulate the data that such rules return as output.
 
 ### GitHub
 
@@ -42,6 +42,6 @@ _Whenever you make a change to a rule, save it with the Save button._
 
 Thanks to Scripting Rules, DecisionRules can have the Best of Both Worlds.
 
-The sheer flexibility offered by the code and the user-friendly interface of Decision Table or Decision Tree that can easily be used by a non-technical person. The key is to use the [solve function](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/scripting-rules/call-embedded-rules-in-sr). Where Scripting Rule takes care of advanced data manipulation and uses the solve function to parameterize the Decision Table or Scripting Rule.&#x20;
+The sheer flexibility offered by the code and the user-friendly interface of Decision Table or Decision Tree that can easily be used by a non-technical person. The key is to use the [solve function](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/scripting-rule/call-embedded-rules-in-sr). Where Scripting Rule takes care of advanced data manipulation and uses the solve function to parameterize the Decision Table or Scripting Rule.&#x20;
 
 Scripting Rule allows you to create custom functions, make advanced data manipulation, aggregations, iterations. You can also very easily copy functions and code that you have already created in JavaScript.

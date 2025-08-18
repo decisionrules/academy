@@ -215,7 +215,7 @@ Upon hitting Run, we will get the following response.
 ```
 
 {% hint style="info" %}
-More information about Test Bench can be found [<mark style="color:purple;">here</mark>](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/other/test-bench).
+More information about Test Bench can be found [<mark style="color:purple;">here</mark>](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/test-bench).
 {% endhint %}
 
 If you have arrived here, you have successfully completed the tutorial. Congratulations!
