@@ -16,11 +16,11 @@ To log in to our application using your registered email address and password, s
 
 <figure><img src="../.gitbook/assets/Login Academy Dec 2025.gif" alt=""><figcaption><p><mark style="color:purple;">Log in with credentials</mark></p></figcaption></figure>
 
-## Google or Microsoft Sign-in
+## Google or Microsoft Sign in
 
 With one click, you can log in to <mark style="color:purple;">DecisionRules</mark> with Google and Microsoft SSO. Simply click the button "SIGN IN WITH Google" or "SIGN IN WITH Microsoft". You will be redirected to Google or Microsoft login. After successfully logging in to your Google or Microsoft account, you will be redirected to your account in <mark style="color:purple;">DecisionRules</mark>.
 
-## Organization Single Sign-On
+## Organization Single Sign On
 
 If your organization has the single sign-on (SSO) option enabled, you can use your corporate email for login. On the login page click the “SIGN IN WITH SSO” button and the SSO login page will show.
 

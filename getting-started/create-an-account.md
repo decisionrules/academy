@@ -20,9 +20,9 @@ Then click on the <mark style="background-color:purple;">**REGISTER**</mark> but
 
 Are you tired of inventing new logins? With one click, you can create an account on <mark style="color:purple;">DecisionRules</mark> with Google and Microsoft SSO. Go to the [<mark style="color:purple;">DecisionRules</mark>](https://www.decisionrules.io/) page. Click on the <mark style="background-color:purple;">**LOGIN**</mark> button at the top of the page. A login page will appear. Simply click the button <mark style="background-color:red;">SIGN IN WITH Google</mark> or <mark style="background-color:green;">SIGN IN WITH Microsoft</mark> to start the sign up.&#x20;
 
-You will be redirected to Google or Microsoft login. After successfully logging in to your Google or Microsoft account, you'll be asked to grant permissions for application to access certain information. Review the permissions, and if you agree, click "Allow" or "Grant."
+You will be redirected to Google or Microsoft login. After successfully logging in to your Google or Microsoft account, you'll be asked to grant permissions for application to access certain information. Review the permissions, and if you agree, click Allow or Grant.
 
-## Organization Single Sign-On
+## Organization Single Sign On
 
 If your organization has the single sign-on (SSO) option enabled, you can use your corporate email for sign up. Go to the [<mark style="color:purple;">DecisionRules</mark>](https://www.decisionrules.io/) page. Click on the <mark style="background-color:purple;">**LOGIN**</mark> at the top of the page. A login page will appear where you click on the “SIGN IN WITH SSO” button and the Single Sign On page will show. Enter your organization's name and click “LOGIN VIA SSO” button.&#x20;
 
@@ -38,8 +38,8 @@ For detailed information about organization SSO please see our documentation [he
 
 You received an invitation in your email inbox. In it you will find all the details about the invitation.
 
-<figure><img src="../.gitbook/assets/inboxinvite (1).png" alt=""><figcaption><p><mark style="color:purple;">Space Invitation in Your Inbox</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/noreply.png" alt=""><figcaption><p><mark style="color:purple;">Space Invitation in Your Inbox</mark></p></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/invitation.png" alt=""><figcaption><p><mark style="color:purple;">Invitation Email</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/InvitationSpace.png" alt=""><figcaption><p><mark style="color:purple;">Invitation Email</mark></p></figcaption></figure>
 
-Click on the <mark style="background-color:purple;">**Join Space**</mark> button. You will be redirected to create an account. Click "Create account" option. Fill in all the required fields and click  <mark style="background-color:purple;">**REGISTER**</mark>  button.
+Click on the <mark style="background-color:purple;">**Join {name} Space**</mark> button. You will be redirected to create an account. Click "Create account" option. Fill in all the required fields and click  <mark style="background-color:purple;">**REGISTER**</mark>  button.

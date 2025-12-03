@@ -8,27 +8,29 @@ description: >-
 
 ## How to access your plan any time
 
-To change your plan, you must first log into your account. At the top, click on your account and select "My Profile". Your profile page will appear. Click on the “Plans” button that will lead you to a page of available plans.
+To change your plan, you must first log into your account. At the bottom of your Space, click on the "Profile" button and select your Username. Your profile page will then appear. Click "Plans" on the left-hand side to see the available plans.
+
+<figure><img src="../../.gitbook/assets/View and Manage Your Subscription Plan (1).gif" alt=""><figcaption></figcaption></figure>
 
 ## How to change your subscription when the rule limit is reached
 
-Running out of space? Clicking on the “Upgrade" button will redirect you to a page where you can easily choose from higher plans that will fit your business needs. If you choose the Medium or a higher plan, you will have access to Management API andREST API, that provide read/write access to your rules and spaces.
+Running out of space? Once you have reached the limits of your plan, an "Upgrade" button will appear on your profile page Dashboard. Clicking "Upgrade" will redirect you to the plans page, where you can easily choose a higher plan to fit your business needs.
 
-<figure><img src="../../.gitbook/assets/rulelimitreached.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Upgrade 2.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-_Of course every business has its own needs, so do not hesitate to contact us for a tailored plan. You can simply click on the “Contact Us” button on a page of plans._
+_Of course every business has its own needs, so do not hesitate to contact us for a tailored plan. You can simply click Premium on a page of plans._
 {% endhint %}
 
 ## Changing the plan
 
-On the page of available plans you can see your actual plan and other plans with all permissions and limits. Choose a plan you want to change to and click on the “Change plan” button.
+On the page of available plans, you can find your current plan alongside others, each with a description. Select the plan you wish to change to and click on the "Select Plan" or "Get a Quote" button. You can also check your current limits and permissions in the "Limits" section on the left-hand side of the page.&#x20;
 
-<figure><img src="../../.gitbook/assets/changeplan.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Limits 2025.png" alt=""><figcaption></figcaption></figure>
 
-Within the paygate fill out your payment details and click the “Subscribe” button.
+You will need to finish setting up your profile. Once you have done this, fill out your payment details within the pay-gate and click the "Pay and subscribe" button.
 
-<figure><img src="../../.gitbook/assets/paygate.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Payment 2025.png" alt=""><figcaption></figcaption></figure>
 
 After a successful payment you will be redirected back to the plan page. Now your plan has been changed and a new invoice was created. Click the “Invoices” button to see all your invoices.
 

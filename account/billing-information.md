@@ -22,9 +22,9 @@ _Some fields of the form are required or/and have a strict format._
 
 ## 1. Complete your profile
 
-In order to fill out your billing information, you must first log into your account. At the top, click on your account and select "My Profile". Your profile page will appear. On the Billing Information tab, fill in your information and confirm your changes with the Save button.
+In order to fill out your billing information, you must first log into your account.  At the bottom of your Space, click on the "Profile" button and select your Username. Your profile page will then appear. In the "General" section, enter your Billing Info and confirm your changes by clicking "Save".
 
-<figure><img src="../.gitbook/assets/changethebillinprofile (2).gif" alt=""><figcaption><p><mark style="color:purple;">Complete you billing information</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/Bill info.png" alt=""><figcaption><p><mark style="color:purple;">Complete you billing information</mark></p></figcaption></figure>
 
 ## 2. Provide the billing information when changing to a higher plan
 
@@ -32,11 +32,9 @@ In order to fill out your billing information, you must first log into your acco
 _This option is for users who have not yet entered their billing information. Once you have completed your billing information, you will not need to enter it again if you change your plan._
 {% endhint %}
 
-In order to fill in your billing information, you must first log in to your account. At the top, click on your account and select "Plans". Page of available plans will appear. Select the plan you want to switch to. After confirming the plan change dialog, a window will appear to fill in your billing information. Confirm the completed information by clicking the Save button. After that you will be redirected to the payment gateway to change your plan.
+In order to fill in your billing information, you must first log in to your account. At the bottom of your Space, click on the "Profile" button and select your Username.  Click on the "Plans" section. A page showing the available plans will appear. Select the plan you want to switch to. A Profile window will then appear where you can enter your Billing Info. Confirm the information by clicking the "Save" button. You will then be redirected to the payment gateway to finalize the change.&#x20;
 
-<figure><img src="../.gitbook/assets/changeplan (1).png" alt=""><figcaption></figcaption></figure>
-
-<figure><img src="../.gitbook/assets/changeplanbillinginfo.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Change Your Plan Academy 2025.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 _Some fields of the form are required or/and have a strict format._
