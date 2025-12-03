@@ -12,8 +12,7 @@ The Decision Tables have a really friendly interface, excellent for any non-tech
 
 #### How does the Decision Table look like
 
-As already mentioned, the Decision Table is very similar to an Excel table - it is also divided into columns and rows and you can enter values or functions into cells. The table is conceptually divided into two parts, a part with conditions and a part with results. Conditions are created based on input values, so the condition columns are tied to the input model. On the other hand, the results are the values we want to obtain after evaluating the decision, so the result columns are tied to the output model. In the input-output model, you set the structure of the data and what values will go into the rule and what values will be received from it.\
-
+As already mentioned, the Decision Table is very similar to an Excel table - it is also divided into columns and rows and you can enter values or functions into cells. The table is conceptually divided into two parts, a part with conditions and a part with results. Conditions are created based on input values, so the condition columns are tied to the input model. On the other hand, the results are the values we want to obtain after evaluating the decision, so the result columns are tied to the output model. In the input-output model, you set the structure of the data and what values will go into the rule and what values will be received from it.<br>
 
 {% hint style="info" %}
 _For more information about setting up the Input-Output model, see the_ [_section_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/input-and-output) _dedicated to it._&#x20;

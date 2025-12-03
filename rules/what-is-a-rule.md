@@ -13,7 +13,7 @@ While it is true that our business rule engine is low-code and does not require 
 Lastly, we also offer the Rule flow. With this rule, you can create an entire decision process or maybe a part of it that shares a common logic. In a simple editor, you can easily link individual rules together as they logically follow each other.
 
 {% hint style="info" %}
-_See_ [_Rule Types_](broken-reference) _section for more information about each rule type._
+_See_ [_Rule Types_](/broken/pages/C428SVEbDiRt896FuJaX) _section for more information about each rule type._
 {% endhint %}
 
 ## Rule Structure

@@ -32,8 +32,7 @@ A user with the <mark style="color:purple;">Admin</mark> role is allowed to perf
 
 As mentioned, you can create new user roles for your project. You can create them in two ways
 
-One way is by copying one of our predefined roles, where you can modify part of the permissions. In the example below, a new role similar to the Editor will be created, but the user will only be able to work with decision table rules.\
-
+One way is by copying one of our predefined roles, where you can modify part of the permissions. In the example below, a new role similar to the Editor will be created, but the user will only be able to work with decision table rules.<br>
 
 <figure><img src="../../.gitbook/assets/copyfromeditorrole (1).gif" alt=""><figcaption></figcaption></figure>
 

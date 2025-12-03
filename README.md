@@ -72,7 +72,7 @@ Lastly, we also offer the Rule flow. With this rule, you can create an entire de
 <figure><img src=".gitbook/assets/Travel Insurance app.png" alt=""><figcaption><p><mark style="color:purple;">Rule Types</mark></p></figcaption></figure>
 
 {% hint style="info" %}
-_See_ [_Rule Types_](broken-reference) _section for more information about each rule type._
+_See_ [_Rule Types_](/broken/pages/C428SVEbDiRt896FuJaX) _section for more information about each rule type._
 {% endhint %}
 
 ## Delivery of new rules or changes using versioning
