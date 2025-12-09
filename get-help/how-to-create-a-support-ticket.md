@@ -12,7 +12,7 @@ Something went wrong? Let us know. You can submit a ticket through our support p
 
 The link can be found in the left side bar menu. In the Help section, click on Service Desk and you will be redirected to the [<mark style="color:purple;">support site</mark>](https://support.decisionrules.io/support/home).
 
-<figure><img src="../.gitbook/assets/tosupportdesk.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Kapture 2025-12-09 at 10.31.13.gif" alt=""><figcaption></figcaption></figure>
 
 ## Submit a ticket
 
