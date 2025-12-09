@@ -79,6 +79,10 @@ This field should include a detailed description of your problem. Be as specific
 
 Include files such as screenshots and gifs. If you have a problem with one of your decision rules, export it and attach it as well.
 
+**For better resolve of your problem please download Support file which you can find under Info and Help button in the left side bar under section Support.**
+
+<figure><img src="../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+
 {% hint style="info" %}
 _Cumulative file size cannot exceed 20 MB._
 {% endhint %}
