@@ -16,78 +16,47 @@ Let's advance one step at a time.
 
 Becoming a superhero is a fairly straightforward process. After entering our [<mark style="color:purple;">login page</mark>](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_qLewOTJelEMoVeRYkiu6_image (2).webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption></figcaption></figure>
 
-There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the [<mark style="color:purple;">Dashboard</mark>](../../spaces/space-dashboard.md) will be displayed.
+There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the folder structure of your Rules List will be displayed.
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_JC9aflM8S2oyWAuEy7CM_image (2).webp" alt=""><figcaption></figcaption></figure>
+### 2. Create a new Decision Table
 
-### 2. Go to Create rule
+To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a table for discounts, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed. We will continue in the Rule Setting menu.
 
-To display the rule creation pop-up click the <mark style="background-color:purple;">**Create Rule**</mark> button on the sidebar.
+<figure><img src="../../.gitbook/assets/Create Decision Table Academy Dec 2025 (1).gif" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_5lH7axWPDLVplZXjKmvy_image.webp" alt=""><figcaption></figcaption></figure>
+### 3. Make basic settings
 
-### 3. Create a new Decision Table
+Rule Settings will be in a left-hand side menu, or you can access them by Rule Model at the top bar. Let's do some settings. Since we do not want this decision table to be available yet, we will change its status to **Pending**. To do this, switch on the current status **Published** to **Pending**.
 
-You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
+To apply these changes, we have to click the <mark style="background-color:orange;">**Save**</mark> button at the top of the page, right corner.
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_wwOPIdwbgEP4oGmrk2dQ_image.webp" alt=""><figcaption></figcaption></figure>
+### 4. Create the input and output model
 
-### 4. Make basic settings
-
-Once we are in the Rule Settings, let's do some settings. Since we do not want this decision table to be available yet, we will change its status to **Pending**. To do this, click on the current status **Published** and then select **Pending**.
-
-To apply these changes, we have to click the <mark style="background-color:orange;">**Save**</mark> button at the bottom of the page.
-
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_WM43BQuCbIrjr4ikfbrF_image.webp" alt=""><figcaption></figcaption></figure>
-
-### 5. Create the input and output model
-
-We will now create the input and output model which is used to set conditions and results. There are 2 ways to create these models:
-
-* Simple editor is intended for inexperienced users who do not know the syntax of JSON files.
-* JSON editor is intended for an experienced user.
+We will now create the input and output model which is used to set conditions and results. There are two ways to create these models:
 
 #### Using the simple editor
 
-Let's start with the input model. First we delete all default attributes by clicking the trash can icon. Then we add our own attributes: <mark style="color:purple;background-color:purple;">**period**</mark>, <mark style="color:purple;background-color:purple;">**ProductType**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark>. We create a root for each of them by clicking the **+Add root** button.
+Let's start with the input model. First, you can switch from "Designer" to "Model" at the centre of the top bar. Delete the default attribute "input" by clicking the trash can icon next to the name. Then, add your own attributes: <mark style="color:purple;background-color:purple;">**period**</mark>, <mark style="color:purple;background-color:purple;">**productType**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark>. Create a root for each of them by clicking the **+Add Root** button.
 
-{% hint style="info" %}
-More information on the simple editor is provided [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/input-and-output/simple-editor).
-{% endhint %}
+Now, you can continue with the output model. It will be set similarly. As root attributes, add <mark style="color:green;background-color:green;">**prices**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. Then, you can add a child attributes to the <mark style="color:green;background-color:green;">**prices**</mark>. You can do that by clicking the + icon within the prices field. Rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
+
+<figure><img src="../../.gitbook/assets/simple-editor.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 After creating an input or output model, we must always confirm the changes with the <mark style="background-color:orange;">save</mark> button.
 {% endhint %}
 
-Now we can continue with the output model. It will be set similarly. As root attributes, we add <mark style="color:green;background-color:green;">**prices**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. Here, we would like to add a child attributes to the <mark style="color:green;background-color:green;">**prices**</mark>. We do that by clicking the + icon within the prices field. We rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
+{% hint style="info" %}
+More information on the simple editor is provided [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/input-and-output/simple-editor).
+{% endhint %}
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_Kk9OOAFg1xRpFGgPDY7D_image.webp" alt=""><figcaption></figcaption></figure>
+#### Using the JSON editor
 
-### Using the JSON editor
+In the JSON editor, you can provide the input and output model in JSON format. In our case, the input/output model will read:
 
-In the JSON editor, we can provide the input and output model in JSON format. In our case, the input model will read
-
-```javascript
-{
-  "period": {},
-  "productType": {},
-  "promoCode": {}
-}
-```
-
-while the output model shall read
-
-```json
-{
-  "prices": {
-    "finalPrice": {},
-    "crudePrice": {}
-  },
-  "message": {}
-}
-```
+<figure><img src="../../.gitbook/assets/JSON editor.png" alt=""><figcaption></figcaption></figure>
 
 For now, you may just enter these values and you are done!
 
@@ -95,41 +64,41 @@ For now, you may just enter these values and you are done!
 More information on the JSON editor can be found [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/input-and-output/json-editor).
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_HsKPnFIlLW63uFFdVTNw_image.webp" alt=""><figcaption></figcaption></figure>
-
-### 6. Set the conditions and results
+### 5. Set the conditions and results
 
 To create conditions and results, you must go to the **Table Designer** tab. Now let's move on and bind our input and output models to our condition and result columns.
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_HTXsRP1SFM3EC63PoBAt_image.webp" alt=""><figcaption></figcaption></figure>
+We already have one condition column and one result column. We start with the conditions. Click the space below Condition, <mark style="color:orange;background-color:orange;">**->**</mark>**&#x20;           &#x20;**&#x20;dropdown, and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
 
-We already have one condition column and one result column here. We start with the conditions. Click the <mark style="color:orange;background-color:orange;">**input**</mark> dropdown and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
+<figure><img src="../../.gitbook/assets/Configure Discount Price Rules with Multiple Conditions and Results.gif" alt="" width="563"><figcaption></figcaption></figure>
 
-Next we add the result columns. One is already there, so click the <mark style="color:orange;background-color:orange;">**output**</mark> dropdown and select <mark style="color:green;background-color:green;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+** button at the top and bind them to <mark style="color:green;background-color:green;">**prices.finalPrice**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. These are all the results we need.
+Similarly, we add the result columns. One is already there, so click the <mark style="color:orange;background-color:orange;">**-> output**</mark> dropdown and select <mark style="color:green;background-color:green;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+** button at the top and bind them to <mark style="color:green;background-color:green;">**prices.finalPrice**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. These are all the results we need.
 
 {% hint style="info" %}
 More information about creating conditions and results can be found in the [<mark style="color:purple;">Table Designer Section</mark>](https://docs.decisionrules.io/doc/decision-tables/decision-table-designer) and [<mark style="color:purple;">Binding to Model Section</mark>](https://docs.decisionrules.io/doc/decision-tables/binding-to-model).
 {% endhint %}
 
-After adding conditions and results, we can also set their names. To do this, click the name, currently reading **New Condition**, and rewrite it.
+After adding conditions and results, we can also set their names. For example, click on the name (currently reading **Condition**), and rewrite it.
 
 {% hint style="warning" %}
 Do not forget to click the <mark style="background-color:orange;">save</mark> button.
 {% endhint %}
 
-### 7. Edit rows
+### 6. Edit rows
 
 Currently, we have a single row in the Decision Table.
 
 {% hint style="info" %}
-Each row of the table corresponds to one set of conditions and results. When the Rule Solver is called, it goes through the individual rows and evaluates their condition values against the corresponding request input data. If some values of the conditions in a row match, Rule Solver takes the values of the individual results on that row and places them in the output.
+Each row of the table corresponds to one set of conditions and results. When the Rule Solver is called, it goes through the individual rows and evaluates their condition values against the corresponding request input data. If values of the conditions in a row match, Rule Solver takes the values of the individual results on that row and places them in the output.
 {% endhint %}
 
 Let's set the conditions in the first row.
 
 #### Product Type
 
-Click the **anything** label in the <mark style="color:purple;background-color:purple;">**productType**</mark> column. You can choose a type of condition from the Select type modal. We would like to activate the results of this row when the value of <mark style="color:purple;background-color:purple;">**productType**</mark> is `basic`. We can do that simply by selecting the Equals operator and entering the string `basic`.
+Click the anything label, <mark style="color:green;background-color:green;">**ANY**</mark> , in the <mark style="color:purple;background-color:purple;">**productType**</mark> column. You can choose a type of condition from the Select type modal. We would like to activate the results of this row when the value of <mark style="color:purple;background-color:purple;">**productType**</mark> is `basic`. We can do that simply by selecting the "Equals" operator and entering the string `basic`.
+
+<figure><img src="../../.gitbook/assets/Product Type Academy Dec 2025.gif" alt="" width="563"><figcaption></figcaption></figure>
 
 #### Period
 
@@ -139,14 +108,16 @@ We will use the Equals operator for <mark style="color:purple;background-color:p
 
 Here we want to check whether the customer's promo code is correct. We could again enter the desired value with an Equal operator, but we can do better. Let's go to Rule settings and open the Rule Variables section. Here we shall add two Rule Variables. The first one will have name `PromoCode` and value `SUMMER SALE` while the other will have name `PromoDiscount` and value  `30`. Rule variables make our rules easily manageable. If we later want to change the promo code, we do it only on a single place: in the Rule Settings.
 
-Click Save and go back to the Decision Table Designer. Now you can add the condition for <mark style="color:purple;background-color:purple;">**promoCode**</mark>. Select again the Equals operator and eneter `{PromoCode}`in the field. This expression refers to the `PromoCode` Rule variable.
+Click Save and go back to the Decision Table Designer. Now you can add the condition for <mark style="color:purple;background-color:purple;">**promoCode**</mark>. Select again the Equals operator and enter `{PromoCode}` in the field. This expression refers to the `PromoCode` Rule variable.
+
+<figure><img src="../../.gitbook/assets/PromoCode Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 An overview of all operators is [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/operators).\
 An overview of all possible values is [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/data-types).
 {% endhint %}
 
-Now we are going to continue with setting results.
+Now we are going to continue with setting the results.
 
 #### Crude Price
 
@@ -156,9 +127,17 @@ In the <mark style="color:green;background-color:green;">**prices.crudePrice**</
 
 Because we are in the row where the promo code is matched, we will give a discount on the crude price. Click the = sign and select **Function**. Then enter the following expression:
 
-```
-TIMES({prices.crudePrice},DIVIDED(MINUS(100,{PromoDiscount}),100))
-```
+{% hint style="warning" %}
+Originally the expression of such a function was:&#x20;
+
+* TIMES({prices.crudePrice},DIVIDED(MINUS(100,{PromoDiscount}),100))
+
+However, some functions are updated and it is written:
+
+* {prices.crudePrice}\*((100-{PromoDiscount})/100)
+{% endhint %}
+
+<figure><img src="../../.gitbook/assets/Final 2 Price Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
 
 It means that we calculate the final price by taking the crude price and subtracting 30% discount defined by the `PromoDiscount` variable. Note that we are referring to the <mark style="color:green;background-color:green;">**prices.crudePrice**</mark> column by writing `{prices.crudePrice}`.
 
@@ -167,7 +146,7 @@ It means that we calculate the final price by taking the crude price and subtrac
 Finally, let's include some message about what happened on this row. In the <mark style="color:green;background-color:green;">**message**</mark> column, again select the **Function** type of the result and enter the following expression:
 
 ```
-CONCAT("{PromoDiscount}","% discount")
+CONCAT({PromoDiscount},"% discount")
 ```
 
 This function will take the `PromoDiscount` variable and concatenate it with the given string to generate the desired message.
@@ -176,19 +155,25 @@ This function will take the `PromoDiscount` variable and concatenate it with the
 Do not forget to click the <mark style="background-color:orange;">**Save**</mark> button.
 {% endhint %}
 
-You can now click the three dots at the beginning of the row and select **Insert Below**. This will add another empty row below. Its conditions and results may be set analogically. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
+You can now click the arrow at the beginning of the row and select **Insert**, and after click on **Below**. This will add another empty row below. Its conditions and results may be set analogically. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
+
+<figure><img src="../../.gitbook/assets/Insert Below.png" alt="" width="375"><figcaption></figcaption></figure>
 
 {% file src="../../.gitbook/assets/sample-pricing-rule.json" %}
 
 You can import this rule to your space by going to **Decision Tables** and clicking the **Import** button.
 
-### 8. Test the Decision Table
+<figure><img src="../../.gitbook/assets/Import or Overwrite a Pricing Rule Version.gif" alt=""><figcaption></figcaption></figure>
+
+### 7. Test the Decision Table
 
 Now we can test our rule in Test Bench. Before testing the rule, we must go to Rule Settings and change the status of the decision table to **Published**.
 
-If we want to test a certain row, we can click the <mark style="background-color:purple;">**test bench**</mark> icon at its beginning. After clicking the icon, the values from the row will be pre-filled in **Test Bench**, which will show up at the bottom of the page. We can freely modify these values. For instance, if you click the first row of your Decision Table, you will have to enter the correct <mark style="color:purple;background-color:purple;">**promoCode**</mark>, which should be `SUMMER SALE`.
+If we want to test a certain row, we can click the <mark style="background-color:purple;">**Test Bench**</mark> icon at its beginning. After clicking the icon, the values from the row will be pre-filled in **Test Bench**, which will show up at the bottom of the page.&#x20;
 
 Then we can click the <mark style="background-color:green;">**Run**</mark> button and the result will be displayed in right hand side of the Test Bench. Note that you can switch between the **Simple Bench** and the **JSON Bench**.
+
+<figure><img src="../../.gitbook/assets/Test bench Table.png" alt="" width="375"><figcaption></figcaption></figure>
 
 For example, if we switch to the JSON Bench, we may input the following data.
 

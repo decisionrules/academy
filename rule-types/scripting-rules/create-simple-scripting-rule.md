@@ -12,31 +12,23 @@ Let's advance one step at a time.
 
 Becoming a superhero is a fairly straightforward process. After entering our [<mark style="color:purple;">login page</mark>](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_qLewOTJelEMoVeRYkiu6_image.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption></figcaption></figure>
 
-There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the [<mark style="color:purple;">Dashboard</mark>](../../spaces/space-dashboard.md) will be displayed.
+There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the folder structure of your Rules List will be displayed.
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_JC9aflM8S2oyWAuEy7CM_image.webp" alt=""><figcaption></figcaption></figure>
+### 2. Create a new Scripting Rule
 
-### 2. Go to Create rule
+To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed. We will continue in the Rule Setting menu.
 
-To display the rule creation pop-up click the <mark style="background-color:purple;">**Create rule**</mark> button on the sidebar.
+<figure><img src="../../.gitbook/assets/Create Scripting Rule Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_nunImcjpurq1LS5zSwAe_image.webp" alt=""><figcaption></figcaption></figure>
+### 3. Make basic settings
 
-### 3. Create a new Scripting Rule
+Rule Settings will be in a left-hand side menu, or you can access them by Rule Model at the top bar. Let's do some settings. Since we do not want this decision table to be available yet, we will change its status to **Pending**. To do this, switch on the current status **Published** to **Pending**.
 
-You will be prompted to provide a name and choose between **SAMPLE RULE** or **EMPTY RULE.** For now, name the rule as you wish and choose the EMPTY RULE. The new rule will be created and its detail will be displayed. We will continue in the Rule Settings tab.
+To apply these changes, we have to click the <mark style="background-color:orange;">**Save**</mark> button at the top of the page, right corner.
 
-### 4. Set scripting rules information
-
-When you click on RULE SETTINGS on the top left corner, the scripting rule's detail will appear first to set some information. We will change the name of our script. To do this, click on it's name, enter one you like and press Enter.&#x20;
-
-Since we do not want this decision table to be available yet, we will change its status to **"Pending"**. To do this, click on the current status **"Published"** and then select **"Pending"**.
-
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_rEL1IN9EnaH7NbpXxorP_image.webp" alt=""><figcaption></figcaption></figure>
-
-### 5. Create an Input and Output model
+### 4. Create an Input and Output model
 
 We will now create an input and output model, which we will then use to set conditions and results. We create this model with a **JSON editor**.
 
@@ -46,7 +38,7 @@ After creating an input or output model, we must always confirm the changes with
 
 #### **Input model**
 
-First, we delete all created objects. Then we will add our specified requirements (**value1, value2**) as empty objects.
+First, we delete all created objects. Then we will add our specified requirements (**value1, value2**) as empty objects. Let's start with the input model. First, you can switch from "Designer" to "Model" at the centre of the top bar. Change from Simple Editor to JSON Editor at the toggle next to the "Rule Settings" button. Delete all default objects. Then add your specified requirements, e.g. **value1, value2**, as empty objects.&#x20;
 
 {% hint style="info" %}
 Because our model is simple, these objects do not contain any others. For more complex models, more information is [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/input-and-output/json-editor).
@@ -75,7 +67,7 @@ We set the output model similarly, where we set it as root **result** (empty obj
 
 ### 6. Creating rules
 
-Now let's move on to code editor by clicking on **Scripting Rule Designer** it in the right upper corner and create individual rules.
+Now let's move on to code editor by clicking on **Scripting Rule Designer** it in the upper center and create individual rules.
 
 {% hint style="success" %}
 Our code editor is based on **Monaco Editor,** using its features, like autocomplete, syntax highlight, line numbers, etc.
@@ -109,14 +101,6 @@ Input must always be entered as input.yourInputVariable.
 Output must always be entered as output.yourOutputVariable.
 
 To return an output, always enter **return output** at the end of your script!
-{% endhint %}
-
-{% hint style="info" %}
-**console.log()** is forbidden due to performance, but you can use **log()** instead.
-{% endhint %}
-
-{% hint style="success" %}
-You can use **log()** to print values in the console, which is at the bottom of the code editor.
 {% endhint %}
 
 ```javascript
@@ -156,6 +140,14 @@ return output;
 ```
 
 {% hint style="info" %}
+**console.log()** is forbidden due to performance, but you can use **log()** instead.
+{% endhint %}
+
+{% hint style="success" %}
+You can use **log()** to print values in the console, which is at the bottom of the code editor.
+{% endhint %}
+
+{% hint style="info" %}
 Always **save** your script using <mark style="background-color:purple;">**Save**</mark> (bottom of the page) or CTRL/CMD + S
 {% endhint %}
 
@@ -167,15 +159,15 @@ Don't forget to save your scripting rule!
 
 Now we can test our rule. Before testing the rule, we must change the status of the rule to **"Published"**.
 
-If we want to test a rule, we can click on the <mark style="background-color:green;">**Run**</mark> icon at the bottom of the page. An input and output window will show up at the bottom of the page.
+If we want to test a rule, we can click on the Test Bench button. An input and output window will show up at the bottom of the page. Press the <mark style="background-color:green;">**Run**</mark> icon at the center of the window.&#x20;
 
-<figure><img src="../../.gitbook/assets/spaces_-MN4F4-qybg8XDATvios_uploads_uAvpcmr8smmvLC7JxcL5_image.webp" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/test bench scripting rule.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="success" %}
 You can find more information about input and result at [<mark style="color:purple;">Solver API</mark>](https://docs.decisionrules.io/doc/api/rule-solver-api).
 {% endhint %}
 
-We can either click on the run button between input and output windows or <mark style="background-color:green;">**Run**</mark> the button on the top of the code editor. The result will be displayed in the **Output window (the right one)**.
+The result will be displayed in the **Output window (the right one)**.
 
 {% hint style="info" %}
 The debug mode can be turned on by clicking on [ <mark style="background-color:purple;">**Debug off**</mark>](#user-content-fn-1)[^1] . In scripting rules, it will enable to write **log()** in the console.

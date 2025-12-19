@@ -17,9 +17,10 @@
 ## 🌌 SPACES
 
 * [What Is a Space](spaces/what-is-a-space.md)
+* [Space Side Menu](spaces/space-side-menu.md)
 * [Space Dashboard](spaces/space-dashboard.md)
 * [Users in Spaces](spaces/users-in-spaces/README.md)
-  * [How to invite a new User](spaces/users-in-spaces/how-to-invite-a-new-user.md)
+  * [Invitations](spaces/users-in-spaces/invitations.md)
   * [Roles](spaces/users-in-spaces/roles.md)
 
 ## ⚖️ RULES

@@ -28,7 +28,7 @@ If your organization has the single sign-on (SSO) option enabled, you can use yo
 
 <figure><img src="../.gitbook/assets/Single Sign-On Academy Dec 2025 (1).gif" alt=""><figcaption><p><mark style="color:purple;">Single Sign On</mark></p></figcaption></figure>
 
-You will be directed to the provider's login page to log in. After successful login you will be redirected to the Dashboard in <mark style="color:purple;">DecisionRules</mark>.
+You will be directed to the provider's login page to log in. After successful login you will be redirected to <mark style="color:purple;">DecisionRules</mark>.
 
 {% hint style="info" %}
 For detailed information about organization SSO please see our documentation [here](https://docs.decisionrules.io/doc/other/single-sign-on-sso).

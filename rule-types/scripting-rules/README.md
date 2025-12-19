@@ -6,7 +6,7 @@ Scripting Rule is another type of rule that you can use in <mark style="color:pu
 
 Just like the other rules, it has a unified Rule Settings form that is the same across all rule types.
 
-So when you are creating a rule, the procedure is exactly the same, first, you create an input and output structure in Rule Settings. You can also create your own [Rule Variables](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/rule-variables).
+So when you are creating a rule, the procedure is exactly the same, first, you create an input and output structure in Rule Model. You can also create your own [Rule Variables](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/rule-variables).
 
 Next, you move to the Scripting Rule Designer and create the rule and all the logic using JavaScript.&#x20;
 
@@ -16,7 +16,7 @@ _Below you can find example file with Scripting Rule. This rule contains a funct
 
 {% file src="../../.gitbook/assets/RandomNumber_v1.json" %}
 
-{% hint style="info" %}
+{% hint style="warning" %}
 _What is important to note is that you should always have “return output;” in the last line of your Scripting rule._
 {% endhint %}
 

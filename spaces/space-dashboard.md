@@ -6,38 +6,32 @@ description: All information and statistics from your space at your fingertips
 
 ## Introduction
 
-The Dashboard is where you can see information and statistics about the usage of a given space. The Dashboard appears automatically when you log in to <mark style="color:purple;">DecisionRules</mark>. In case you are currently working on a rule, you can access the dashboard from the left side menu by clicking on the Dashboard button.
+The dashboard is where you can see information and statistics about the usage of a given Space. Because the rule list appears automatically when you log in to <mark style="color:purple;">DecisionRules,</mark> for a checking of the Space dashboard you first must click "Space" in the side menu. A list of configurations will open in a left sidebar and there you can press the "Dashboard" option. The Space dashboard will display.&#x20;
 
-<figure><img src="../.gitbook/assets/dashboard_access" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/Dashboard Intro.png" alt=""><figcaption></figcaption></figure>
 
 ## Dashboard Sections
 
 The Dashboard has several sections where you can easily find individual information about the selected space.
 
-### Rules and Rule Flows
+### Rules, Rule Flows and Nodes
 
-In the rules section you can see how many rules and rule flows are created on the space, and what the limit is. It also shows the number of rules with pending and published status. All of your published rules can be solved and accessed using an external tool.
+In the rules section you can see how many [rules, rule flows and nodes](../rules/what-is-a-rule.md) have been created in the Space. Although these are different concepts, they are counted in the same manner. There is no distinction made between the number of rules with pending status and the numbers of rules with published status. In practice, the main difference is that all your published rules can be solved and accessed using an external tool, while pending rules cannot.
 
-<figure><img src="../.gitbook/assets/rulecount.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/rulesruleflowsnodes.png" alt="" width="333"><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-_The number of rules is based on your schedule. In case you run out of space for rules, you can navigate directly from the dashboard to the plans page where you can simply upgrade your plan._
+_The number of rules is based on your plan subscription. In case you run out of space for rules, you can navigate directly from the dashboard to the plans page where you can simply upgrade your plan._
 {% endhint %}
 
 ### Space Information
 
 In the right section you will find the current space plan along with the email address of the owner of that space. If you are not the owner yourself, you can contact the owner on matters relating to the space.
 
-<figure><img src="../.gitbook/assets/space_info.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/SpaceInfo.png" alt="" width="375"><figcaption></figcaption></figure>
 
 ### API Calls
 
 In the API Calls section, you can keep track of your number of API calls. The graph allows you to see the number of calls for each day in the current period. Using the calendar you can select the specific period you want to track. The graph on the right summarizes the calls for each month.
 
 <figure><img src="../.gitbook/assets/dashboard_apicalls.gif" alt=""><figcaption></figcaption></figure>
-
-### Event Timeline
-
-Track changes that have been made to your space in the event timeline. Show rule creation, versioning; API key creation and more. Each event records the event name, the author, as well as the timestamp.
-
-<figure><img src="../.gitbook/assets/event_timeline.png" alt=""><figcaption></figcaption></figure>

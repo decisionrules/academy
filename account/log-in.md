@@ -1,14 +1,12 @@
 ---
-description: >-
-  Get to know more about log in options like SSO or using your email and
-  password
+description: Get to know more about log in options
 ---
 
 # Log in
 
 There are multiple ways to log in to your account - using credentials provided on sign up, Google and Microsoft Sign-in and SSO (Single Sign On).
 
-<figure><img src="../.gitbook/assets/login 2025.png" alt="" width="563"><figcaption><p><mark style="color:purple;">Login Screen</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption><p><mark style="color:purple;">Login Screen</mark></p></figcaption></figure>
 
 ## Email and password
 

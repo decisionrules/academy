@@ -4,6 +4,12 @@ description: Discover the capabilities of DecisionRules
 
 # DecisionRules Academy Introduction
 
+This Academy has been thought for your first steps in the world of Business Rules Engines. The intended audience are beginners in <mark style="color:purple;">DecisionRules</mark>, therefore it goes step by step from the most basics actions in the app, such as creating an account or buying a plan to more complex functionalities, creating the rules.&#x20;
+
+The focus is practical, we will show you how to do. In the blink of an eye, you will run the application at full capacity, your team divided into different spaces, each member's roles well defined, and your most important rules already deciding. Although some concepts will be necessary, more extensive explanations are available in our documentation; when it can be relevant we share with you links to specific sections of that documentation.  &#x20;
+
+Let us see first the originality of <mark style="color:purple;">DecisionRules</mark>, how the system stands out from other rules engines with some concrete examples. Examples of our use cases, of our rule types and of our deployment options.   &#x20;
+
 ## Benefits of a codeless solution
 
 Many organizations use code-based rules. Thus, when any change is made to the logic or individual values such as insurance rates or seasonal sale discount code, a Business Description needs to be created by the development team who then implement the change in production. Such a change can take several days and requires a whole team of developers to implement it. But what if there was a way to transform your business logic into rules without having to use any code? Automate your processes with <mark style="color:purple;">DecisionRules</mark>. Create, deploy and manage your Business Rules thanks to our user friendly UI.
@@ -63,11 +69,9 @@ Many organizations use code-based rules. Thus, when any change is made to the lo
 
 ## Rule types
 
-There are several types of rules in DecisionRules, and each can be used to create a different type of decision. For simple decisions following an IF - ELSE logic you can use Decision Trees. For more complex logic use Decision Tables, where each row corresponds to some combination of condition and result.
+Currently there are six different types of rules in the engine: Decision Tree, Decision Table, Lookup Table, Scripting Rule, Decision Flow, and Integration Flow. One of our popular rules, the Rule Flow, is accessible but it has been improved by the new flows, Decision and Integration.&#x20;
 
-While it is true that our business rule engine is low-code and does not require knowledge of programming languages, one type of rule we do offer is a Scripting Rule, whose content is JavaScript code. This is a rule that allows you to enrich your decision-making process.
-
-Lastly, we also offer the Rule flow. With this rule, you can create an entire decision process or maybe a part of it that shares a common logic. In a simple editor, you can easily link individual rules together as they logically follow each other.
+Each type correspond to different levels of logical complexity and different types of decision. Depending of the process you want to automate you choose one rule or another. The criteria for this selection comes from experience, but for now feel free for experiments with all of them. A more detailed explanation will be found below in the [RULES](https://academy.decisionrules.io/rules/what-is-a-rule) section.&#x20;
 
 <figure><img src=".gitbook/assets/Travel Insurance app.png" alt=""><figcaption><p><mark style="color:purple;">Rule Types</mark></p></figcaption></figure>
 

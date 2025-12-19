@@ -1,36 +1,26 @@
 # Export Rule
 
-### 1.1 Exporting from Business Rules
+### Exporting from Rule List
 
-As you know, your rules can be accessed from the “Business Rules” in the left sidebar menu. From there you can export rules by clicking on the context menu button ![](<../../.gitbook/assets/busrurulescontextmenubutton (1).png>) and choosing “Export”.
+As you know, your decision rules can be accessed from the “Rules” in the left sidebar menu. From there you can export your rule by clicking on the context menu button  <mark style="background-color:purple;">**...**</mark>  according to that rule, and choosing <mark style="background-color:purple;">**Export**</mark> .
 
-<figure><img src="../../.gitbook/assets/exportfrombusinessrules.png" alt=""><figcaption><p><mark style="color:purple;">Export Rule from Business Rules</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Rule list export.png" alt=""><figcaption><p><mark style="color:purple;">Export Rule from Rule List</mark></p></figcaption></figure>
 
-### 1.2 Exporting from Rule Settings
+### Exporting from Rule Structure Design
 
-In the Rule Settings tab you can do various actions such as exporting your rule to a file. At the top click on the  <mark style="background-color:purple;">**Export**</mark>  button.
+At the top bar of your 'Rule' you can do various actions. Select the context menu button  <mark style="background-color:purple;">**...**</mark>  and a dropdown list will appear. Click on  <mark style="background-color:purple;">**Export**</mark> .
 
-<figure><img src="../../.gitbook/assets/exportfromrulesettings.png" alt=""><figcaption><p><mark style="color:purple;">Export Rule from Rule Settings</mark></p></figcaption></figure>
-
-### 1.3 Exporting from Folders structure
-
-Make sure the folder structure is open. Right click on the rule you want to export. In the context menu simply select “Export”.
-
-<figure><img src="../../.gitbook/assets/exportfromfolders.png" alt=""><figcaption><p><mark style="color:purple;">Export Rule from Folder Structure</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Rule Structure design export.png" alt=""><figcaption><p><mark style="color:purple;">Export Rule from Rule Structure Design</mark></p></figcaption></figure>
 
 ## Choose export format
 
-### 2.1 Choosing export format of Decision Table:
+### Choosing export format of Decision Table:
 
-When exporting the decision table you can choose from three different file formats based on your further actions. For transporting rules to another space you can choose JSON format. If you want to modify your table and for example input more data in it, choose XLSX or CSV format.
+When exporting the decision table you can choose from two different file formats based on your further actions. For transporting rules to another space you can choose JSON format. If you want to modify a decision table and for example input more data in it, choose XLSX format.
 
-<figure><img src="../../.gitbook/assets/exportformatdecisiontable.png" alt=""><figcaption><p><mark style="color:purple;">Export Formats of Decision Table</mark></p></figcaption></figure>
+### Choosing export format of other Rule types:
 
-### 2.2 Choosing export format of other Rule types:
-
-Other rule types - Rule Flow, Decision Tree and Scripting rule have a single export option - JSON format. These types should be created and modified in the DecisionRules application.
-
-<figure><img src="../../.gitbook/assets/exportformatothers.png" alt=""><figcaption><p><mark style="color:purple;">Export Formats of other Rule types</mark></p></figcaption></figure>
+Other rule types - Rule Flows, Decision Tree and Scripting rule have a single export option - JSON format. These types should be created and modified in the DecisionRules application.
 
 Once you choose the right format, your export will start automatically. The exported file can be found where your browser stores downloaded files.
 

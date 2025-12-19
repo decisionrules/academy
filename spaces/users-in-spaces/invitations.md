@@ -1,0 +1,42 @@
+---
+description: How to invite your colleagues to collaborate
+---
+
+# Invitations
+
+Two heads are better than one. Invite your colleagues and teammates you want to collaborate with to your space.
+
+## 1. You want to invite other users
+
+To invite other users to your space, log into your account and click on the  <mark style="background-color:purple;">**+ Invite Teammates**</mark>  button at the top right-side corner of your Space. A window will open with the title 'You are Inviting into {name} space'.&#x20;
+
+{% hint style="info" %}
+_Note that plans have limit for number of users you can invite to your space._
+
+_More information about Tariff Limits can be found_ [_<mark style="color:purple;">here</mark>_](https://www.decisionrules.io/pricing/public-cloud) _and_ [_<mark style="color:purple;">here</mark>_](https://app.decisionrules.io/profile)_._
+{% endhint %}
+
+To invite another user, simply complete the configuration process. First, select any users with whom you have shared spaces previously; if you are inviting a new user, select "New User". Insert their email address of the person you want to collaborate. Select the role you want to assign to the new user and confirm with the “Invite” button. Invitation will be sent to the email address provided.
+
+<figure><img src="../../.gitbook/assets/Invite a New Teammate to Your Workspace.gif" alt=""><figcaption><p><mark style="color:purple;">Invite a user to you space</mark></p></figcaption></figure>
+
+Every new invitation will appear at the bottom of the page, where you can manage them and track their status. Once a user accepts your invitation, the status of the invitation is no longer "pending" and the user is moved to 'Users' where you can edit their role.
+
+To delete a pending invitation or user from the space, click on the ![](<../../.gitbook/assets/deleterolebtn (1).png>) button next to the user’s name.
+
+<figure><img src="../../.gitbook/assets/Users.png" alt=""><figcaption><p><mark style="color:purple;">Delete a user from your space</mark></p></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/Invitations.png" alt=""><figcaption><p><mark style="color:purple;">Delete a pending invitation</mark></p></figcaption></figure>
+
+## 2. You are invited
+
+After another user invites you to the space, an invitation arrives in your inbox.
+
+<figure><img src="../../.gitbook/assets/Snímek obrazovky 2024-01-03 v 16.33.25.png" alt=""><figcaption><p><mark style="color:purple;">Space invitation in your inbox</mark></p></figcaption></figure>
+
+&#x20;
+
+<figure><img src="../../.gitbook/assets/InvitationSpace.png" alt=""><figcaption></figcaption></figure>
+
+Inside is a link that will take you to the decisionrules.io login page. After logging in, you gain access to the space you were invited to.
+
