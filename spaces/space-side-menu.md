@@ -30,24 +30,25 @@ _More about the Rule List in your Space can be found_ [_<mark style="color:purpl
 
 #### Info
 
-Manage the general information of your Space in the Info section...&#x20;
+General data management for your Space can be found in the Info section:
 
-#### **Dashboard**
-
-The Space Dashboard provides statistics related to the Space. For example, it displays the number of Rules, API calls or the Current Space Plan. The Dashboard also displays information and statistics related to Audit Logs of your rules and to Jobs.&#x20;
-
-<figure><img src="../.gitbook/assets/Dashboard.png" alt=""><figcaption><p><mark style="color:purple;">Space Dashboard</mark></p></figcaption></figure>
+* Space Name
+* Space Owner
+* Number of Rules
+* API calls per period
 
 #### Access
 
-On this section, you can manage individual users and their roles. You can either assign predefined roles, such as Admin, Editor and Reader, or create new custom roles with the  <mark style="background-color:purple;">**+ Add Role**</mark>  button. A Role contains a list of permissions granted to the user.&#x20;
+On this section, you can manage individual users and their roles. You can either assign predefined roles, such as Admin, Editor and Reader, or create new custom roles with the  <mark style="background-color:purple;">**+ Add Role**</mark>  button. A Role contains a list of permissions granted to the user. See the [Users in Spaces](https://academy.decisionrules.io/spaces/users-in-spaces) section for more detailed information.
 
-Invite new users to your Space using the   <mark style="background-color:purple;">**+ Invite Teammates**</mark>  option. First, select whether the teammate is a new user and assign the appropriate role. You can also manage the invitations in the bottom section of the page.
+Invite new users to your Space using the   <mark style="background-color:purple;">**+ Invite Teammates**</mark>  option. First, select whether the teammate is a new user and assign the appropriate role. You can also manage the invitations in the bottom section of the Rules window.
 
 {% hint style="info" %}
 _The number of users you can invite is predetermined by your Tariff Limit, which is compared to the sum of existing users and unique invitations._
+{% endhint %}
 
-_This practically means that users who are already invited to one of your Spaces can easily be invited to your other Spaces._
+{% hint style="info" icon="triangle-exclamation" %}
+If you are using an Organization, the management of access and precise roles is handled in the Organizations' settings, not in this Space menu.
 {% endhint %}
 
 #### API Keys
@@ -81,6 +82,32 @@ _Audit Logs are not created automatically. Turn on the Audit Logs feature for ea
 {% endhint %}
 
 <figure><img src="../.gitbook/assets/Audit Logs Academy 2025 (1).gif" alt=""><figcaption><p><mark style="color:purple;">Audit Logs</mark></p></figcaption></figure>
+
+#### Jobs
+
+When an asynchronous process is required, you can run your flows and then work on something else while they are running. The Job is the ticket to check the progress of your rules. This section manages all your jobs, their descriptions, statuses and results.
+
+{% hint style="info" %}
+To dive on the logic of asynchronous processes you can check our Integration Flow.
+{% endhint %}
+
+#### Connectors
+
+The integration of DecisionRules with your particular database is possible through the native Connectors. If you want to access another database while making a decision, you can add a REST API or Connector section. The management of Connectors is provided in this section.
+
+#### Webhooks
+
+Still related with asynchronous processes, this section allows you to create webhook links to receive a real-time report when your jobs are complete. Remember, webhooks are used in Integration Flows.
+
+#### Event Logs
+
+History of all changes to your rules are tracked in the event logs. If you want to check when a change was made or what type of change was made by a team member, you can browse this section.
+
+{% hint style="info" %}
+Further information on these features for the Integration Flow can be found in the [documentation](https://docs.decisionrules.io/doc/space/jobs).
+{% endhint %}
+
+<figure><img src="../.gitbook/assets/Space new features.png" alt=""><figcaption></figcaption></figure>
 
 ### New Space
 

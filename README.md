@@ -8,7 +8,7 @@ This Academy has been thought for your first steps in the world of Business Rule
 
 The focus is practical, we will show you how to do. In the blink of an eye, you will run the application at full capacity, your team divided into different spaces, each member's roles well defined, and your most important rules already deciding. Although some concepts will be necessary, more extensive explanations are available in our documentation; when it can be relevant we share with you links to specific sections of that documentation.  &#x20;
 
-Let us see first the originality of <mark style="color:purple;">DecisionRules</mark>, how the system stands out from other rules engines with some concrete examples. Examples of our use cases, of our rule types and of our deployment options.   &#x20;
+Let us see first the originality of <mark style="color:purple;">DecisionRules</mark>, how the system stands out from other rules engines by looking at some concrete examples. Examples of our use cases, rule types and deployment options.   &#x20;
 
 ## Benefits of a codeless solution
 
@@ -71,9 +71,15 @@ Many organizations use code-based rules. Thus, when any change is made to the lo
 
 Currently there are six different types of rules in the engine: Decision Tree, Decision Table, Lookup Table, Scripting Rule, Decision Flow, and Integration Flow. One of our popular rules, the Rule Flow, is accessible but it has been improved by the new flows, Decision and Integration.&#x20;
 
-Each type correspond to different levels of logical complexity and different types of decision. Depending of the process you want to automate you choose one rule or another. The criteria for this selection comes from experience, but for now feel free for experiments with all of them. A more detailed explanation will be found below in the [RULES](https://academy.decisionrules.io/rules/what-is-a-rule) section.&#x20;
+Each type correspond to different levels of logical complexity and different types of decision. Depending of the process you want to automate you choose one rule or another. The criteria for this selection comes from experience, but for now, feel free to experiment with all of them. A more detailed explanation will be found below in the [RULES](https://academy.decisionrules.io/rules/what-is-a-rule) section.&#x20;
 
-<figure><img src=".gitbook/assets/Travel Insurance app.png" alt=""><figcaption><p><mark style="color:purple;">Rule Types</mark></p></figcaption></figure>
+<figure><img src=".gitbook/assets/Intro Academa 0.png" alt="" width="513"><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Intro academy.png" alt="" width="513"><figcaption></figcaption></figure>
+
+<figure><img src=".gitbook/assets/Intro Academy 2.png" alt="" width="514"><figcaption></figcaption></figure>
+
+
 
 {% hint style="info" %}
 _See_ [_Rule Types_](/broken/pages/C428SVEbDiRt896FuJaX) _section for more information about each rule type._

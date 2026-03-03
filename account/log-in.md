@@ -24,7 +24,7 @@ If your organization has the single sign-on (SSO) option enabled, you can use yo
 
 <figure><img src="../.gitbook/assets/SSO.png" alt="" width="375"><figcaption><p><mark style="color:purple;">SSO login page</mark></p></figcaption></figure>
 
-Enter your organization's name and click “LOGIN VIA SSO”. You will be directed to the provider's login page to log in. After successful login you will be redirected to the Dashboard in <mark style="color:purple;">DecisionRules</mark>. For detailed information about organization SSO please see our documentation [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/access/single-sign-on-sso).
+Enter your organization's name and click “LOGIN VIA SSO”. You will be directed to the provider's login page to log in. After successful login you will be redirected to the Dashboard in <mark style="color:purple;">DecisionRules</mark>. For detailed information about organization SSO please see our documentation [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/access/cloud/single-sign-on-sso).
 
 ## Forgotten Password
 
