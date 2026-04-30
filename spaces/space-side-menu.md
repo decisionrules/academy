@@ -34,8 +34,12 @@ General data management for your Space can be found in the Info section:
 
 * Space Name
 * Space Owner
+* Your Space Role
 * Number of Rules
+* Number of Users
 * API calls per period
+
+<figure><img src="../.gitbook/assets/Space info.png" alt=""><figcaption></figcaption></figure>
 
 #### Access
 
@@ -47,7 +51,7 @@ Invite new users to your Space using the   <mark style="background-color:purple;
 _The number of users you can invite is predetermined by your Tariff Limit, which is compared to the sum of existing users and unique invitations._
 {% endhint %}
 
-{% hint style="info" icon="triangle-exclamation" %}
+{% hint style="warning" %}
 If you are using an Organization, the management of access and precise roles is handled in the Organizations' settings, not in this Space menu.
 {% endhint %}
 
@@ -71,7 +75,7 @@ _This kind of key is used every time you solve your rule using the Test Bench. Y
 
 Use <mark style="color:purple;">Business Intelligence API Keys</mark> to access Audit Logs - data about the solving of your rules. In addition to output data, you will also receive additional metadata about individual rule solves. You can create a new Business Intelligence API Key by clicking on the same  <mark style="background-color:purple;">**+ Add API Key**</mark>  button on API Keys section.
 
-<figure><img src="../.gitbook/assets/APIs 2.png" alt=""><figcaption><p><mark style="color:purple;">API Keys</mark></p></figcaption></figure>
+<figure><img src="../.gitbook/assets/API keys.png" alt=""><figcaption><p><mark style="color:purple;">API Keys</mark></p></figcaption></figure>
 
 #### Audit Logs
 
@@ -111,11 +115,13 @@ Further information on these features for the Integration Flow can be found in t
 
 ### New Space
 
-If you need to create a new space for another project, or for testing your rules for example, simply click on the Space Name at the top left corner, next to our logo. A list of the Spaces you are a user in will appear. At the top right corner, click the  <mark style="background-color:purple;">**+ Space**</mark>  button, select destination and enter a name for the new Space. Click on the "Create" button and the new Space will be created.
+If you need to create a new space for another project, or for testing your rules for example, simply click on the "_Space Name"_ at the top left corner, next to our logo. A list of the Spaces you are a user in will appear. At the top right corner, click the  <mark style="background-color:purple;">**+ Space**</mark>  button, select destination and enter a name for the new Space. Click on the "Create" button and the new Space will be created.
+
+<figure><img src="../.gitbook/assets/Create a New Private Workspace.gif" alt=""><figcaption></figcaption></figure>
 
 ### Switching between Spaces
 
-If you are a user of several Spaces, you can switch between them freely. Click on the Space Name next to our logo. A list of all the Spaces you are a user in will appear. The list is divided into your own Spaces and those that someone else owns and has invited you to.
+If you are a user of several Spaces, you can switch between them freely. Click on the "_Space Name"_ next to our logo. A list of all the Spaces you are a user in will appear. The list is divided into your own Spaces and those that someone else owns and has invited you to.
 
 {% hint style="warning" %}
 _Before switching to another Space, make sure you have saved your progress._

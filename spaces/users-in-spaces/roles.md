@@ -4,7 +4,13 @@ description: Manage access and permissions for users within the space
 
 # Roles
 
-Use Roles to assign specific permissions to the users invited to your space. There are two ways to assign roles, you can either create a new custom role for the user or use one of our predefined roles. In addition, when creating new roles, you can use the predefined roles as templates that you copy to modify just a part of the permissions. See below for more details on the two types of role.
+Use Roles to assign specific permissions to the users invited to your space.&#x20;
+
+{% hint style="warning" %}
+If you are using an Organization, the management of access and precise roles is handled in the Organizations' settings, not in this Space menu.
+{% endhint %}
+
+There are two ways to assign roles within the Space menu, you can either create a new custom role for the user or use one of our predefined roles. In addition, when creating new roles, you can use the predefined roles as templates that you copy to modify just a part of the permissions. See below for more details on the two types of role.
 
 You can find role settings and assignment of roles under "Access" in the left sidebar menu of your Space settings.
 

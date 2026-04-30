@@ -39,6 +39,10 @@
   * [Create Simple Scripting Rule](rule-types/scripting-rules/create-simple-scripting-rule.md)
 * [Decision Flow](rule-types/decision-flow/README.md)
   * [Create a Decision Flow](rule-types/decision-flow/create-a-decision-flow.md)
+* [Integration Flow](rule-types/integration-flow/README.md)
+  * [Create an Integration Flow](rule-types/integration-flow/create-an-integration-flow.md)
+* [Lookup Tables](rule-types/lookup-tables/README.md)
+  * [Create a Simple Lookup Table](rule-types/lookup-tables/create-a-simple-lookup-table.md)
 * [Rule Flow](rule-types/rule-flow/README.md)
   * [Create Simple Rule Flow](rule-types/rule-flow/create-simple-rule-flow.md)
 

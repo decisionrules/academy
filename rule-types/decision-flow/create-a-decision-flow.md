@@ -123,7 +123,7 @@ In the Source field, we create a formula that continuously updates the total by 
 
 This formula will overwrite the initial price, increasing it as each item’s price is processed. Then save the modal and connect the new node to **Business Rule** node.
 
-<figure><img src="../../.gitbook/assets/Assign.png" alt="" width="563"><figcaption><p>Incrementally Adding Each Item’s Price</p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Assign (1).png" alt="" width="563"><figcaption><p>Incrementally Adding Each Item’s Price</p></figcaption></figure>
 
 To collect the `productId` of each unavailable product, start by adding a **Switch** node and an **Append** node. The **Switch** node will check each item’s availability from the output of the decision table. If the item is unavailable, the **Append** node will add its `productId`, also from the output of the decision table, to an array named `items_unavailable`. This array will then be used in the order message to notify the customer about any items that are out of stock.
 

@@ -14,27 +14,37 @@ Our business rule engine combines both, a low-code engine that does not require 
 
 Lastly, we also offer the category of 'Rule Flows'. These are a special type of rules, where you can create an entire flow of decisions that share a common logic. [Decision Flow](https://academy.decisionrules.io/rule-types/decision-flow) is the rule that easily link individual rules together in the form of 'Nodes', as they logically follow each other, and solves your requests in real time. The design of the [Integration Flow](https://docs.decisionrules.io/doc/rules/flow/decision-flow-vs.-integration-flow) is similar, but oriented to long-running processes and database batch processing. &#x20;
 
+Integrating AI capabilities in your decision-making process can be helpful when you are getting unstructured data in your input but you want to obtain from it structured data for deterministic decisioning. Use our [AI Agent Rule](https://www.decisionrules.io/en/product/ai-agent/) to incorporate these capabilities into decision flows. &#x20;
+
 {% hint style="info" %}
 Nodes are relevant rule blocks building the Flows, more about the possible nodes in your palette [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/flow/flow-nodes-overview).&#x20;
 {% endhint %}
 
 ## Rule Structure
 
-Each rule consists of two main parts:
+Each rule consists of three main parts:
 
-### Rule Model
+#### Rule Model
 
-Our decision rules are built according to the input/output model. The structure of the rules implies the reception of an input and the returning of an output.&#x20;
+Our decision rules are built according to the _input/output_ model. The structure of the rules implies the reception of an input and the returning of an output.&#x20;
 
 In the Model part of your rules you can specify the data you will send to the rule as input and then receive back as output. There, you can also access the settings of the rule, where you manage its name, alias and status, enable audit logs and other features.
 
-### Rule Designer
+#### Rule Designer
 
-In the Rule Designer interface, you create the rule itself. Based on the rule type, you create individual rows (Decision Table), blocks (Decision Tree), lines of code (Scripting Rule) or combine rules into one larger decision unit (Rule Flows). The one feature of Rule Designer that is common to all rule types, and one of the main advantages of <mark style="color:purple;">DecisionRules</mark>, is the Test Bench.
+In the Rule Designer interface, you create the rule itself. Based on the rule type, you create individual rows (Decision Table), blocks (Decision Tree), lines of code (Scripting Rule) or combine rules into one larger decision unit (Flows). The one feature of Rule Designer that is common to all rule types, and one of the main advantages of <mark style="color:purple;">DecisionRules</mark>, is the Test Bench.
+
+#### Rule Tests
+
+A crucial practice creating and updating a rule is testing it. In the Tests interface of your rule, you can create test samples, defining the inputs the rule will run and the expected outputs. You can collect dozens of tests on different Test Suits to evaluate different scenarios at once. The results are given with a comparison match between the current output and the expected ones according to each input.
+
+To switch between the different parts of your rule interface, go to the center of your top-bar.
+
+<figure><img src="../.gitbook/assets/Screenshot 2026-04-29 at 14.52.49 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 ## Test Bench
 
-This is an input-output editor that makes it easy to test the behavior of your new or existing rules when you insert certain input data. You can either enter data using a simple editor or you can use a JSON editor where you can put the entire input in JSON format.
+This is an _input/output_ editor that makes it easy to test the behavior of your new or existing rules when you insert certain input data. You can either enter data using a simple editor or you can use a JSON editor where you can put the entire input in JSON format.
 
 ## Share and Connect Rules
 

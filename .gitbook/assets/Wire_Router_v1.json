@@ -1,0 +1,573 @@
+{
+    "name": "Wire Router",
+    "status": "published",
+    "ruleAlias": "wire-router-fxc5ly",
+    "primaryKeyColumn": "pk",
+    "tags": [],
+    "locked": false,
+    "inputSchema": {
+        "primaryKey": {},
+        "outputColumn": {}
+    },
+    "outputSchema": {
+        "output": {}
+    },
+    "type": "lookup-table",
+    "columns": [
+        {
+            "name": "Swift Code",
+            "alias": "pk",
+            "isPrimaryKey": true
+        },
+        {
+            "name": "BankName",
+            "alias": "bankname",
+            "isPrimaryKey": false
+        },
+        {
+            "name": "Country",
+            "alias": "country",
+            "isPrimaryKey": false
+        },
+        {
+            "name": "RoutingMethod",
+            "alias": "routingmethod",
+            "isPrimaryKey": false
+        }
+    ],
+    "data": {
+        "BOFAUS3N": {
+            "pk": "BOFAUS3N",
+            "bankname": "Bank of America",
+            "country": "USA",
+            "routingmethod": "WIRE_FAST",
+            "_position": 0
+        },
+        "CHASUS33": {
+            "pk": "CHASUS33",
+            "bankname": "JPMorgan Chase",
+            "country": "USA",
+            "routingmethod": "WIRE_FAST",
+            "_position": 1
+        },
+        "CITIUS33": {
+            "pk": "CITIUS33",
+            "bankname": "Citibank NA",
+            "country": "USA",
+            "routingmethod": "WIRE_STD",
+            "_position": 2
+        },
+        "HBUSGB4B": {
+            "pk": "HBUSGB4B",
+            "bankname": "HSBC Bank PLC",
+            "country": "UK",
+            "routingmethod": "BACS_STD",
+            "_position": 3
+        },
+        "BARCGB22": {
+            "pk": "BARCGB22",
+            "bankname": "Barclays Bank",
+            "country": "UK",
+            "routingmethod": "SEPA_INST",
+            "_position": 4
+        },
+        "DEUTDEFF": {
+            "pk": "DEUTDEFF",
+            "bankname": "Deutsche Bank AG",
+            "country": "DE",
+            "routingmethod": "SEPA_INST",
+            "_position": 5
+        },
+        "COBADEFF": {
+            "pk": "COBADEFF",
+            "bankname": "Commerzbank AG",
+            "country": "DE",
+            "routingmethod": "SEPA_STD",
+            "_position": 6
+        },
+        "BNPAFRPP": {
+            "pk": "BNPAFRPP",
+            "bankname": "BNP Paribas",
+            "country": "FR",
+            "routingmethod": "SEPA_INST",
+            "_position": 7
+        },
+        "CRLYFRPP": {
+            "pk": "CRLYFRPP",
+            "bankname": "Crédit Agricole",
+            "country": "FR",
+            "routingmethod": "SEPA_STD",
+            "_position": 8
+        },
+        "UNCRITMM": {
+            "pk": "UNCRITMM",
+            "bankname": "UniCredit S.p.A.",
+            "country": "IT",
+            "routingmethod": "SEPA_INST",
+            "_position": 9
+        },
+        "GEBAESMM": {
+            "pk": "GEBAESMM",
+            "bankname": "Banco Santander",
+            "country": "ES",
+            "routingmethod": "SEPA_STD",
+            "_position": 10
+        },
+        "ABNANL2A": {
+            "pk": "ABNANL2A",
+            "bankname": "ABN AMRO Bank",
+            "country": "NL",
+            "routingmethod": "SEPA_INST",
+            "_position": 11
+        },
+        "RABONL2U": {
+            "pk": "RABONL2U",
+            "bankname": "Rabobank",
+            "country": "NL",
+            "routingmethod": "SEPA_STD",
+            "_position": 12
+        },
+        "DNBANOKK": {
+            "pk": "DNBANOKK",
+            "bankname": "DNB Bank ASA",
+            "country": "NO",
+            "routingmethod": "SWIFT_INT",
+            "_position": 13
+        },
+        "NDEAFIHH": {
+            "pk": "NDEAFIHH",
+            "bankname": "Nordea Bank Abp",
+            "country": "FI",
+            "routingmethod": "SWIFT_INT",
+            "_position": 14
+        },
+        "KREDPLPW": {
+            "pk": "KREDPLPW",
+            "bankname": "PKO Bank Polski",
+            "country": "PL",
+            "routingmethod": "SWIFT_INT",
+            "_position": 15
+        },
+        "KABTNL2A": {
+            "pk": "KABTNL2A",
+            "bankname": "ING Bank N.V.",
+            "country": "NL",
+            "routingmethod": "SEPA_INST",
+            "_position": 16
+        },
+        "SCBLINBB": {
+            "pk": "SCBLINBB",
+            "bankname": "Standard Chartered Bank",
+            "country": "IN",
+            "routingmethod": "SWIFT_INT",
+            "_position": 17
+        },
+        "HASAJPJT": {
+            "pk": "HASAJPJT",
+            "bankname": "Mizuho Bank",
+            "country": "JP",
+            "routingmethod": "SWIFT_INT",
+            "_position": 18
+        },
+        "SMBCJPJT": {
+            "pk": "SMBCJPJT",
+            "bankname": "Sumitomo Mitsui Banking",
+            "country": "JP",
+            "routingmethod": "SWIFT_INT",
+            "_position": 19
+        },
+        "ICBKCNBJ": {
+            "pk": "ICBKCNBJ",
+            "bankname": "Industrial and Commercial Bank of China",
+            "country": "CN",
+            "routingmethod": "SWIFT_INT",
+            "_position": 20
+        },
+        "BKCHCNBJ": {
+            "pk": "BKCHCNBJ",
+            "bankname": "Bank of China",
+            "country": "CN",
+            "routingmethod": "SWIFT_INT",
+            "_position": 21
+        },
+        "UOVBHKHH": {
+            "pk": "UOVBHKHH",
+            "bankname": "United Overseas Bank",
+            "country": "HK",
+            "routingmethod": "SWIFT_INT",
+            "_position": 22
+        },
+        "PPCBTHBK": {
+            "pk": "PPCBTHBK",
+            "bankname": "Bangkok Bank",
+            "country": "TH",
+            "routingmethod": "SWIFT_INT",
+            "_position": 23
+        },
+        "OCBCSGSG": {
+            "pk": "OCBCSGSG",
+            "bankname": "OCBC Bank",
+            "country": "SG",
+            "routingmethod": "SWIFT_INT",
+            "_position": 24
+        },
+        "MBBEMYKL": {
+            "pk": "MBBEMYKL",
+            "bankname": "Maybank",
+            "country": "MY",
+            "routingmethod": "SWIFT_INT",
+            "_position": 25
+        },
+        "ANZBAU3M": {
+            "pk": "ANZBAU3M",
+            "bankname": "ANZ Bank",
+            "country": "AU",
+            "routingmethod": "SWIFT_INT",
+            "_position": 26
+        },
+        "WPACAU2S": {
+            "pk": "WPACAU2S",
+            "bankname": "Westpac Banking Corp",
+            "country": "AU",
+            "routingmethod": "SWIFT_INT",
+            "_position": 27
+        },
+        "NABAAU33": {
+            "pk": "NABAAU33",
+            "bankname": "National Australia Bank",
+            "country": "AU",
+            "routingmethod": "SWIFT_INT",
+            "_position": 28
+        },
+        "BNSFCATT": {
+            "pk": "BNSFCATT",
+            "bankname": "Scotiabank",
+            "country": "CA",
+            "routingmethod": "SWIFT_INT",
+            "_position": 29
+        },
+        "TDOMCATT": {
+            "pk": "TDOMCATT",
+            "bankname": "TD Bank Group",
+            "country": "CA",
+            "routingmethod": "SWIFT_INT",
+            "_position": 30
+        },
+        "ROYCCATT": {
+            "pk": "ROYCCATT",
+            "bankname": "Royal Bank of Canada",
+            "country": "CA",
+            "routingmethod": "SWIFT_INT",
+            "_position": 31
+        },
+        "BCITITMM": {
+            "pk": "BCITITMM",
+            "bankname": "Intesa Sanpaolo",
+            "country": "IT",
+            "routingmethod": "SEPA_STD",
+            "_position": 32
+        },
+        "VOBAATWW": {
+            "pk": "VOBAATWW",
+            "bankname": "Raiffeisen Bank",
+            "country": "AT",
+            "routingmethod": "SEPA_INST",
+            "_position": 33
+        },
+        "RZBAATWW": {
+            "pk": "RZBAATWW",
+            "bankname": "Raiffeisen Zentralbank",
+            "country": "AT",
+            "routingmethod": "SEPA_STD",
+            "_position": 34
+        },
+        "UBSWCHZH": {
+            "pk": "UBSWCHZH",
+            "bankname": "UBS Switzerland AG",
+            "country": "CH",
+            "routingmethod": "SWIFT_INT",
+            "_position": 35
+        },
+        "CSFBCHZZ": {
+            "pk": "CSFBCHZZ",
+            "bankname": "Credit Suisse ",
+            "country": "CH",
+            "routingmethod": "SWIFT_INT",
+            "_position": 36
+        },
+        "DABASKBX": {
+            "pk": "DABASKBX",
+            "bankname": "VUB Banka",
+            "country": "SK",
+            "routingmethod": "SEPA_INST",
+            "_position": 37
+        },
+        "GIBASKBX": {
+            "pk": "GIBASKBX",
+            "bankname": "Tatra banka",
+            "country": "SK",
+            "routingmethod": "SEPA_STD",
+            "_position": 38
+        },
+        "AGRILULL": {
+            "pk": "AGRILULL",
+            "bankname": "Crédit Agricole ",
+            "country": "LU",
+            "routingmethod": "SEPA_INST",
+            "_position": 39
+        },
+        "SOGEFRPP": {
+            "pk": "SOGEFRPP",
+            "bankname": "Société Générale",
+            "country": "FR",
+            "routingmethod": "SEPA_STD",
+            "_position": 40
+        },
+        "BLOMUS33": {
+            "pk": "BLOMUS33",
+            "bankname": "Bank of the Orient",
+            "country": "USA",
+            "routingmethod": "WIRE_STD",
+            "_position": 41
+        },
+        "WELLUS6S": {
+            "pk": "WELLUS6S",
+            "bankname": "Wells Fargo Bank",
+            "country": "USA",
+            "routingmethod": "WIRE_FAST",
+            "_position": 42
+        },
+        "BOSWGB2L": {
+            "pk": "BOSWGB2L",
+            "bankname": "Bank of Scotland",
+            "country": "UK",
+            "routingmethod": "BACS_STD",
+            "_position": 43
+        },
+        "MIDLGB22": {
+            "pk": "MIDLGB22",
+            "bankname": "Midland Bank",
+            "country": "UK",
+            "routingmethod": "SEPA_INST",
+            "_position": 44
+        },
+        "ESSEDE5F": {
+            "pk": "ESSEDE5F",
+            "bankname": "Sparkasse Essen",
+            "country": "DE",
+            "routingmethod": "SEPA_STD",
+            "_position": 45
+        },
+        "HYVEDEMM": {
+            "pk": "HYVEDEMM",
+            "bankname": "HypoVereinsbank",
+            "country": "DE",
+            "routingmethod": "SEPA_INST",
+            "_position": 46
+        },
+        "BAPVPTPL": {
+            "pk": "BAPVPTPL",
+            "bankname": "Banco Português de Investimento",
+            "country": "PT",
+            "routingmethod": "SEPA_STD",
+            "_position": 47
+        },
+        "CAIXESBB": {
+            "pk": "CAIXESBB",
+            "bankname": "CaixaBank",
+            "country": "ES",
+            "routingmethod": "SEPA_INST",
+            "_position": 48
+        },
+        "BELGCOR": {
+            "pk": "BELGCOR",
+            "bankname": "KBC Bank",
+            "country": "BE",
+            "routingmethod": "SEPA_INST",
+            "_position": 49
+        },
+        "NEDSZAJJ": {
+            "pk": "NEDSZAJJ",
+            "bankname": "Nedbank",
+            "country": "ZA",
+            "routingmethod": "SWIFT_INT",
+            "_position": 50
+        },
+        "STBGSGSG": {
+            "pk": "STBGSGSG",
+            "bankname": "DBS Bank",
+            "country": "SG",
+            "routingmethod": "SWIFT_INT",
+            "_position": 51
+        },
+        "HASEHKHH": {
+            "pk": "HASEHKHH",
+            "bankname": "Hang Seng Bank",
+            "country": "HK",
+            "routingmethod": "SWIFT_INT",
+            "_position": 52
+        },
+        "HFCBCNBJ": {
+            "pk": "HFCBCNBJ",
+            "bankname": "Huaxia Bank",
+            "country": "CN",
+            "routingmethod": "SWIFT_INT",
+            "_position": 53
+        },
+        "CHASJPJT": {
+            "pk": "CHASJPJT",
+            "bankname": "JPMorgan Chase",
+            "country": "JP",
+            "routingmethod": "SWIFT_INT",
+            "_position": 54
+        },
+        "BBVAESMM": {
+            "pk": "BBVAESMM",
+            "bankname": "BBVA",
+            "country": "ES",
+            "routingmethod": "SEPA_STD",
+            "_position": 55
+        },
+        "MHCBJPJT": {
+            "pk": "MHCBJPJT",
+            "bankname": "MUFG Bank",
+            "country": "JP",
+            "routingmethod": "SWIFT_INT",
+            "_position": 56
+        },
+        "BKASUS44": {
+            "pk": "BKASUS44",
+            "bankname": "Bank of America",
+            "country": "USA",
+            "routingmethod": "WIRE_FAST",
+            "_position": 57
+        },
+        "ABNAUS33": {
+            "pk": "ABNAUS33",
+            "bankname": "ABN AMRO",
+            "country": "USA",
+            "routingmethod": "WIRE_STD",
+            "_position": 58
+        },
+        "DBAUATWW": {
+            "pk": "DBAUATWW",
+            "bankname": "Deutsche Bank",
+            "country": "AT",
+            "routingmethod": "SEPA_INST",
+            "_position": 59
+        },
+        "CRDEIT22": {
+            "pk": "CRDEIT22",
+            "bankname": "Credito Emiliano",
+            "country": "IT",
+            "routingmethod": "SEPA_STD",
+            "_position": 60
+        },
+        "EVBKDEFF": {
+            "pk": "EVBKDEFF",
+            "bankname": "Evangelische Bank",
+            "country": "DE",
+            "routingmethod": "SEPA_STD",
+            "_position": 61
+        },
+        "CIBKIE2S": {
+            "pk": "CIBKIE2S",
+            "bankname": "AIB Bank",
+            "country": "IE",
+            "routingmethod": "SEPA_INST",
+            "_position": 62
+        },
+        "SVENGB2L": {
+            "pk": "SVENGB2L",
+            "bankname": "Svenska Handelsbanken",
+            "country": "SE",
+            "routingmethod": "SWIFT_INT",
+            "_position": 63
+        },
+        "DAHBNL22": {
+            "pk": "DAHBNL22",
+            "bankname": "Triodos Bank",
+            "country": "NL",
+            "routingmethod": "SEPA_STD",
+            "_position": 64
+        },
+        "UNCRHR22": {
+            "pk": "UNCRHR22",
+            "bankname": "Zagrebačka Banka",
+            "country": "HR",
+            "routingmethod": "SEPA_INST",
+            "_position": 65
+        },
+        "KOPBCZPP": {
+            "pk": "KOPBCZPP",
+            "bankname": "Komerční banka",
+            "country": "CZ",
+            "routingmethod": "SEPA_STD",
+            "_position": 66
+        },
+        "BREXPLPW": {
+            "pk": "BREXPLPW",
+            "bankname": "mBank",
+            "country": "PL",
+            "routingmethod": "SWIFT_INT",
+            "_position": 67
+        },
+        "HBHOUSAA": {
+            "pk": "HBHOUSAA",
+            "bankname": "Home Bank",
+            "country": "USA",
+            "routingmethod": "WIRE_FAST",
+            "_position": 68
+        },
+        "SNORDEFF": {
+            "pk": "SNORDEFF",
+            "bankname": "Snoras Bank",
+            "country": "LT",
+            "routingmethod": "SEPA_STD",
+            "_position": 69
+        },
+        "HWBKDEHH": {
+            "pk": "HWBKDEHH",
+            "bankname": "Hamburg Commercial Bank",
+            "country": "DE",
+            "routingmethod": "SEPA_INST",
+            "_position": 70
+        },
+        "BNPAAUMM": {
+            "pk": "BNPAAUMM",
+            "bankname": "BNP Paribas",
+            "country": "AU",
+            "routingmethod": "SWIFT_INT",
+            "_position": 71
+        },
+        "RUMBUS44": {
+            "pk": "RUMBUS44",
+            "bankname": "Rumi Bank",
+            "country": "USA",
+            "routingmethod": "WIRE_STD",
+            "_position": 72
+        }
+    },
+    "createdIn": "2026-04-15T12:42:37.262Z",
+    "lastUpdate": "2026-04-15T12:42:37.262Z",
+    "visualData": {
+        "columns": [
+            {
+                "columnAlias": "routingmethod",
+                "width": 141
+            },
+            {
+                "columnAlias": "bankname",
+                "width": 257
+            }
+        ]
+    },
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "description": "<p>This table acts as the central reference database for the project, indexed by unique<span class=\"Apple-converted-space\">&#160;</span><b>SWIFT Codes</b>. It maps each code to critical banking attributes, including the official<span class=\"Apple-converted-space\">&#160;</span><b>Bank Name</b>,<span class=\"Apple-converted-space\">&#160;</span><b>Country</b>, and specific<span class=\"Apple-converted-space\">&#160;</span><b>Routing Method</b><span class=\"Apple-converted-space\">&#160;</span>(e.g., SEPA_INST, WIRE_FAST).</p><p>The decision logic queries this dataset to verify bank existence and retrieve banks data.</p>"
+}
