@@ -84,4 +84,6 @@ You can also configure the connection of a new model within the **Left sidebar**
 
 With the tutorial below you will be able to create a simple AI Agent Rule and discover how to integrate the new funcionalities with a Decision Flow.&#x20;
 
-{% embed url="https://app.gitbook.com/o/-MN4G-7P_ExsN1x1n9Mp/s/2kePaAlhzmPFZTjuxdCY/~/edit/~/changes/66/rule-types/ai-agent-rules/create-a-simple-ai-agent-rule" %}
+{% content-ref url="create-a-simple-ai-agent-rule.md" %}
+[create-a-simple-ai-agent-rule.md](create-a-simple-ai-agent-rule.md)
+{% endcontent-ref %}
