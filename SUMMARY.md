@@ -43,6 +43,8 @@
   * [Create an Integration Flow](rule-types/integration-flow/create-an-integration-flow.md)
 * [Lookup Tables](rule-types/lookup-tables/README.md)
   * [Create a Simple Lookup Table](rule-types/lookup-tables/create-a-simple-lookup-table.md)
+* [AI Agent Rules](rule-types/ai-agent-rules/README.md)
+  * [Create a Simple AI Agent Rule](rule-types/ai-agent-rules/create-a-simple-ai-agent-rule.md)
 * [Rule Flow](rule-types/rule-flow/README.md)
   * [Create Simple Rule Flow](rule-types/rule-flow/create-simple-rule-flow.md)
 

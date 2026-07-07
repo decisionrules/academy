@@ -56,7 +56,7 @@ You can find a JSON file of this rule containing all countries here below. You m
 
 {% file src="../../.gitbook/assets/Wire_Router_v1.json" %}
 
-### 6. Using Lookup Tables in Rules
+### 6. Using Lookup Tables within other Rules
 
 Next, create a **Decision Table** called _Fee Multiplier_ to calculate transaction fees based on the bank in use. The Input/Output model will be:
 

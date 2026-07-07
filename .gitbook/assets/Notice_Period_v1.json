@@ -1,0 +1,142 @@
+{
+    "type": "decision-tree",
+    "templateMetadata": {},
+    "name": "Notice Period",
+    "description": "",
+    "inputSchema": {
+        "notice_period_days": {}
+    },
+    "outputSchema": {
+        "validation": {},
+        "error": {
+            "rule": {},
+            "message": {}
+        }
+    },
+    "tags": [],
+    "status": "published",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "ruleAlias": "modest-butterfly",
+    "createdIn": "2026-06-29T14:16:56.844Z",
+    "lastUpdate": "2026-07-02T14:49:35.458Z",
+    "nodes": [
+        {
+            "id": "efb04e6e-94f6-ad8a-4df5-2f93c968145c",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "f8558215-876c-28b9-60de-b50aafdff8c0",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "isNull",
+                        "value": "",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "notice_period_days"
+                },
+                {
+                    "id": "f8ea16cc-8b72-d8d4-3083-5b8365850925",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "642f6921-78f3-99fb-a1ef-db9ff4af1ee1",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "ERROR IN NOTICE PERIOD",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.rule"
+                        },
+                        {
+                            "id": "e0931562-c07c-51ea-9e5e-5557df8c3fe0",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "No enough information to determine the notice period in days",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.message"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "36b8d843-f551-1481-968c-840faac63bd7",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "9b10436a-a952-8430-a835-f34de4b2ead7",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": ">=",
+                        "value": "30",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "notice_period_days"
+                },
+                {
+                    "id": "3b3ee2fd-7c91-1daf-9f0a-e3242640ba67",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "417eb3f8-2877-aa1f-902b-792e0593202b",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "passed",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "935e134b-e40e-376d-140d-a3309d808af2",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "7fcd1849-37a8-0db2-1200-f6c1a4d53b59",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "<",
+                        "value": "30",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "notice_period_days"
+                },
+                {
+                    "id": "828fd14e-cd28-4b47-7195-0f38327b8ae9",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "b6dba3c5-7df5-b64d-8fa4-6a0f781671a5",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "failed, it requires notice in less than 30 days",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

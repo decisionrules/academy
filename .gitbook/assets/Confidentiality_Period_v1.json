@@ -1,0 +1,142 @@
+{
+    "type": "decision-tree",
+    "templateMetadata": {},
+    "name": "Confidentiality Period",
+    "description": "",
+    "inputSchema": {
+        "confidentiality_period_years": {}
+    },
+    "outputSchema": {
+        "validation": {},
+        "error": {
+            "rule": {},
+            "message": {}
+        }
+    },
+    "tags": [],
+    "status": "published",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "ruleAlias": "silky-rabbit",
+    "createdIn": "2026-06-29T13:58:18.468Z",
+    "lastUpdate": "2026-07-02T11:06:00.309Z",
+    "nodes": [
+        {
+            "id": "d11adc22-350b-69cb-88b6-d30228847e0a",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "d5201c0a-c78b-4400-1e17-6de50155b9e4",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "isNull",
+                        "value": "",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "confidentiality_period_years"
+                },
+                {
+                    "id": "c1a59b93-da1f-1747-6c7f-e6641cbbd3d2",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "dbaa33b0-8165-2d64-aa76-4df4ec49b502",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "ERROR IN CONFIDENTIALITY PERIOD",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.rule"
+                        },
+                        {
+                            "id": "8cbccd11-16fa-fc30-fe53-2ebaade8d03b",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "No enough information to determine the confidentiality period in years",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.message"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "89eff9c5-c242-527b-176a-89aafce81ebd",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "6a104939-7b80-74a5-9c76-0e6cf4991a96",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "<=",
+                        "value": "15",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "confidentiality_period_years"
+                },
+                {
+                    "id": "52134a4f-8267-ea62-85df-f6dd8e799143",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "5a834fb3-4e84-8389-b88e-86c8cd57ee09",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "passed",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "d1c6ab92-860e-861f-a013-426c85a2963d",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "462740eb-3183-4e49-a2c6-4e7248496ee4",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": ">",
+                        "value": "15",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "confidentiality_period_years"
+                },
+                {
+                    "id": "e9a5a588-89dc-fae8-9650-555537a77aa3",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "a893cea0-f546-81e9-10a0-786c698cd74a",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "failed, confidentiality is longer than 15 years",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,142 @@
+{
+    "type": "decision-tree",
+    "templateMetadata": {},
+    "name": "Reciprocity",
+    "description": "",
+    "inputSchema": {
+        "reciprocity": {}
+    },
+    "outputSchema": {
+        "validation": {},
+        "error": {
+            "rule": {},
+            "message": {}
+        }
+    },
+    "tags": [],
+    "status": "published",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "ruleAlias": "overall-leech",
+    "createdIn": "2026-06-29T14:32:35.146Z",
+    "lastUpdate": "2026-07-02T11:06:34.457Z",
+    "nodes": [
+        {
+            "id": "e634b114-d192-0c8b-0e5b-9ab4b49e60c2",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "422d4e2b-cb80-5bb8-1187-76696d182d79",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "isNull",
+                        "value": "",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "reciprocity"
+                },
+                {
+                    "id": "16230bda-0049-97dd-b477-a6918483565c",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "a9204350-5f9c-8d73-1462-f0654bf224ef",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "ERROR IN RECIPROCITY",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.rule"
+                        },
+                        {
+                            "id": "ea014bb2-a4a3-b4d8-6e93-f741cb140e29",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "No enough information to determine the reciprocity",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.message"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "da599773-1fbe-31f8-4ec3-4ca389938915",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "283215b3-377d-0080-e0e7-2e3600793cad",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "=",
+                        "value": "true",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "reciprocity"
+                },
+                {
+                    "id": "acee3c8a-4daa-c465-1fd3-ddf9dcdfa690",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "d2329da9-68f2-8e26-c6a3-df3e9739328e",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "passed",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "b8e35a8f-32ce-4187-a253-e739ace77604",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "86baa7c5-de5f-c1c6-7425-d971eef8966c",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "=",
+                        "value": "false",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "reciprocity"
+                },
+                {
+                    "id": "1da120aa-b017-0c0c-fef1-e34d836f712e",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "535b2b82-c23a-5a70-734c-a081ce5bf6c4",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "failed, obligations are not reciprocal",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

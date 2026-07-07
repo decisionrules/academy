@@ -6,7 +6,7 @@ Scripting Rule is another type of rule that you can use in <mark style="color:pu
 
 Just like the other rules, it has a unified Rule Settings form that is the same across all rule types.
 
-So when you are creating a rule, the procedure is exactly the same, first, you create an input and output structure in Rule Model. You can also create your own [Rule Variables](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/rule-variables).
+So when you are creating a rule, the procedure is exactly the same, first, you create an input and output structure in Rule Model. You can also create your own [Rule Variables](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/variables/rule-variables).
 
 Next, you move to the Scripting Rule Designer and create the rule and all the logic using JavaScript.&#x20;
 

@@ -8,7 +8,7 @@ Decision Tree is an easy to learn type of decision rule based on if this then th
 
 <figure><img src="../../.gitbook/assets/First tree.png" alt=""><figcaption><p><mark style="color:purple;">Solution designed in DecisionRules</mark></p></figcaption></figure>
 
-## Designer
+## Decision Tree Designer
 
 The space where you create your decision tree looks like a canvas. Use mouse dragging to move around. Use the mouse wheel or the Zoom In and Zoom Out buttons in the bottom bar of the Designer to adjust the zoom level.
 

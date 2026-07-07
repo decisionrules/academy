@@ -73,7 +73,7 @@ Click the node to open the configuration window and set the following:
 
 &#x20;Recommended SQL statement:
 
-```
+```sql
 SELECT employee_id, last_name, salary FROM australia_employees WHERE region = {input.employeesRegion}
 ```
 
@@ -91,12 +91,12 @@ Remember that you can '_drag-and-drop_' the attributes for mapping data, from th
 
 We will now use a Decision Table called **"Salary Increase Table"** to decide the percentage increase for each employee.
 
-```
+```json
 //Table Input
 {"salary": {}}
 ```
 
-```
+```json
 //Table Output
 {"pctIncrease": {}}
 ```
@@ -122,7 +122,7 @@ To update the salary in each iteration of the loop, drag a **PostgreSQL Single R
 
 To set this node follow similar steps to the last Data & Integration node, but in the Query field, enter the following statement:
 
-```
+```sql
 UPDATE australia_employees 
 SET latest_salary = {postgresql.currentRow.salary} * (1 + ({rule.currentItem.pctIncrease} / 100.0))
 WHERE employee_id = {postgresql.currentRow.employee_id}; 

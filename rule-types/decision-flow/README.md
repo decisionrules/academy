@@ -12,7 +12,7 @@ Decision Flows represent a new feature category within DecisionRules, enhancing 
 
 <figure><img src="../../.gitbook/assets/Perfection.png" alt=""><figcaption><p>Workflow overview</p></figcaption></figure>
 
-### The Decision Flow Designer
+### Decision Flow Designer
 
 The Designer features a canvas with a single **Start** node. On left side, you’ll find several tabs, with the **Palette** being the most important for now. The Palette lists all available node types with brief descriptions. To use a node, simply drag it from the palette onto the canvas.
 

@@ -1,0 +1,136 @@
+{
+    "type": "decision-tree",
+    "templateMetadata": {},
+    "name": "Governing Law",
+    "description": "",
+    "inputSchema": {
+        "governing_law": {}
+    },
+    "outputSchema": {
+        "validation": {},
+        "error": {
+            "rule": {},
+            "message": {}
+        }
+    },
+    "tags": [],
+    "status": "published",
+    "auditLog": {
+        "active": false,
+        "debug": {
+            "active": false
+        },
+        "ttl": 14
+    },
+    "ruleAlias": "illegal-cod",
+    "createdIn": "2026-06-29T13:50:30.731Z",
+    "lastUpdate": "2026-07-02T11:05:37.581Z",
+    "nodes": [
+        {
+            "id": "516c1626-5397-00fb-bc19-a349b7afe84c",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "8b34b475-e8ca-d74a-8d0d-e5c9f096675e",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "isNull",
+                        "value": "",
+                        "type": "general"
+                    },
+                    "modelVariablePath": "governing_law"
+                },
+                {
+                    "id": "6160ee07-f537-0f75-7aea-f777d84c6abe",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "a18a749d-e773-544b-c173-39fe13b4e714",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "ERROR IN GOVERNING LAW",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.rule"
+                        },
+                        {
+                            "id": "d0d369b9-9839-ef76-f40e-3a6a014e8224",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "No enough information to determine the country of arbitration",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "error.message"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "e3112977-a974-2e28-deea-5b1fc200bb07",
+            "operandText": "If",
+            "type": "if",
+            "nodes": [
+                {
+                    "id": "f02ec3dc-81b2-d832-fc02-45213b2408a0",
+                    "type": "condition",
+                    "scalarCondition": {
+                        "operator": "IN",
+                        "value": [
+                            "United States",
+                            "US",
+                            "USA"
+                        ],
+                        "type": "general"
+                    },
+                    "modelVariablePath": "governing_law"
+                },
+                {
+                    "id": "64bb1fb5-716f-3f23-770d-7e69af032ccd",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "113d51ec-f306-0bd9-3486-67d1f5e4a39c",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "passed",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "f012da47-5130-6731-2386-0d29accb376f",
+            "operandText": "Else",
+            "type": "else",
+            "nodes": [
+                {
+                    "id": "0553fb6c-692e-3267-64b1-bd2a2d4a58f4",
+                    "operandText": "Then",
+                    "type": "then",
+                    "nodes": [
+                        {
+                            "id": "f1933b4a-4a87-760c-27e1-299c84f20875",
+                            "type": "result",
+                            "outputScalarValue": {
+                                "value": "failed, governing law is not from US",
+                                "type": "common",
+                                "stringValue": null
+                            },
+                            "modelVariablePath": "validation"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -8,7 +8,7 @@ description: >-
 
 ## Integration Flow Basics
 
-Similar to the Decision Flow, this rule type is composed of a sequence of other rules. It orchestrates independent logical steps within a consistent process. Because they share a similar structure, Integration Flows are built by placing nodes on a canvas and connecting them with lines, utilizing a variety of available node types.
+Similar to the Decision Flow, this rule type is composed of a sequence of other rules. It orchestrates independent logical steps within a consistent process. Because they share a similar structure, Integration Flows are built as well by placing nodes on a canvas and connecting them with lines, utilizing a variety of available node types.
 
 <figure><img src="../../.gitbook/assets/Intro Integration Flow (1).png" alt=""><figcaption></figcaption></figure>
 
@@ -57,9 +57,9 @@ Note that the number of parallel jobs available for your Integration Flows depen
 
 While you can make standard REST API calls from any rule using functions to fetch external data, Integration Flows offer specialized nodes to connect directly and more efficiently with your databases. These are our _Data & Integration Nodes_ (or Connectors).
 
-We support a wide range of relevant databases for our connectors and continuously expand this list based on client requests. The most important aspect of implementation is as follows:&#x20;
+We support a wide range of relevant databases for our connectors and continuously expand this list based on client requests.&#x20;
 
-"To use these nodes, you must first connect your database to your DecisionRules Space".&#x20;
+The most important aspect of implementation is as follows: "_To use these nodes, you must first connect your database to your DecisionRules Space_".&#x20;
 
 #### Steps to connect your database
 

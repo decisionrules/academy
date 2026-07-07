@@ -1,5 +1,23 @@
 ---
 description: Discover the capabilities of DecisionRules
+layout:
+  width: default
+  title:
+    visible: true
+  description:
+    visible: true
+  tableOfContents:
+    visible: true
+  outline:
+    visible: true
+  pagination:
+    visible: true
+  metadata:
+    visible: true
+  tags:
+    visible: true
+  actions:
+    visible: true
 ---
 
 # DecisionRules Academy Introduction
@@ -82,7 +100,7 @@ Each type correspond to different levels of logical complexity and different typ
 
 
 {% hint style="info" %}
-_See_ [_Rule Types_](/broken/pages/C428SVEbDiRt896FuJaX) _section for more information about each rule type._
+_See_ [_Rule Types_](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types) _section for more information about each rule type._
 {% endhint %}
 
 ## Delivery of new rules or changes using versioning
