@@ -22,6 +22,12 @@
   * [Invitations](spaces/users-in-spaces/invitations.md)
   * [Roles](spaces/users-in-spaces/roles.md)
 
+## ORGANIZATIONS
+
+* [What Is an Organization?](organizations/what-is-an-organization.md)
+* [Organizations Side Menu](organizations/organizations-side-menu.md)
+* [Members in Organization](organizations/members-in-organization.md)
+
 ## ⚖️ RULES
 
 * [What is a Rule?](rules/what-is-a-rule.md)

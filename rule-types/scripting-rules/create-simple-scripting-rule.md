@@ -8,27 +8,19 @@ description: This tutorial will walk you through the creation of a simple Script
 
 Let's advance one step at a time.
 
-### 1. Log in
-
-Becoming a superhero is a fairly straightforward process. After entering our [<mark style="color:purple;">login page</mark>](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
-
-<figure><img src="../../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption></figcaption></figure>
-
-There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the folder structure of your Rules List will be displayed.
-
-### 2. Create a new Scripting Rule
+### 1. Create a new Scripting Rule
 
 To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed. We will continue in the Rule Setting menu.
 
 <figure><img src="../../.gitbook/assets/Create Scripting Rule Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
 
-### 3. Make basic settings
+### 2. Make basic settings
 
 Rule Settings will be in a left-hand side menu, or you can access them by Rule Model at the top bar. Let's do some settings. Since we do not want this decision table to be available yet, we will change its status to **Pending**. To do this, switch on the current status **Published** to **Pending**.
 
 To apply these changes, we have to click the <mark style="background-color:orange;">**Save**</mark> button at the top of the page, right corner.
 
-### 4. Create an Input and Output model
+### 3. Create an Input and Output model
 
 We will now create an input and output model, which we will then use to set conditions and results. We create this model with a **JSON editor**.
 
@@ -65,7 +57,7 @@ We set the output model similarly, where we set it as root **result** (empty obj
 }
 ```
 
-### 6. Creating rules
+### 4. Creating rules
 
 Now let's move on to code editor by clicking on **Scripting Rule Designer** it in the upper center and create individual rules.
 
@@ -151,7 +143,7 @@ You can use **log()** to print values in the console, which is at the bottom of 
 Always **save** your script using <mark style="background-color:purple;">**Save**</mark> (bottom of the page) or CTRL/CMD + S
 {% endhint %}
 
-### 7. Test created scripting rule
+### 5. Test created scripting rule
 
 {% hint style="warning" %}
 Don't forget to save your scripting rule!

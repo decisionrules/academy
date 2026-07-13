@@ -10,33 +10,25 @@ In this detailed end-to-end tutorial, we’ll guide you through creating a simpl
 
 Let's advance one step at a time.
 
-### 1. Log in
-
-Becoming a superhero is a fairly straightforward process. After entering our [<mark style="color:purple;">login page</mark>](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
-
-<figure><img src="../../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption></figcaption></figure>
-
-There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the folder structure of your Rules List will be displayed.
-
-### 2. Create a new Decision Table
+### 1. Create a new Decision Table
 
 To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a table for Bank Data Catalog, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed.
 
 <figure><img src="../../.gitbook/assets/Crear una nueva tabla de búsqueda.gif" alt=""><figcaption></figcaption></figure>
 
-### 3. Make basic settings
+### 2. Make basic settings
 
 Rule Settings will be in a left-hand side menu. Let's do some settings. You can switch the toggle status between **Published** and **Pending**. Modify the Rule name or the Alias. Write a short description of the table.
 
 To apply these changes, we have to click the <mark style="background-color:orange;">**Save**</mark> button at the top of the page, right corner.
 
-### 4. Set the columns
+### 3. Set the columns
 
 To define your data columns, navigate to the first column after the Primary Key. _Double-click_ the header to rename it; enter the name of the first property, i.e.  `BankName` . To expand your table, simply click the **"+"** sign located next to your rightmost column. You can rename the next column  `Country` with the same method, or using the dropdown menu clicking the small arrow on the header. The last one must contains the specific `RoutingMethod` , repeat the same steps. &#x20;
 
 <figure><img src="../../.gitbook/assets/Add and Rename Columns in a Data Table.gif" alt=""><figcaption></figcaption></figure>
 
-### 5. Set the rows
+### 4. Set the rows
 
 Now, begin filling in the information for each bank. In this example, banks are indexed by their unique SWIFT Codes, so the **Primary Key** must contain these codes. This maps each Swift Code to the critical banking attributes defined in your columns.&#x20;
 
@@ -56,7 +48,7 @@ You can find a JSON file of this rule containing all countries here below. You m
 
 {% file src="../../.gitbook/assets/Wire_Router_v1.json" %}
 
-### 6. Using Lookup Tables within other Rules
+### 5. Using Lookup Tables within other Rules
 
 Next, create a **Decision Table** called _Fee Multiplier_ to calculate transaction fees based on the bank in use. The Input/Output model will be:
 
@@ -96,7 +88,7 @@ Finally, set the results. For the first row, the _feeMultiplier_ is empty (inval
 
 <figure><img src="../../.gitbook/assets/dt all.png" alt=""><figcaption></figcaption></figure>
 
-### 7. Test the Decision Table
+### 6. Test the Decision Table
 
 You can now test the functionality of your Lookup Table by evaluating the Decision Table we just created. Open the **Test Bench** at the bottom of your the designer for your _Fee Multiplier_ **Decision Table**.
 

@@ -8,21 +8,13 @@ description: This tutorial will walk you through the creation of a simple Decisi
 
 Let's advance one step at a time.
 
-### 1. Log in
-
-Becoming a superhero is a fairly straightforward process. After entering our [<mark style="color:purple;">login page</mark>](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
-
-<figure><img src="../../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption></figcaption></figure>
-
-There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the folder structure of your Rules List will be displayed.
-
-### 2. Create a New Decision Tree
+### 1. Create a New Decision Tree
 
 To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a tree for procrastination, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed. We will continue in the Rule Setting menu.
 
 <figure><img src="../../.gitbook/assets/Creation of trees Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
 
-### 4. Create the input and output model
+### 2. Create the input and output model
 
 We will now create the input and output model which is used to set conditions and results. There are two ways to create these models:
 

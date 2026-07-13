@@ -1,16 +1,16 @@
 # Create a Simple AI Agent Rule
 
 {% hint style="success" %}
-All steps can be created and managed right in DecisionRules app
+All steps in this tutorial can be created and managed directly within the DecisionRules app.
 {% endhint %}
 
-**Use Case:** The rules of this tutorial were designed to be called by a user when a new NDA arrives and the team want to decide the necessary redlines in real time.&#x20;
+**Use Case:** The rules in this tutorial are designed to be called by a user when a new NDA arrives and the team needs to determine necessary redlines in real time.
 
-**Goal:** The goal was to automate the process such that the system sends the NDA to DecisionRules and retrieve the evaluation of the document with the redlines that must be pointed out.&#x20;
+**Goal:** The goal is to automate the process so the system sends the NDA to DecisionRules and retrieves data identifying the redlines that must be addressed.
 
-The main features in DecisionRules to achieve this goal are the **AI Agent Rule** and the **Decision Flow**. In this detailed end-to-end tutorial, we'll guide you to build an **AI Agent Rule** for the analysis of the unstructured data given in the new NDA, getting back the data of the NDA in structured JSON format. In the second part of this tutorial we'll model a **Decision Flow** that integrates the **AI Agent Rule** and complete the goal in a predictable, deterministic way.&#x20;
+The primary features in DecisionRules used to achieve this goal are the **AI Agent Rule** and the **Decision Flow**. In this detailed end-to-end tutorial, we will guide you through building an AI Agent Rule to analyze the unstructured data in a new NDA and return it in a structured JSON format. In the second part, we will model a Decision Flow that integrates the AI Agent Rule to achieve the goal in a predictable, deterministic way.
 
-We'll cover navigating through the creation process, configuring **Decision Flow** nodes, and generating the final output, which includes the redlines of the NDA according to the evaluation of the rules, the reference in the text for the decision of those redlines, and personalized messages for the user in case of misbehaviour because the unstructured data.&#x20;
+We will cover navigating the creation process, configuring Decision Flow nodes, and generating the final output. This includes: Identifying redlines based on rule evaluations, providing text references for those redlines, and creating personalized messages in case of misbehaviour because the unstructured data is inconsistent.&#x20;
 
 At the end we’ll test our new rule with one mock example. This tutorial will help you understand key **AI Agent Rule** practices and data manipulation techniques.&#x20;
 
@@ -18,23 +18,15 @@ At the end we’ll test our new rule with one mock example. This tutorial will h
 
 Let's advance one step at a time.
 
-### 1. Log in
+### 1. Create a new AI Agent Rule
 
-Becoming a superhero is a fairly straightforward process. After entering our [<mark style="color:purple;">login page</mark>](https://app.decisionrules.io/auth/login), you will be able to pass your credentials and log in.
-
-<figure><img src="../../.gitbook/assets/login 2025.png" alt="" width="375"><figcaption></figcaption></figure>
-
-There are multiple options for user login. If you do not have an account yet, you can [<mark style="color:purple;">create one</mark>](https://app.decisionrules.io/auth/register?type=true-registration). After logging in to the application, the folder structure of your Rules List will be displayed.
-
-### 2. Create a new AI Agent Rule
-
-To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a AI Agent Rule for analysing a new NDA, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed.
+To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a **AI Agent Rule** for analysing a new NDA, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed.
 
 <figure><img src="../../.gitbook/assets/Create a New AI Agent Rule in DecisionRules.gif" alt=""><figcaption></figcaption></figure>
 
-### 3. Create the input and output (I/O) model
+### 2. Create the input and output (I/O) model
 
-We will now create the **Input/Output** model which is used to set the instructions for the AI and the invariable structure of the output . Similar to the other rules, there are two ways to write these models:
+We will now create the **Input/Output** model which is used to set the instructions for the AI and the fields of the output. Similar to the other rules, there are two ways to write these models:
 
 #### Using the simple editor
 
@@ -42,28 +34,28 @@ First, you can switch from "Designer" to "Model" at the centre of the top bar.&#
 
 <figure><img src="../../.gitbook/assets/Screenshot 2026-04-29 at 14.52.49 (2) (1).png" alt=""><figcaption></figcaption></figure>
 
-**Delete the default attribute "input"** by clicking the trash can icon next to the name. Then, add your own attribute: First create the root of your attributes clicking the **+Add** button. For this example you will need just one root: <mark style="color:purple;background-color:purple;">**nda**</mark>. After, you can add all the data required for the analyzis of that `nda` object: <mark style="color:purple;background-color:purple;">**originatingParty**</mark>, <mark style="color:purple;background-color:purple;">**disclosingParty**</mark>, <mark style="color:purple;background-color:purple;">**receivingParty**</mark>, and <mark style="color:purple;background-color:purple;">**text**</mark>.&#x20;
+**Delete the default attribute "input"** by clicking the trash can icon next to the name. Then, add your own attributes: First create the root of your attributes clicking the **+Add** button. For this example, you will only need one root: <mark style="color:purple;background-color:purple;">**nda**</mark>. AAfterward, you can add all the data required for the analysis of that `nda` object: <mark style="color:purple;background-color:purple;">**originatingParty**</mark>, <mark style="color:purple;background-color:purple;">**disclosingParty**</mark>, <mark style="color:purple;background-color:purple;">**receivingParty**</mark>, and <mark style="color:purple;background-color:purple;">**text**</mark>.&#x20;
 
 <figure><img src="../../.gitbook/assets/Edit Input Fields in Model Configuration.gif" alt=""><figcaption></figcaption></figure>
 
-Now, you can continue with the output model. It will be set similarly. As root attributes, add <mark style="color:green;background-color:green;">**terms**</mark> and <mark style="color:green;background-color:green;">**reference**</mark>. Then, you can add a similar child attributes to the both roots because they are connected.&#x20;
+Now, let's proceed with the output model. It is configured in the same way. Add two root attributes: <mark style="color:green;background-color:green;">**terms**</mark> and <mark style="color:green;background-color:green;">**reference**</mark>. Then, add identical child attributes to both roots, as they are logically connected.
 
-* The `terms`' fields are expecting: **the precise report**, whether the data exist; what exact number, name or sentence it is.
-* The `reference`'s fields are expecting: **the exact words in the text** from where the AI is taking the report for terms.
+* **The `terms` fields** are designed to capture the precise data, indicating whether the information exists and providing the exact number, name, or sentence.
+* **The `reference` fields** will store the exact words from the text that the AI used to generate the corresponding "terms" report.
 
-Rename the new attributes according the information you want to obtain. A comprehensive list of attributes that will be useful in future examples and exercises is the following:
+Rename the new attributes according to the information you wish to obtain. A comprehensive list of attributes that will be useful for future examples and exercises includes:
 
 * <mark style="color:green;background-color:green;">**scope\_and\_definition**</mark>, <mark style="color:green;background-color:green;">**confidentiality\_period\_years**</mark>, <mark style="color:green;background-color:green;">**governing\_law**</mark>, <mark style="color:green;background-color:green;">**notice\_period\_days**</mark>, <mark style="color:green;background-color:green;">**reciprocity**</mark>, <mark style="color:green;background-color:green;">**exclusions**</mark>, <mark style="color:green;background-color:green;">**permitted\_disclosures**</mark>, <mark style="color:green;background-color:green;">**liability\_cap\_usd**</mark>, <mark style="color:green;background-color:green;">**return\_of\_information\_required**</mark>, <mark style="color:green;background-color:green;">**return\_deadline\_days**</mark>, and <mark style="color:green;background-color:green;">**residuals\_clause**</mark>.&#x20;
 
 {% hint style="warning" %}
-You don't have to write one by one the attributes, see how to use the JSON editor below.
+You don't have to write one by one the attributes, see how to use the **JSON editor** below.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/outputs (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 #### Using the JSON editor
 
-Now, **the JSON editor can reduce the time for modelling the I/O model** by simple copy and paste. You can provide the input and output model in JSON format from any other source. In our case, use the following format to copy and paste in your editor:&#x20;
+Alternatively, **the JSON editor can reduce the time required to define your I/O model** through simple copying and pasting. You can provide the input and output models in JSON format from any external source. For this tutorial, use the following format to copy and paste into your editor:
 
 {% tabs %}
 {% tab title="Input Model" %}
@@ -125,33 +117,29 @@ After creating an input and output (I/O) model, we must always confirm the chang
 More information on the JSON editor can be found [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/input-and-output/json-editor).
 {% endhint %}
 
-### 4. Set the configurations of the background
+### 3. Set the configurations of the background
 
-To set the environment where your LLM will operate, switch again, from "Model" to "Designer". Go to the left sidebar and start the configurations according to your requirements.&#x20;
+To set up the environment where your LLM will operate, switch back from the "Model" view to the "Designer" view. Use the left sidebar to configure the settings according to your requirements:
 
-{% hint style="info" %}
-The instructions to create a Connector for your LLM are in the introduction to the AI Agent Rule.
-{% endhint %}
-
-* **AI Model:** We will show one possible sample. For this instance we choose the Model: _Gemini 3 Flash_. Clearly for the reproduction in your Space you can select any other model in the dropdown.&#x20;
-* **Connector:** The LLM already connected to our Space has the named: gemini (connection-vhksg). The options showed to you will depend of the connectors that you already created.
-* **Cache AI Response (Toggle):** For the creation and testing of this new rule you can activate the Cache.&#x20;
-* **Explainable AI (Toggle):** For this example, the Explainable AI won't be necessary. Its use will be fine in more advanced exercises.&#x20;
-* **Data Dictionary:** It is enough to check that you have all the information necessary for building the prompt.
+* **AI Model:** We will use _Gemini 1.5 Flash_ as an example. You can, of course, select any other available model from the dropdown list in your rule.
+* **Connector:** For this example, our LLM is connected via a [connector](https://docs.decisionrules.io/doc/space/connectors) named _gemini (connection-vhksg)_. The options shown to you will depend on the connectors you have already created in your Space.
+* **Cache AI Response (Toggle):** During the creation and testing of this new rule, you should activate the **Cache**.
+* **Explainable AI (Toggle):** For this tutorial, Explainable AI is not necessary. It is better suited for more advanced exercises.
+* **Data Dictionary:** Briefly check this panel to ensure you have all the information required to build your prompt.
 
 {% hint style="success" %}
-**Best Practices:** The Cache will help you to make faster tests and secure analysis with the same input in a short period of time, for this reason it is good to activate for the rule's construction.
+**Best Practices:** Activating the **Cache** allows you to perform faster tests and ensures consistent analysis when using the same input repeatedly. This is highly recommended during the rule construction phase.
 {% endhint %}
 
 <figure><img src="../../.gitbook/assets/Configure and Test AI Model for NDA Analysis (2).gif" alt=""><figcaption></figcaption></figure>
 
 
 
-### 6. Build the Prompt
+### 4. Build the Prompt
 
-Currently, the practices for writing optimal prompts evolve fast, the suggestions in this section will have constantly improvements. What is relevant to notice is to apply the best practices for instructions, using the Data Dictionary in a way that your input model will be used with precision in the prompt.
+Prompt engineering practices evolve rapidly; therefore, the suggestions in this section will be continuously improved. What is relevant to notice is to apply the best DecisionRules practices for instructions: Ensure your input model is framed with precision, use the Data Dictionary as direct reference, and write with your best clarity.&#x20;
 
-For this rule, we will make explicit the **Role** assumed by the AI, the **Context** of the analysis, and the **Task** required from the model. A possible example:
+For this example, we will explicitly define the **Role** assumed by the AI, the **Context** of the analysis, and the **Task** required from the model.&#x20;
 
 {% prompt description="" %}
 ```markdown
@@ -176,25 +164,27 @@ For every output field that can be determined and the answer is explicitely nega
 ```
 {% endprompt %}
 
-As you can see, there are string of data in the form: _{a.b}_. This are the attributes from the input in the data dictionary, and will be filled dynamically, each new payload for the input will give precise new information for the analysis.&#x20;
+The placeholders in the form _{a.b}_ (such as _{nda.text}_) are dynamic attributes. At runtime, DecisionRules replaces these placeholders with the actual content of your input payload. This allows a single AI Agent rule to analyze thousands of different NDAs. &#x20;
 
-The most important is the body of the NDA in _{nda.text}_. &#x20;
+**Remark:** If your analysis requires a reference document (such as a company standard or a regulatory guideline), you can use the **Attachments** feature:
 
-**Remark:** If required, you can also use attached documents (in pdf or other formats) for the prompt. First, they must be added in the Tab "Attachments", click on Add Attachment and select your document. Next, go back to the "Prompt/Instruction", drag and drop the attachment from the data dictionary, and repeat the logic: locate the attachment in the part of the prompt that better explain the use of that data.&#x20;
+1. Navigate to the Attachments tab and click Add Attachment to upload your file (PDF, TXT, etc.).
+2. Return to the Prompt/Instruction editor.
+3. Drag the file from the Data Dictionary into your prompt. The AI will now be able to reason across both the input data and the attached document.
 
-### 6. Edit the Annotations
 
-By the relevant role of the Annotations in the AI agent rule, this is the most extensive work. We will cover each detail.&#x20;
 
-In the main panel move from "Prompt/Instruction" to "Annotations".
+### 5. Edit the Annotations
 
-**You will find three columns:**&#x20;
+Annotations are the most critical part of the AI Agent rule because they define the conditions of engagement for the model's response. Here you will find the most extensive work. We will cover each detail.
+
+In the main panel, navigate to the "Annotations" tab. The interface is organised into three columns:
 
 The first column reflects your **output model**. The second column is for the specification of the **data types** expected in each particular output attribute. The third column is **a description** of what exactly you are expecting and how.  &#x20;
 
 <figure><img src="../../.gitbook/assets/pre annotations.png" alt=""><figcaption></figcaption></figure>
 
-The **data type** of a root will be always {} Object. In this example, change the children of terms to the more convenient data type. Notice that in case of doubt, it is better to select a data type that can cover all the expected outputs and offer a more restrict set of these outputs. This is the given solution for some of them:
+**Setting Data Types:** Root attributes (like `terms` and  `reference` ) will always be of the **{} Object** type. For the "child" attributes under _terms_, select the type that best fits the logic. For instance, using **Number** for years or **Boolean** for the presence of a clause. This ensures your downstream Decision Flows can process the data without errors.
 
 | Attribute                      | Data Type |
 | ------------------------------ | --------- |
@@ -207,46 +197,40 @@ The **data type** of a root will be always {} Object. In this example, change th
 
 <figure><img src="../../.gitbook/assets/annotations.png" alt=""><figcaption></figcaption></figure>
 
-In **the description** of the last column for each element of the output, it is a good practice to include the conditions you are expecting to fulfil in order to select just one element of the set of outputs. You can read some possible descriptions in the image above.&#x20;
+**Writing Effective Descriptions:** Your descriptions should be treated as "mini-prompts." A good description includes the conditions required to satisfy the field. To exemplify this feature, we will focus on the _reference_ root, and the description of its "child" attributes.
 
-Regarding the children of reference, all of them must be of type: Text. And the description is the same as well, you can repeat the pattern of the first child in all the others:[^1]
+First, ensure all its child attributes are set to the **Text** data type. These descriptions should follow a consistent pattern, instructing the AI to provide the verbatim evidence from the NDA. For instance:
 
-| Attribute                      | Description                                                                                                                                          |
-| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| scope\_and\_definition         | Return a string with the exact words in the text of the nda, where you extracted the info for the ouput above: terms.scope\_and\_definition.         |
-| confidentiality\_period\_years | Return a string with the exact words in the text of the nda, where you extracted the info for the ouput above: terms.confidentiality\_period\_years. |
+| Attribute                      | Description                                                                                                                                            |
+| ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| scope\_and\_definition         | Return a string with the exact words in the text of the nda, where you extracted the info for the ouput above: _terms.scope\_and\_definition_.         |
+| confidentiality\_period\_years | Return a string with the exact words in the text of the nda, where you extracted the info for the ouput above: _terms.confidentiality\_period\_years_. |
 
 {% hint style="warning" %}
-The last column must be filled for every object in the output, including the roots.
+**Note:** The last column must be filled for every object in the output, including the root folders. Providing a description for the root helps the model understand the overall context of that data group.
 {% endhint %}
 
-{% hint style="info" %}
-In the description of the roots it is always good to put some limits and minimum of compliance.&#x20;
-{% endhint %}
+### 6. Test the Agent
 
-### 7. Test the Agent
+Now we can test our rule in the **Test Bench**. Click the **Test Bench** icon on the far left of the bottom bar. Once clicked, the Test Bench will appear at the bottom of the page.
 
-Now we can test our rule in Test Bench.
-
-We can click the <mark style="background-color:purple;">**Test Bench**</mark> icon at the beginning of the bottombar. After clicking the icon, the Test Bench will show up at the bottom of the page.&#x20;
-
-Then we can fill in some mock data, some examples of NDAs. In the document below you will find a sample. Use the specifications of the document to complete the input, and remember to paste the text of the NDA in nda.text. Click the <mark style="background-color:green;">**Run**</mark> button and the result will be displayed in right hand side of the Test Bench. Note that you can switch between the **Simple Bench** and the **JSON Bench**.
+You can then fill in some mock data using the sample NDA provided below. Use the specifications from the document to complete the input fields, and remember to paste the full text of the NDA into the nda.text field. Click the **Run** button, and the results will be displayed on the right-hand side of the Bench. Note that you can switch between the **Simple Bench** and the **JSON Bench** to view the output.
 
 {% file src="../../.gitbook/assets/Mock_NDA.pdf" %}
 
 <figure><img src="../../.gitbook/assets/testing.png" alt=""><figcaption></figcaption></figure>
 
-## 2nd Part: How to integrate the AI agent rule with a decision flow
+## 2nd Part: How to integrate **the AI Agent Rule into a Decision Flow**
 
-In this section we will create a Decision Flow that use the structured data given by the AI agent rule to validate the NDA parameters according the company's standards, and decide which redlines are pertinent.&#x20;
+In this section, we will create a Decision Flow that uses the structured data provided by the AI Agent rule to validate NDA parameters against company standards and determine which redlines are pertinent.
 
-### Logic of the flow
+### Intro: Logic of the flow
 
 #### IO Model
 
-Our input model captures the data required to run the AI agent rule above, it will replicate the input model of the AI agent rule. The reason for this design are the results from the AI node, which contain all the information required to run the other rules and nodes in the flow.&#x20;
+Our **Input Model** captures the data required to run the AI Agent rule from Part 1; therefore, it will replicate that rule's input model. This design is due to the fact that the results from the AI node contain all the information necessary to drive the other rules and nodes in the flow, and it will be the first node.
 
-Our output model will be constructed slightly different. It includes `redline` 's validation, the `reference` to accept or reject those redlines in the text, and `error` option to handle drawbacks. In this sample the company has just four minimal standards to accept an NDA (Next example will handle big sets of standards).
+Our **Output Model** is constructed slightly different. It includes `redline` validation, the specific text `reference` used to accept or reject those redlines, and `error` handling options to manage potential drawbacks. In this sample, the company evaluates four minimal standards for accepting an NDA (more complex sets of standards will be handled in future examples).
 
 {% tabs %}
 {% tab title="Input Model" %}
@@ -288,22 +272,22 @@ Our output model will be constructed slightly different. It includes `redline` '
 
 #### Flow of the Process
 
-When designing the Decision Flow as a decision process, establishing a logical steps ensures stability and efficiency.&#x20;
+When designing the Decision Flow as a decision process, establishing a logical steps ensures a faster selection and location of the nodes.&#x20;
 
-1. **AI Analysis**: Start by converting the unstructured data of the NDA text in a typed JSON response. This step allows to extract with precision the attributes from the NDA for evaluation. At this stage, the analysis of the AI is the key to use the other strong predictable rules over the NDA.
-2. **Validation of the company's standards**: This is the core of the flow, the standards of the company are saved in Rules inside the Space. The flow will call four rules to evaluate a set of four minimal standards: _The confidentiality period_, _the governing law country_, _the notice period_, and _the reciprocity of the agreement_. Based on these rules, the system decides which sections of the NDA must be redlined or not.
-3. **Error handle:** Because the nature of the AI practice, it is not gurantee the NDA gives all necessary data in the first call, and the LLM is not always fast. With a couple of nodes we design a path to follow in case the NDA misses information or you run out of time waiting for the LLM answer. These nodes will give you a warning and a message to solve quickly the problems.
-4. **Generating the final redlines**: Use the values from the previous steps to populate the output properties specified in the output model. Additionally, if there are error, send an error message accordingly.
+1. **AI Analysis**: Start by converting the unstructured data of the NDA text into a typed JSON response. This step enables the precise extraction of attributes from the NDA for evaluation. At this stage, the AI analysis is key to using other strong, predictable rules over the NDA.
+2. **Validation of Company Standards**: This is the core of the flow; the company's standards are saved as Rules within the Space. The flow will call four rules to evaluate a set of four minimal standards: _the confidentiality period_, _the governing law country_, _the notice period_, and _the reciprocity of the agreement_. Based on these rules, the system decides which sections of the NDA should be redlined.
+3. **Error Handling:** Due to the nature of AI, it is not guaranteed that the NDA will provide all necessary data in the first call, and LLM response times can vary. With a couple of nodes, we design a path to follow in case the NDA is missing information or the LLM request times out. These nodes provide a warning and a message to help resolve the issues quickly.
+4. **Generating the Final Redlines:** Use the values from the previous steps to populate the properties specified in the output model. Additionally, if there are errors, an appropriate error message is sent.
 
 ### 1. AI Analysis
 
-It's time for adding first node to the canvas. Start by adding an **AI Agent** node and connect the **Start** node to it. Open the node, click on the dropdown of the Select Agent, and choose the AI agent rule to analyse the NDA. After selecting your rule, its input model will show. We need a mapping from our Data Dictionary to the input of the rule: Drag and drop from the Data Dictionary the root `nda` in the main Decision Flow input, to the section Rule Inputs and the attribute with the same name, it means  `nda` . Save values in the modal.&#x20;
+It is time to add the first node to the canvas. Begin by adding an **AI Agent node** and connecting the **Start node** to it. Open the node settings, click the _Select Agent_ dropdown, and choose the AI Agent rule you created to analyze the NDA. Once selected, the rule's input model will be displayed. You now need to map the data from the Data Dictionary to the rule's input: drag and drop the `nda` root from the Data Dictionary into the _Rule Inputs_ section for the attribute named  `nda` . Save the values in the modal.
 
 <figure><img src="../../.gitbook/assets/Configure an AI Agent to Analyze NDA Documents.gif" alt=""><figcaption><p>Adding the AI Agent node</p></figcaption></figure>
 
-### 2. Validation of the company's standards
+### 2. Validation of Company Standards
 
-Drag and drop four **Business Rule** nodes onto the canvas, locate them in parallel next to the **AI Agent** node.&#x20;
+Drag and drop four Business Rule nodes onto the canvas and position them in parallel to the right of the AI Agent node.&#x20;
 
 In the first **Business Rule** we will use the _Reciprocity_ tree (A JSON file with the design of the rule is here below). The standard is simple: **The NDA must be reciprocal**. The logic of the standard can be expressed in a Decision Tree keeping the simplicity:&#x20;
 
@@ -337,37 +321,47 @@ In the fourth **Business Rule** we will use the _Governing Law_ tree (A JSON fil
 
 {% file src="../../.gitbook/assets/Governing_Law_v1.json" %}
 
-The AI Agent node has two hooks, connect the green one to the four Decision Trees recently set.&#x20;
+The AI Agent node features two output ports; connect the _green (success) port_ to each of the four Decision Trees you just configured.
 
 <figure><img src="../../.gitbook/assets/four trees.png" alt=""><figcaption></figcaption></figure>
 
 ### 3. Error handle
 
-Drop an **Assign** node below the column of **Business Rule** nodes, and connect the red hook of the **AI Agent** node to it. The red path runs for times out waiting for the AI. Open the **Assign** and create a target to report the error of the LLM, e.g. `AnalyzerError.code` . And write an error code like: AI\_PROCESSING\_ERROR.&#x20;
+Place an **Assign node** below the column of Business Rule nodes and connect the _red (failure) anchor_ of the AI Agent node to it. The red path is triggered if the AI request times out or fails. Open the Assign node and create a target to report the LLM error (e.g. `AnalyzerError.code` ). Then, assign a static error code such as AI\_PROCESSING\_ERROR.&#x20;
 
 <figure><img src="../../.gitbook/assets/assign.png" alt="" width="563"><figcaption></figcaption></figure>
 
-Drop on the right of your design an **Append** node and connect all the nodes on the last column of parallel nodes to it. So far there are two kind of errors, the AI time out and the empty fields in the report of the NDA. This node will store one array with all errors from both kind. Please, create a target array called `errors` and drag all the attributes reporting errors to the values to append.&#x20;
+Add an **Append node** to the right of your design and connect it to all the nodes in the preceding parallel column (the four Business Rule nodes and the error-handling Assign node). So far, we have identified two types of errors: AI timeouts and empty fields within the NDA report. This node will store a single array containing all potential issues. In the node settings, create a target array called `errors` and drag all attributes that report errors into the "Values to Append" section.
 
 <figure><img src="../../.gitbook/assets/append.png" alt="" width="375"><figcaption></figcaption></figure>
 
 <figure><img src="../../.gitbook/assets/errro handle.png" alt=""><figcaption></figcaption></figure>
 
-Finally, drop a **Switch** node and connect it from the **Append**. Open it and create a case for Errors in the evaluation. The condition is: IF the error array from the **Append** is not empty, THEN there are errors so go to the mapping for errors, OTHERWISE go to the mapping for redlines. The case configuration requires to drag and drop the object `errors` created in the **Append** node to the condition. Use the function Contains Text and write the text: ERROR. The Default case will cover the 'otherwise' option of the condition. &#x20;
+Finally, place a **Switch node** on the canvas and connect the output of the **Append node** to it. Open the Switch settings and create a case for "Errors in evaluation". The logic is as follows: IF the errors array from the Append node is not empty, THEN follow the path for error mapping; OTHERWISE, proceed to the redline mapping.
+
+To configure this, drag and drop the `errors` object created in the **Append node** into the _Condition_ field. Select the <mark style="color:green;background-color:green;">**Contains Text**</mark> function and enter the value: ERROR. The _Default case_ will automatically handle the "otherwise" scenario, directing the flow when no errors are present.
 
 <figure><img src="../../.gitbook/assets/Set Up Conditional Branching for AI Evaluation Errors.gif" alt=""><figcaption></figcaption></figure>
 
 ### 4. Generating the final redlines
 
-Now that we have gathered all the necessary values, we can create the final redlines, which will include the validation of the four minimal standards and the references in the original text. To map these values for display in the Decision Flow output, we'll utilize an **Assign** node. In the modal we will map all the information to output properties.
+Now that all necessary values have been gathered, we can generate the final redlines, including the validation results for the four minimal standards and their corresponding text references. To map these for the final output, we will use an **Assign node**.
 
-Connect the "Default" option of the **Switch** node to the **Assign** node. Open the node. Put on the "Target" side all output attributes for redlines and references, eight in total. For the redlines, map on the "Source" the results from the four Decision Trees. For the references, map on the "Source" the corresponding results from the AI rule.&#x20;
+1. **Success Path:** Connect the _Default port_ of the **Switch node** to a new Assign node. Open the configuration.
+2. **Map Results:** On the _Target_ side, add all eight output attributes for redlines and references. For the redlines, map the results from the four Decision Trees as the _Source_. For the references, map the corresponding data from the AI Agent rule.
 
 <figure><img src="../../.gitbook/assets/final assignment.png" alt=""><figcaption><p>Assigning values to Decision Flow Output</p></figcaption></figure>
 
-We'll utilize another **Assign** node to handle the errors. Connect the "AI error in the evaluation" option of the **Switch** node to the _new_ **Assign** node and to the _last_ **Assign** node. If any errors were stored in our errors array, the **Switch** node will direct the flow to the redline **Assign** node to give any processed information, but also it will direct to a node for message error. &#x20;
+To manage exceptions, add a second **Assign node**. Connect the "_AI error in the evaluation" port_ of the **Switch node** to this new node.
 
-Put on the "Target" side the output attributes for errors, two in total. For output.errors.types you can map the errors array from the **Append**. For output.errors.message we can use a customised message with the originating party and instructions to deal with the errors:
+{% hint style="info" %}
+**Note:** If errors are stored in our array, the Switch node can direct the flow to both the success Assign node (to provide any partially processed info) and the error Assign node simultaneously.
+{% endhint %}
+
+In the **error** **Assign node**, set the _Target_ to your two error output attributes:
+
+* **output.errors.types:** Map the errors array from the Append node.
+* **output.errors.message:** Enter a customized message such as:
 
 ```
 Please check the list of errors.types . 
@@ -383,7 +377,7 @@ Congratulations! :tada: You've completed the Decision Flow, which might look som
 
 In the next section, we’ll test the Decision Flow with some inputs to ensure it’s functioning correctly. Before proceeding, please double-check that all Decision Flow nodes are fully configured and properly connected.
 
-### 3. Testing the Decision Flow and the AI Agent Rule
+### 5. Testing the Decision Flow and the AI Agent Rule
 
 Now we can test our rule in Test Bench.
 
@@ -459,5 +453,3 @@ To wrap up, let’s go over the management and maintenance of this Decision Flow
 * **We only accept the governing law from United States - to - the law from Australia.**
 
 These changes can be done directly by them, just changing values on Decision Trees, for instance from 15 to 20. See that the roles of the users can be very different, but everyone collaborate to directly on the hand of the right expert, the capacity to make changes in the company's applications for prediction, transparency and velocity. &#x20;
-
-[^1]: 

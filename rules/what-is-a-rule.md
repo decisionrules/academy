@@ -14,7 +14,7 @@ Our business rule engine combines both, a low-code engine that does not require 
 
 Lastly, we also offer the category of 'Rule Flows'. These are a special type of rules, where you can create an entire flow of decisions that share a common logic. [Decision Flow](https://academy.decisionrules.io/rule-types/decision-flow) is the rule that easily link individual rules together in the form of 'Nodes', as they logically follow each other, and solves your requests in real time. The design of the [Integration Flow](https://docs.decisionrules.io/doc/rules/flow/decision-flow-vs.-integration-flow) is similar, but oriented to long-running processes and database batch processing. &#x20;
 
-Integrating AI capabilities in your decision-making process can be helpful when you are getting unstructured data in your input but you want to obtain from it structured data for deterministic decisioning. Use our [AI Agent Rule](https://www.decisionrules.io/en/product/ai-agent/) to incorporate these capabilities into decision flows. &#x20;
+Integrating AI capabilities in your decision-making process can be helpful when the user prefers to describe the rule in natural language rather than defining explicit conditions and outcomes.    Use our [AI Agent Rule](https://www.decisionrules.io/en/product/ai-agent/) to get typed-structured JSON response from informal rule descriptions. &#x20;
 
 {% hint style="info" %}
 Nodes are relevant rule blocks building the Flows, more about the possible nodes in your palette [here](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/flow/flow-nodes-overview).&#x20;

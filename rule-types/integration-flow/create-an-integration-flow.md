@@ -41,7 +41,7 @@ The output model contains the list of employees receiving a raise `employeesBigg
 }
 ```
 
-#### Flow Steps <a href="#flow-of-the-process" id="flow-of-the-process"></a>
+### Flow Steps
 
 Establishing clear logical steps ensures an efficient design process:
 
