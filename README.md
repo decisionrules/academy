@@ -22,7 +22,7 @@ layout:
 
 # DecisionRules Academy Introduction
 
-This Academy has been thought for your first steps in the world of Business Rules Engines. The intended audience are beginners in <mark style="color:purple;">DecisionRules</mark>, therefore it goes step by step from the most basics actions in the app, such as creating an account or buying a plan to more complex functionalities, creating the rules.&#x20;
+This Academy has been thought for your first steps in the world of Business Rules Engines. The intended audience are beginners in <mark style="color:purple;">DecisionRules</mark>, therefore it goes step by step from the most basic actions in the app, such as creating an account or buying a plan to more complex functionalities, creating and managing the rules&#x20;
 
 The focus is practical, we will show you how to do. In the blink of an eye, you will run the application at full capacity, your team divided into different spaces, each member's roles well defined, and your most important rules already deciding. Although some concepts will be necessary, more extensive explanations are available in our documentation; when it can be relevant we share with you links to specific sections of that documentation.  &#x20;
 

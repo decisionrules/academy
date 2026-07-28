@@ -16,7 +16,7 @@
 
 ## 🌌 SPACES
 
-* [What Is a Space](spaces/what-is-a-space.md)
+* [What Is a Space?](spaces/what-is-a-space.md)
 * [Space Side Menu](spaces/space-side-menu.md)
 * [Users in Spaces](spaces/users-in-spaces/README.md)
   * [Invitations](spaces/users-in-spaces/invitations.md)
@@ -25,8 +25,8 @@
 ## ORGANIZATIONS
 
 * [What Is an Organization?](organizations/what-is-an-organization.md)
-* [Organizations Side Menu](organizations/organizations-side-menu.md)
-* [Members in Organization](organizations/members-in-organization.md)
+* [Building an Organization Part 1](organizations/building-an-organization-part-1.md)
+* [Building an Organization Part 2](organizations/building-an-organization-part-2.md)
 
 ## ⚖️ RULES
 

@@ -13,8 +13,6 @@ The side menu in the main interface gives you access to four main sections:&#x20
 | **Intelligence**  | Contains audit reports and dashboards for the rules in the Space | Analyse your rules individually or in group, create grounded strategies. |
 | **Organizations** | Contains the settings to manage a set of several Spaces.         | Manage all capabilities of your Spaces and get a comprehensive overview. |
 
-Simply click on "Space" and explore the menu of your Space, you will be taken to their sections as you click on the different options.
-
 ## Rules
 
 The decision rules that you create belong to your Space. You can find your list of rules in the "Rules" section of the menu, where you can either filter the list by rule type or sort it by name or date created.
@@ -28,6 +26,8 @@ _More about the Rule List in your Space can be found_ [_<mark style="color:purpl
 <figure><img src="../.gitbook/assets/rules.png" alt=""><figcaption><p><mark style="color:purple;">Business Rules</mark></p></figcaption></figure>
 
 ## Space
+
+Simply click on "Space" and explore the menu of your Space, you will be taken to their sections as you click on the different options.
 
 ### Info
 
