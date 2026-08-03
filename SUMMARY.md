@@ -54,6 +54,10 @@
 * [Rule Flow](rule-types/rule-flow/README.md)
   * [Create Simple Rule Flow](rule-types/rule-flow/create-simple-rule-flow.md)
 
+## 🚀 SELF-HOSTED
+
+* [Observability with OpenTelemetry](self-hosted/observability-with-opentelemetry.md)
+
 ## 🤝 GET HELP
 
 * [How to Create a Support Ticket](get-help/how-to-create-a-support-ticket.md)
