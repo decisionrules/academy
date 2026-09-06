@@ -80,3 +80,25 @@ With the tutorial below you will be able to create a simple AI Agent Rule and di
 {% content-ref url="create-a-simple-ai-agent-rule.md" %}
 [create-a-simple-ai-agent-rule.md](create-a-simple-ai-agent-rule.md)
 {% endcontent-ref %}
+
+## AI Agent Rule in Practice
+
+The walkthrough below shows an AI Agent Rule inside a complete Decision Flow. An investment broker has a conversation with a client, and the AI Agent Rule turns that freeform transcript into structured values: income, risk tolerance and investment horizon. Decision Tables and Decision Trees then filter the investment portfolio, so the same input always produces the same shortlist.
+
+A second AI Agent Rule sits at the end of the flow. It explains why each product was selected and flags near-miss products that the deterministic rules excluded, for example an investment horizon that is one year off. Those suggestions stay clearly separated from the deterministic result, so the final call belongs to the broker.
+
+{% embed url="https://youtu.be/BVcLMyjisdI" %}
+AI-assisted investment recommendation flow in DecisionRules
+{% endembed %}
+
+**What the walkthrough covers:**
+
+* Connecting an LLM provider and writing a prompt against a conversation transcript
+* Annotations that force the model into a typed JSON output
+* Explainable AI fields (`probability`, `reason`, `source_fragments`, `warnings`) used to tell the broker which questions still need to be asked
+* Passing the structured output into Decision Tables and Decision Trees
+* Keeping deterministic recommendations and AI suggestions visibly separate
+
+{% hint style="info" %}
+The full write-up of this use case, including the reasoning behind splitting the AI and deterministic parts, is available in the article [AI-Powered Investment Recommendations with Deterministic Rules](https://www.decisionrules.io/en/articles/ai-powered-investment-recommendations-with-deterministic-rules/).
+{% endhint %}
