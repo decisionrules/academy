@@ -1,5 +1,7 @@
 ---
-description: Find out how you can differentiate rules for individual teams or projects
+description: >-
+  Find out how you can differentiate rules for individual teams, departments or
+  projects
 ---
 
 # What Is a Space?

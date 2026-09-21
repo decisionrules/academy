@@ -4,7 +4,7 @@ description: How to fill out your billing information
 
 # Billing Information
 
-To upgrade your plan to any other than Free/Tiny you need to enter some information such as:
+To upgrade your plan to any other than Free, you need to enter some information such as:
 
 * Billing email
 * Name or Company

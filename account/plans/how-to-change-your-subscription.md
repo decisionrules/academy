@@ -8,7 +8,7 @@ description: >-
 
 ## How to access your plan any time
 
-To change your plan, you must first log into your account. At the bottom of your Space, click on the "Profile" button and select your Username. Your profile page will then appear. Click "Plans" on the left-hand side to see the available plans.
+To change your plan, you must first log into your account. At the bottom left-hand corner of your Space, click on the "Profile" button and select your Username. Your profile page will then appear. Click "Plans" on the menu at the left-hand side to see the available plans.
 
 <figure><img src="../../.gitbook/assets/View and Manage Your Subscription Plan (1).gif" alt=""><figcaption></figcaption></figure>
 
@@ -19,20 +19,20 @@ Running out of space? Once you have reached the limits of your plan, an "Upgrade
 <figure><img src="../../.gitbook/assets/Upgrade 2.png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
-_Of course every business has its own needs, so do not hesitate to contact us for a tailored plan. You can simply click Premium on a page of plans._
+Of course every business has its own needs, so do not hesitate to contact us for a tailored plan. Simply select the Premium plan on a page of plans, or contact support via "Info and Help" in the bottom left-hand corner.
 {% endhint %}
 
 ## Changing the plan
 
 On the page of available plans, you can find your current plan alongside others, each with a description. Select the plan you wish to change to and click on the "Select Plan" or "Get a Quote" button. You can also check your current limits and permissions in the "Limits" section on the left-hand side of the page.&#x20;
 
-<figure><img src="../../.gitbook/assets/Limits 2025.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Limits 2025_1.png" alt=""><figcaption></figcaption></figure>
 
-You will need to finish setting up your profile. Once you have done this, fill out your payment details within the pay-gate and click the "Pay and subscribe" button.
+When you select a plan, you will need to finish setting up your profile. Once you have done this, fill out your payment details within the pay-gate and click the "Pay and subscribe" button.
 
 <figure><img src="../../.gitbook/assets/Payment 2025.png" alt=""><figcaption></figcaption></figure>
 
-After a successful payment you will be redirected back to the plan page. Now your plan has been changed and a new invoice was created. Click the “Invoices” button to see all your invoices.
+After a successful payment you will be redirected back to the plan page. Now your plan has been changed and a new invoice was created. Click the “Invoices” button on your profile page to see all your invoices.
 
 {% hint style="info" %}
 _When a plan is changed to a higher plan, the higher plan takes effect immediately. If the plan is changed to a lower plan, the lower plan will not take effect until the next billing period._
