@@ -54,6 +54,14 @@
 * [Rule Flow](rule-types/rule-flow/README.md)
   * [Create Simple Rule Flow](rule-types/rule-flow/create-simple-rule-flow.md)
 
+## 📈 Intelligence
+
+* [About Intelligence](intelligence/about-intelligence.md)
+
+## 🤖 AI Tools
+
+* [AI Integrations](ai-tools/ai-integrations.md)
+
 ## 🚀 SELF-HOSTED
 
 * [Observability with OpenTelemetry](self-hosted/observability-with-opentelemetry.md)
