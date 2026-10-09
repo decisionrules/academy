@@ -60,7 +60,9 @@
 
 ## 🤖 AI Tools
 
+* [From Excel to Decision Tables with AI](ai-tools/from-excel-to-decision-tables-with-ai.md)
 * [AI Integrations](ai-tools/ai-integrations.md)
+* [Process Architect](ai-tools/process-architect.md)
 
 ## 🚀 SELF-HOSTED
 
