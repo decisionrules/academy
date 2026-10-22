@@ -31,6 +31,7 @@
 ## ⚖️ RULES
 
 * [What is a Rule?](rules/what-is-a-rule.md)
+* [Evaluating Rules](rules/evaluating-rules.md)
 * [Export & Import of the Rules](rules/export-and-import-of-the-rules/README.md)
   * [Export Rule](rules/export-and-import-of-the-rules/export-rule.md)
   * [Import Rule](rules/export-and-import-of-the-rules/import-rule.md)
