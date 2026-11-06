@@ -1,19 +1,17 @@
 ---
-description: >-
-  Find out how you can differentiate rules for individual teams, departments or
-  projects
+description: Find out how you can differentiate rules for individual teams or projects
 ---
 
 # What Is a Space?
 
-Spaces can be thought of as work areas, containing projects linked by a particular logic. Usually, spaces are used to define teams and connect different departments. Invite your colleagues to collaborate on your Space and assign roles and permissions to create seamless workflows for your projects.
+**Definition:** Spaces can be thought of as work areas, containing projects linked by a particular logic. Usually, spaces are used to define teams and connect different departments. Invite your colleagues to collaborate on your Space and assign roles and permissions to create seamless workflows for your rules.
 
 {% hint style="info" %}
-_The number of Spaces and Rules you can create, the users you can invite is determined by your Subscription._
+_The number of Spaces and Rules you can create, and the users you can invite, are determined by your Subscription._
 {% endhint %}
 
 {% hint style="info" %}
-A more precise definition: A Space is a container for a set of rules. Visually, it is the interface where you organize your folders and rules in one place. The goal of a Space is to clarify which rules share common settings (such as API Keys or Connectors) and can be connected to one another.
+**A more precise definition:** A Space is a virtual container for a set of rules. Visually, it is the interface where you organize your folders and rules within one box. The goal of a Space is to clarify which rules share common settings (such as API Keys or Connectors) and can be connected to one another.
 {% endhint %}
 
 ## First steps
@@ -36,6 +34,8 @@ _Before switching to another Space, make sure you have saved your progress._
 
 ## Space description
 
-Each Space has its own configurations, so its unique dashboard, its own API keys, and its own business rules. It means as well, that you can combine the logic of the business rules in the same Space, using Decision Flows and Integration Flows. Each Space generate audit logs for individual rules and for the relation between these rules within Decision Flows. In addition, relevant information about the Space can be saved and manage.
+Each Space has its own configurations, so its unique dashboard, its own API keys, and its own business rules. It means as well, that you can combine the logic of the business rules in the same Space, using Decision Flows and Integration Flows. Each Space generate audit logs for individual rules and for the relation between these rules. Furthermore, you can create connections between the Spaces.&#x20;
 
-Each Space has users working within it. The creator of the Space must invite these users and assign them specific roles. A set of permissions is given based on these roles. You can also share administrative responsibilities with other users.&#x20;
+In addition, relevant information about the Space can be saved and manage, such as the connectors, the logs, the tests for the rules, the webhooks and others.
+
+Each Space has users working within it. The creator of the Space must invite these users and assign them specific roles. A set of permissions is given based on those roles. You can also share administrative responsibilities with other users.&#x20;

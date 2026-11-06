@@ -6,15 +6,13 @@ Decision Tables are our most popular decision rule type as they are the market s
 
 The Decision Tables have a really friendly interface, excellent for any non-technical person who has experience with Excel or Google Sheets. As you can see here it is nearly identical to a real table.
 
-<figure><img src="../../.gitbook/assets/Excel and tables.png" alt=""><figcaption></figcaption></figure>
-
-
+<figure><img src="../../.gitbook/assets/new table.png" alt=""><figcaption></figcaption></figure>
 
 ## Decision Table Designer
 
-As already mentioned, the Decision Table is very similar to an Excel table - it is also divided into columns and rows and you can enter values or functions into cells. The table is conceptually divided into two parts, a part with conditions and a part with results.
+As already mentioned, the Decision Table is very similar to an Excel table - it is also divided into columns and rows and you can enter values or functions into cells. The table is conceptually divided into two parts, the columns for conditions and the columns for results.
 
-Conditions are created based on input values, so the condition columns are tied to the input model. On the other hand, the results are the values we want to obtain after evaluating the decision, so the result columns are tied to the output model. In the input-output model, you set the structure of the data and what values will go into the rule and what values will be received from it.
+Conditions are created based on input values, so the condition columns are tied to the input model. On the other hand, the results are the values we want to obtain after evaluating the decision, so the result columns are tied to the output model. In the Model interface, you set the structure of the data and what values will go into the rule and what values will be received from it.
 
 {% hint style="info" %}
 _For more information about setting up the Input-Output model, see the_ [_section_](https://app.gitbook.com/s/-MN4F4-qybg8XDATvios/rules/common-rule-features/input-and-output) _dedicated to it._&#x20;
@@ -24,8 +22,6 @@ _For more information about setting up the Input-Output model, see the_ [_sectio
 
 Once you have created the Input-Output model, you go into the Decision Table Designer and start adding individual columns for conditions and results. To add more columns, click on the "+" sign, located between the head of the columns. You can add columns at any time during the creation of your rule. To delete columns you do not need anymore, click the dropdown menu at the head of the column, select “Remove” from the list and continue.
 
-You can also really easily create additional conditions or result columns for the same input or output variables. Just add an additional column with the same variable.
-
 Simply link the values from the Input-Output model to the added columns. Once the values are mapped, you can begin to create individual conditions in the condition columns.
 
 {% hint style="info" %}
@@ -33,6 +29,8 @@ In addition to the conditions columns, you can add calculation columns, they are
 {% endhint %}
 
 The body of the table is made up of columns and rows. It's as if we could translate each row of the table into a sentence: **If all conditions are satisfied, show these results.** We can think of those rows as individual scenarios. By adding more rows to the table, we gradually cover all the scenarios that can occur.
+
+<figure><img src="../../.gitbook/assets/Configure Logic Rules for Luggage Price Model.gif" alt=""><figcaption></figcaption></figure>
 
 #### Adding and building rows
 
@@ -59,7 +57,7 @@ _Note that by definition:_
 * _when the ELSE operator is evaluated, it only takes into account conditions above it_
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Build Tables Academy 2025 (2).gif" alt=""><figcaption><p><mark style="color:purple;">Building Rows for Deciding the Luggage Price</mark></p></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Create Luggage Pricing Rules Using Conditional Logic (2).gif" alt=""><figcaption><p><mark style="color:purple;">Building Rows for Deciding the Luggage Price</mark></p></figcaption></figure>
 
 
 

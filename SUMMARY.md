@@ -30,30 +30,30 @@
 
 ## ⚖️ RULES
 
-* [What is a Rule?](rules/what-is-a-rule.md)
+* [What Is a Rule?](rules/what-is-a-rule.md)
 * [Evaluating Rules](rules/evaluating-rules.md)
 * [Export & Import of the Rules](rules/export-and-import-of-the-rules/README.md)
   * [Export Rule](rules/export-and-import-of-the-rules/export-rule.md)
   * [Import Rule](rules/export-and-import-of-the-rules/import-rule.md)
 
-## 📐 RULE TYPES
+## 📐 CREATING RULES TUTORIAL
 
-* [Decision Tables](rule-types/decision-tables/README.md)
-  * [Create a Simple Decision Table](rule-types/decision-tables/create-a-simple-decision-table.md)
-* [Decision Trees](rule-types/decision-trees/README.md)
-  * [Create Simple Decision Tree](rule-types/decision-trees/create-simple-decision-tree.md)
-* [Scripting Rules](rule-types/scripting-rules/README.md)
-  * [Create Simple Scripting Rule](rule-types/scripting-rules/create-simple-scripting-rule.md)
-* [Decision Flow](rule-types/decision-flow/README.md)
-  * [Create a Decision Flow](rule-types/decision-flow/create-a-decision-flow.md)
-* [Integration Flow](rule-types/integration-flow/README.md)
-  * [Create an Integration Flow](rule-types/integration-flow/create-an-integration-flow.md)
-* [Lookup Tables](rule-types/lookup-tables/README.md)
-  * [Create a Simple Lookup Table](rule-types/lookup-tables/create-a-simple-lookup-table.md)
-* [AI Agent Rules](rule-types/ai-agent-rules/README.md)
-  * [Create a Simple AI Agent Rule](rule-types/ai-agent-rules/create-a-simple-ai-agent-rule.md)
-* [Rule Flow](rule-types/rule-flow/README.md)
-  * [Create Simple Rule Flow](rule-types/rule-flow/create-simple-rule-flow.md)
+* [Decision Tables](creating-rules-tutorial/decision-tables/README.md)
+  * [Create a Simple Decision Table](creating-rules-tutorial/decision-tables/create-a-simple-decision-table.md)
+* [Decision Trees](creating-rules-tutorial/decision-trees/README.md)
+  * [Create Simple Decision Tree](creating-rules-tutorial/decision-trees/create-simple-decision-tree.md)
+* [Scripting Rules](creating-rules-tutorial/scripting-rules/README.md)
+  * [Create Simple Scripting Rule](creating-rules-tutorial/scripting-rules/create-simple-scripting-rule.md)
+* [Decision Flows](creating-rules-tutorial/decision-flows/README.md)
+  * [Create a Decision Flow](creating-rules-tutorial/decision-flows/create-a-decision-flow.md)
+* [Integration Flows](creating-rules-tutorial/integration-flows/README.md)
+  * [Create an Integration Flow](creating-rules-tutorial/integration-flows/create-an-integration-flow.md)
+* [Lookup Tables](creating-rules-tutorial/lookup-tables/README.md)
+  * [Create a Simple Lookup Table](creating-rules-tutorial/lookup-tables/create-a-simple-lookup-table.md)
+* [AI Agent Rules](creating-rules-tutorial/ai-agent-rules/README.md)
+  * [Create a Simple AI Agent Rule](creating-rules-tutorial/ai-agent-rules/create-a-simple-ai-agent-rule.md)
+* [Rule Flow](creating-rules-tutorial/rule-flow/README.md)
+  * [Create Simple Rule Flow](creating-rules-tutorial/rule-flow/create-simple-rule-flow.md)
 
 ## 📈 Intelligence
 

@@ -18,19 +18,21 @@ layout:
     visible: true
   actions:
     visible: true
+  anchors:
+    visible: true
 ---
 
 # DecisionRules Academy Introduction
 
-This Academy has been thought for your first steps in the world of Business Rules Engines. The intended audience are beginners in <mark style="color:purple;">DecisionRules</mark>, therefore it goes step by step from the most basic actions in the app, such as creating an account or buying a plan to more complex functionalities, creating and managing the rules&#x20;
+This Academy has been thought for your first steps in the world of Decision Rules Engines. The intended audience are beginners in <mark style="color:purple;">DecisionRules</mark>, therefore it goes step by step from the most basic actions in the app, such as creating an account or buying a plan to more complex functionalities, creating and managing the rules.&#x20;
 
-The focus is practical, we will show you how to do. In the blink of an eye, you will run the application at full capacity, your team divided into different spaces, each member's roles well defined, and your most important rules already deciding. Although some concepts will be necessary, more extensive explanations are available in our documentation; when it can be relevant we share with you links to specific sections of that documentation.  &#x20;
+The focus is practical, we will show you how to use the platform. Although some theory will be necessary, most of the material is focused on helping you to run the application at full capacity, your team divided into different spaces, each member's roles well defined and your most important rules deciding within a detailed auditing. More extensive theoretical explanations are available in our documentation; when it can be relevant we share with you links to specific sections of that documentation.  &#x20;
 
 Let us see first the originality of <mark style="color:purple;">DecisionRules</mark>, how the system stands out from other rules engines by looking at some concrete examples. Examples of our use cases, rule types and deployment options.   &#x20;
 
 ## Benefits of a codeless solution
 
-Many organizations use code-based rules. Thus, when any change is made to the logic or individual values such as insurance rates or seasonal sale discount code, a Business Description needs to be created by the development team who then implement the change in production. Such a change can take several days and requires a whole team of developers to implement it. But what if there was a way to transform your business logic into rules without having to use any code? Automate your processes with <mark style="color:purple;">DecisionRules</mark>. Create, deploy and manage your Business Rules thanks to our user friendly UI.
+Many organizations use code-based rules. Thus, when any change is made to the logic or individual values such as insurance rates or seasonal sale discount code, a Business Description needs to be created for the development team who then implement the change in production. Such a change can take several days and requires a whole team of developers to implement it. But what if there was a way to transform your business logic into rules without having to use any code? Automate your processes with <mark style="color:purple;">DecisionRules</mark>. Create, deploy and manage your Business Rules thanks to our user friendly UI.
 
 ## Industries and uses cases
 
@@ -87,7 +89,7 @@ Many organizations use code-based rules. Thus, when any change is made to the lo
 
 ## Rule types
 
-Currently there are six different types of rules in the engine: Decision Tree, Decision Table, Lookup Table, Scripting Rule, Decision Flow, and Integration Flow. One of our popular rules, the Rule Flow, is accessible but it has been improved by the new flows, Decision and Integration.&#x20;
+Currently there are seven different types of rules in the engine: Decision Tree, Decision Table, Lookup Table, Scripting Rule, Decision Flow, Integration Flow and AI Agent Rule. One of our popular rules, the Rule Flow, is accessible but it has been improved by the new flows, Decision and Integration.&#x20;
 
 Each type correspond to different levels of logical complexity and different types of decision. Depending of the process you want to automate you choose one rule or another. The criteria for this selection comes from experience, but for now, feel free to experiment with all of them. A more detailed explanation will be found below in the [RULES](https://academy.decisionrules.io/rules/what-is-a-rule) section.&#x20;
 
@@ -97,15 +99,9 @@ Each type correspond to different levels of logical complexity and different typ
 
 <figure><img src=".gitbook/assets/Intro Academy 2.png" alt="" width="514"><figcaption></figcaption></figure>
 
-
-
-{% hint style="info" %}
-_See_ [_Rule Types_](https://app.gitbook.com/s/2kePaAlhzmPFZTjuxdCY/rule-types) _section for more information about each rule type._
-{% endhint %}
-
 ## Delivery of new rules or changes using versioning
 
-With versioning, you can work on or use multiple versions at the same time. While your current version is in production, you can be already working on new versions that include changes or fixes to your logic. You can change the content of all versions separately and test them independently.
+With versioning, you can work on or use multiple versions at the same time. While your current version is in production, you can be already working on new versions that include changes or fixes to your logic. You can change the content of all versions separately and test them independently. The platform also keeps historical record of all changes in each version.
 
 ## DecisionRules Deployments Options
 

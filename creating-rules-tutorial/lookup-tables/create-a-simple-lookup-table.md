@@ -10,7 +10,7 @@ In this detailed end-to-end tutorial, we’ll guide you through creating a simpl
 
 Let's advance one step at a time.
 
-### 1. Create a new Decision Table
+### 1. Create a new Lookup Table
 
 To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a table for Bank Data Catalog, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed.
 
@@ -88,7 +88,7 @@ Finally, set the results. For the first row, the _feeMultiplier_ is empty (inval
 
 <figure><img src="../../.gitbook/assets/dt all.png" alt=""><figcaption></figcaption></figure>
 
-### 6. Test the Decision Table
+### 6. Test the Integration
 
 You can now test the functionality of your Lookup Table by evaluating the Decision Table we just created. Open the **Test Bench** at the bottom of your the designer for your _Fee Multiplier_ **Decision Table**.
 

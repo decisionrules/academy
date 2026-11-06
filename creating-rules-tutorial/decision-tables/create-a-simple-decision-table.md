@@ -6,8 +6,6 @@ description: This tutorial will walk you through the creation of a simple Decisi
 
 Decision Tables are without a question one of the most important tools for creating business rules. Within DecisionRules, they are fairly easy to create and manage. We believe that, with the help of this tutorial, you can master the basics quickly.
 
-{% embed url="https://www.youtube.com/watch?v=UUnG2E4-BFI" %}
-
 ## How to create a simple decision table
 
 Let's advance one step at a time.
@@ -24,7 +22,7 @@ There are multiple options for user login. If you do not have an account yet, yo
 
 To display the rules creation list, click the <mark style="background-color:purple;">**+ Create**</mark> button on the search bar. Select your rule and you will be prompted to provide a nam&#x65;**.** For this example, we will create a table for discounts, select a name for your rule as you wish and press "Confirm". The new rule will be created and its design interface will be displayed. We will continue in the Rule Setting menu.
 
-<figure><img src="../../.gitbook/assets/Create Decision Table Academy Dec 2025 (1).gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Create a New Decision Table Rule.gif" alt=""><figcaption></figcaption></figure>
 
 ### 3. Make basic settings
 
@@ -42,7 +40,7 @@ Let's start with the input model. First, you can switch from "Designer" to "Mode
 
 Now, you can continue with the output model. It will be set similarly. As root attributes, add <mark style="color:green;background-color:green;">**prices**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. Then, you can add a child attributes to the <mark style="color:green;background-color:green;">**prices**</mark>. You can do that by clicking the + icon within the prices field. Rename the New Attribute to <mark style="color:green;background-color:green;">**finalPrice**</mark> and then add one more, <mark style="color:green;background-color:green;">**crudePrice**</mark>.
 
-<figure><img src="../../.gitbook/assets/simple-editor.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/io model (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="warning" %}
 After creating an input or output model, we must always confirm the changes with the <mark style="background-color:orange;">save</mark> button.
@@ -56,7 +54,7 @@ More information on the simple editor is provided [<mark style="color:purple;">h
 
 In the JSON editor, you can provide the input and output model in JSON format. In our case, the input/output model will read:
 
-<figure><img src="../../.gitbook/assets/JSON editor.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/JSON.png" alt=""><figcaption></figcaption></figure>
 
 For now, you may just enter these values and you are done!
 
@@ -70,7 +68,7 @@ To create conditions and results, you must go to the **Table Designer** tab. Now
 
 We already have one condition column and one result column. We start with the conditions. Click the space below Condition, <mark style="color:orange;background-color:orange;">**->**</mark>**&#x20;           &#x20;**&#x20;dropdown, and select <mark style="color:purple;background-color:purple;">**productType**</mark>. Then click the **+** button at the top of the conditions section twice to create two more columns. Bound these to our <mark style="color:purple;background-color:purple;">**period**</mark> and <mark style="color:purple;background-color:purple;">**promoCode**</mark> input attributes. These are all the conditions we will use.
 
-<figure><img src="../../.gitbook/assets/Configure Discount Price Rules with Multiple Conditions and Results.gif" alt="" width="563"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Add Multiple Conditions to a Discount Rule Table (1).gif" alt=""><figcaption></figcaption></figure>
 
 Similarly, we add the result columns. One is already there, so click the <mark style="color:orange;background-color:orange;">**-> output**</mark> dropdown and select <mark style="color:green;background-color:green;">**prices.crudePrice**</mark>. Then create two more columns by clicking the **+** button at the top and bind them to <mark style="color:green;background-color:green;">**prices.finalPrice**</mark> and <mark style="color:green;background-color:green;">**message**</mark>. These are all the results we need.
 
@@ -98,8 +96,6 @@ Let's set the conditions in the first row.
 
 Click the anything label, <mark style="color:green;background-color:green;">**ANY**</mark> , in the <mark style="color:purple;background-color:purple;">**productType**</mark> column. You can choose a type of condition from the Select type modal. We would like to activate the results of this row when the value of <mark style="color:purple;background-color:purple;">**productType**</mark> is `basic`. We can do that simply by selecting the "Equals" operator and entering the string `basic`.
 
-<figure><img src="../../.gitbook/assets/Product Type Academy Dec 2025.gif" alt="" width="563"><figcaption></figcaption></figure>
-
 #### Period
 
 We will use the Equals operator for <mark style="color:purple;background-color:purple;">**period**</mark> as well. This row will activate when the <mark style="color:purple;background-color:purple;">**period**</mark> will be equal to `month`.
@@ -110,7 +106,7 @@ Here we want to check whether the customer's promo code is correct. We could aga
 
 Click Save and go back to the Decision Table Designer. Now you can add the condition for <mark style="color:purple;background-color:purple;">**promoCode**</mark>. Select again the Equals operator and enter `{PromoCode}` in the field. This expression refers to the `PromoCode` Rule variable.
 
-<figure><img src="../../.gitbook/assets/PromoCode Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Create and Configure Discount Pricing Rules.gif" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 An overview of all operators is [<mark style="color:purple;">here</mark>](https://docs.decisionrules.io/doc/decision-tables/operators).\
@@ -137,8 +133,6 @@ However, some functions are updated and it is written:
 * {prices.crudePrice}\*((100-{PromoDiscount})/100)
 {% endhint %}
 
-<figure><img src="../../.gitbook/assets/Final 2 Price Academy Dec 2025.gif" alt=""><figcaption></figcaption></figure>
-
 It means that we calculate the final price by taking the crude price and subtracting 30% discount defined by the `PromoDiscount` variable. Note that we are referring to the <mark style="color:green;background-color:green;">**prices.crudePrice**</mark> column by writing `{prices.crudePrice}`.
 
 #### Message
@@ -151,19 +145,23 @@ CONCAT({PromoDiscount},"% discount")
 
 This function will take the `PromoDiscount` variable and concatenate it with the given string to generate the desired message.
 
+<figure><img src="../../.gitbook/assets/Configure Dynamic Pricing and Messages in the Discount Model.gif" alt=""><figcaption></figcaption></figure>
+
 {% hint style="warning" %}
 Do not forget to click the <mark style="background-color:orange;">**Save**</mark> button.
 {% endhint %}
 
-You can now click the arrow at the beginning of the row and select **Insert**, and after click on **Below**. This will add another empty row below. Its conditions and results may be set analogically. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
+You can now click the "plus" symbol below the numeral of the current row. This will add another empty row below. More rows can be added in a similar fashion. In this way, you can create a rule similar to the following sample rule.
 
-<figure><img src="../../.gitbook/assets/Insert Below.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/add row.png" alt=""><figcaption></figcaption></figure>
 
 {% file src="../../.gitbook/assets/sample-pricing-rule.json" %}
 
-You can import this rule to your space by going to **Decision Tables** and clicking the **Import** button.
+You can import this rule to your space by going to the three dots menu and clicking the **Import** button.
 
-<figure><img src="../../.gitbook/assets/Import or Overwrite a Pricing Rule Version.gif" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Import a New Version of a Rule Table.gif" alt=""><figcaption></figcaption></figure>
+
+<figure><img src="../../.gitbook/assets/final table.png" alt=""><figcaption></figcaption></figure>
 
 ### 7. Test the Decision Table
 
@@ -173,7 +171,7 @@ If we want to test a certain row, we can click the <mark style="background-color
 
 Then we can click the <mark style="background-color:green;">**Run**</mark> button and the result will be displayed in right hand side of the Test Bench. Note that you can switch between the **Simple Bench** and the **JSON Bench**.
 
-<figure><img src="../../.gitbook/assets/Test bench Table.png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../.gitbook/assets/Test Discount Pricing Rules with Custom Parameters.gif" alt=""><figcaption></figcaption></figure>
 
 For example, if we switch to the JSON Bench, we may input the following data.
 

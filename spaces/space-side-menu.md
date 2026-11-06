@@ -6,12 +6,12 @@ description: Find out the main settings of your Space
 
 The side menu in the main interface gives you access to four main sections:&#x20;
 
-| SECTION           | CONTENT                                                          | PURPOSE                                                                  |
-| ----------------- | ---------------------------------------------------------------- | ------------------------------------------------------------------------ |
-| **Rules**         | Contains all decision rules in the Space.                        | Manage the specific rules for your current Space.                        |
-| **Space**         | Contains the settings of the Space.                              | Adjust settings and features of that particular Space.                   |
-| **Intelligence**  | Contains audit reports and dashboards for the rules in the Space | Analyse your rules individually or in group, create grounded strategies. |
-| **Organizations** | Contains the settings to manage a set of several Spaces.         | Manage all capabilities of your Spaces and get a comprehensive overview. |
+| SECTION           | CONTENT                                                       | PURPOSE                                                                  |
+| ----------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------ |
+| **Rules**         | Contains all decision rules in the Space.                     | Manage the specific rules for your current Space.                        |
+| **Space**         | Contains the settings of the Space.                           | Adjust settings and features of that particular Space.                   |
+| **Intelligence**  | Contains audit logs and dashboards for the rules in the Space | Analyse your rules individually or in group, create grounded strategies. |
+| **Organizations** | Contains the settings to manage a set of several Spaces.      | Manage all capabilities of your Spaces and get a comprehensive overview. |
 
 ## Rules
 
